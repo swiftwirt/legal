@@ -1,7 +1,7 @@
 # Politique de Confidentialité
 
-**Date d'entrée en vigueur :** 19 décembre 2025
-**Dernière mise à jour :** 2 janvier 2026
+**Date d'entrée en vigueur :** 30 décembre 2024
+**Dernière mise à jour :** 31 janvier 2025
 
 ## Introduction
 
@@ -22,24 +22,29 @@ Bienvenue sur Gertruda (« nous », « notre » ou « l'Application »). Nous re
 
 - **Données d'utilisation :** Fonctionnalités utilisées, durée de session, schémas d'interaction
 - **Données techniques :** Type d'appareil, version du système d'exploitation, version de l'application
+- **Identifiant publicitaire de l'appareil :** Collecté avec votre consentement sur iOS 14.5+ via App Tracking Transparency ; utilisé pour la publicité personnalisée
 - **Données analytiques :** Statistiques d'utilisation des fonctionnalités, journaux d'erreurs (uniquement si vous y consentez)
 - **Données en cache :** Réponses IA stockées localement pour de meilleures performances
+- **Préférences de notifications :** Vos paramètres de notifications push et données de notifications programmées
 
 ### 1.3 Informations que nous ne collectons PAS
 
 - Nous ne collectons PAS vos données de localisation précise
 - Nous n'accédons PAS à vos contacts, photos ou caméra
-- Nous ne vous suivons PAS sur d'autres applications ou sites web
+- Nous ne vous suivons PAS sur d'autres applications ou sites web (sauf si vous accordez la permission via App Tracking Transparency sur iOS)
 - Nous ne collectons PAS d'informations de santé sensibles
 
 ## 2. Comment nous utilisons vos informations
 
 Nous utilisons vos informations pour :
 
-- **Fourniture du service :** Génération d'interprétations de rêves, d'analyses de compatibilité et d'horoscopes
-- **Traitement IA :** Envoi de votre contenu aux fournisseurs d'IA (OpenAI, Anthropic) pour analyse
+- **Fourniture du service :** Génération d'interprétations de rêves, d'analyses de compatibilité, d'horoscopes et de réponses de l'oracle
+- **Traitement IA :** Envoi de votre contenu aux fournisseurs d'IA (Google Gemini, OpenAI, Anthropic) pour analyse
 - **Personnalisation :** Mémorisation de vos préférences et profil zodiacal
+- **Notifications push :** Envoi de rappels d'horoscope et notifications de réengagement selon vos préférences
+- **Publicité :** Affichage de publicités pertinentes (avec votre consentement pour les publicités personnalisées sur iOS)
 - **Amélioration de l'application :** Compréhension de l'utilisation des fonctionnalités et correction des bugs (avec votre consentement)
+- **Gestion des fonctionnalités :** Utilisation de Firebase Remote Config pour gérer les fonctionnalités et mises à jour de l'application
 - **Support client :** Réponse à vos demandes et problèmes techniques
 - **Conformité légale :** Respect des exigences réglementaires et application de nos Conditions
 
@@ -49,12 +54,32 @@ Nous utilisons vos informations pour :
 
 Votre contenu (rêves, questions, etc.) est envoyé à des fournisseurs d'IA tiers pour traitement :
 
-- **OpenAI** (OpenAI API) - [Politique de confidentialité](https://openai.com/privacy)
-- **Anthropic** (Claude API) - [Politique de confidentialité](https://www.anthropic.com/privacy)
+- **Google Gemini** (Fournisseur IA principal) - [Politique de confidentialité](https://policies.google.com/privacy)
+- **OpenAI** (Fournisseur alternatif) - [Politique de confidentialité](https://openai.com/privacy)
+- **Anthropic** (Fournisseur alternatif) - [Politique de confidentialité](https://www.anthropic.com/privacy)
 
-Ces fournisseurs traitent votre contenu pour générer des réponses mais ne l'utilisent pas pour entraîner leurs modèles sans consentement explicite.
+Ces fournisseurs traitent votre contenu pour générer des réponses. L'application utilise un basculement automatique entre les fournisseurs pour assurer la disponibilité du service.
 
-### 3.2 Processeurs de paiement
+### 3.2 Services Google
+
+Nous utilisons les services Google suivants :
+
+- **Firebase Analytics :** Collecte des données d'utilisation anonymisées pour nous aider à comprendre comment les utilisateurs interagissent avec l'application (optionnel, peut être désactivé dans les Paramètres)
+- **Firebase Remote Config :** Gère les indicateurs de fonctionnalités et la configuration de l'application (ex. : exigences de mise à jour forcée, paramètres publicitaires)
+- **Google AdMob :** Affiche des bannières publicitaires dans l'application
+
+Pour plus d'informations, consultez la [Politique de Confidentialité de Google](https://policies.google.com/privacy).
+
+### 3.3 Publicité
+
+Nous affichons des bannières publicitaires via Google AdMob :
+
+- **Utilisateurs iOS :** Sur iOS 14.5 et ultérieur, nous demandons votre permission via App Tracking Transparency avant de collecter votre identifiant publicitaire pour des publicités personnalisées
+- **Si vous refusez le suivi :** Vous recevrez des publicités non personnalisées
+- **Affichage des publicités :** Les bannières apparaissent dans l'écran Paramètres
+- **Contrôle des publicités :** Nous pouvons activer ou désactiver les publicités à distance via Firebase Remote Config
+
+### 3.4 Processeurs de paiement
 
 Les informations d'achat sont traitées par :
 - **Apple App Store** (pour les utilisateurs iOS) - [Politique de confidentialité](https://www.apple.com/legal/privacy/)
@@ -62,13 +87,17 @@ Les informations d'achat sont traitées par :
 
 Nous ne recevons ni ne stockons vos informations de carte bancaire.
 
-### 3.3 Services analytiques (facultatif)
+### 3.5 Services analytiques (facultatif)
 
-Si vous activez les analyses, des données d'utilisation anonymisées peuvent être partagées avec des fournisseurs d'analyse. **Vous pouvez les désactiver à tout moment dans les Paramètres.**
+Si vous activez les analyses, des données d'utilisation anonymisées peuvent être partagées avec Firebase Analytics. **Vous pouvez les désactiver à tout moment dans les Paramètres.**
 
-### 3.4 Exigences légales
+### 3.6 Exigences légales
 
 Nous pouvons divulguer des informations si la loi, une ordonnance du tribunal ou une demande gouvernementale l'exige, ou pour protéger nos droits et notre sécurité.
+
+### 3.7 Pas de vente de données
+
+**Nous ne vendons PAS vos données personnelles à des tiers.**
 
 ## 4. Stockage et sécurité des données
 
@@ -79,106 +108,132 @@ La plupart de vos données sont stockées localement sur votre appareil :
 - **Profils utilisateurs** (y compris noms, dates de naissance, lieux de naissance, signes du zodiaque) sont stockés localement
 - **Préférences et paramètres** sont stockés dans un stockage spécifique à l'appareil
 - **Réponses en cache** sont stockées localement pour améliorer les performances
+- **Planification des notifications** est stockée localement pour la livraison des notifications push
 
 ### 4.2 Mesures de sécurité
 
-- Chiffrement de bout en bout pour les communications API
-- Stockage sécurisé utilisant iOS Keychain et Android Keystore
+- Chiffrement HTTPS pour toutes les communications réseau
+- Stockage sécurisé utilisant iOS Keychain et Android Keystore pour les clés API
+- Aucune transmission de données sensibles en texte clair
 - Mises à jour de sécurité régulières et tests de vulnérabilité
 - Aucun stockage côté serveur de votre contenu personnel
 
 ### 4.3 Conservation des données
 
 - Les données locales restent sur votre appareil jusqu'à ce que vous les supprimiez ou désinstalliez l'application
-- Les données analytiques (si activées) sont conservées jusqu'à 90 jours
+- Les données analytiques (si activées) sont conservées selon les politiques de conservation des données de Google
+- Les requêtes IA sont traitées en temps réel et ne sont pas stockées par nous
 - Les données en cache sont automatiquement effacées selon vos paramètres de cache
 
-## 5. Vos droits à la vie privée
+## 5. Notifications Push
+
+Nous proposons des notifications push pour améliorer votre expérience :
+
+- **Rappels d'horoscope :** Rappels quotidiens sur vos lectures d'horoscope
+- **Notifications de réengagement :** Notifications envoyées aux Jours 1, 3 et 7 si vous n'avez pas utilisé l'application
+- **Contrôle utilisateur :** Vous pouvez activer ou désactiver les notifications dans les Paramètres ou via les paramètres système de votre appareil
+- **Permissions OS :** Les notifications nécessitent votre permission via le système d'exploitation de votre appareil
+
+## 6. Mises à Jour Forcées
+
+L'application peut nécessiter des mises à jour pour des raisons de sécurité, de compatibilité ou de fonctionnalité :
+
+- **Contrôle de version :** Nous utilisons Firebase Remote Config pour gérer les exigences de version minimale de l'application
+- **Invites de mise à jour :** Si votre version de l'application est inférieure au minimum requis, vous serez invité à mettre à jour
+- **Liens vers les stores :** Les invites de mise à jour vous dirigent vers l'Apple App Store ou Google Play Store
+
+## 7. Vos droits à la vie privée
 
 Selon votre localisation, vous pouvez avoir les droits suivants :
 
-### 5.1 Droits universels
+### 7.1 Droits universels
 
 - **Accès :** Consulter toutes les données que nous avons sur vous
 - **Suppression :** Demander la suppression de vos données (Paramètres > Effacer toutes les données)
 - **Correction :** Mettre à jour ou corriger les informations de votre profil
 - **Opt-out :** Désactiver le suivi analytique à tout moment
+- **Contrôle des notifications :** Gérer les préférences de notifications push
+- **Suivi publicitaire :** Contrôler la publicité personnalisée (iOS : via App Tracking Transparency)
 - **Portabilité des données :** Exporter vos données dans un format lisible par machine
 
-### 5.2 Droits RGPD (utilisateurs UE)
+### 7.2 Droits RGPD (utilisateurs UE)
 
 - Droit à la limitation du traitement
 - Droit d'opposition au traitement
 - Droit de déposer une plainte auprès de l'autorité de contrôle
 - Droit de retirer le consentement à tout moment
+- Le consentement est demandé avant la collecte de données
 
-### 5.3 Droits CCPA (utilisateurs californiens)
+### 7.3 Droits CCPA (utilisateurs californiens)
 
 - Droit de savoir quelles informations personnelles sont collectées
 - Droit de supprimer les informations personnelles
 - Droit de refuser la vente d'informations personnelles (nous ne vendons PAS de données)
 - Droit à la non-discrimination pour l'exercice de vos droits
 
-### 5.4 Comment exercer vos droits
+### 7.4 Comment exercer vos droits
 
 - **Dans l'application :** Allez dans Paramètres > Confidentialité et données
+- **Vider le cache :** Paramètres > Vider le cache pour supprimer les données en cache
+- **Supprimer le profil :** Paramètres > Supprimer le profil horoscope
 - **Email :** Contactez-nous à dmytro.o.ivashyn@gmail.com
 - **Délai de réponse :** Nous répondons dans les 30 jours
 
-## 6. Confidentialité des enfants
+## 8. Confidentialité des enfants
 
 Gertruda n'est PAS destinée aux enfants de moins de 13 ans (ou 16 ans dans l'UE). Nous ne collectons pas sciemment de données auprès d'enfants. Si vous pensez qu'un enfant nous a fourni des informations personnelles, contactez-nous immédiatement et nous les supprimerons.
 
-## 7. Transferts internationaux de données
+## 9. Transferts internationaux de données
 
-Vos données peuvent être transférées et traitées dans des pays autres que le vôtre, y compris aux États-Unis (où se trouvent nos fournisseurs d'IA). Nous assurons des garanties appropriées par :
+Vos données peuvent être transférées et traitées dans des pays autres que le vôtre, y compris aux États-Unis (où se trouvent nos fournisseurs d'IA et services Google). Nous assurons des garanties appropriées par :
 
 - Clauses contractuelles types (CCT) pour les données de l'UE
 - Principes du Privacy Shield le cas échéant
 - Chiffrement et mesures de sécurité pendant le transfert
 
-## 8. Cookies et suivi
+## 10. Cookies et suivi
 
 Nous utilisons un stockage local minimal (similaire aux cookies) pour :
 - Mémoriser votre préférence de langue
 - Enregistrer votre sélection de thème
 - Mettre en cache les réponses IA pour les performances
+- Stocker les préférences de notifications
 
-Nous n'utilisons PAS de cookies de suivi tiers ni de suivi intersites.
+**Suivi inter-applications (iOS) :** Nous demandons votre permission via App Tracking Transparency avant tout suivi inter-applications à des fins publicitaires. Vous pouvez refuser et vous recevrez toujours des publicités non personnalisées.
 
-## 9. Modifications de cette politique
+## 11. Modifications de cette politique
 
 Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter les changements dans nos pratiques ou exigences légales. Nous :
 - Vous informerons des changements importants via une notification dans l'application
 - Mettrons à jour la date « Dernière mise à jour » en haut
 - Obtiendrons votre consentement si la loi l'exige
 
-## 10. Nous contacter
+## 12. Nous contacter
 
 Si vous avez des questions sur cette Politique de Confidentialité ou vos données :
 
 **Email :** dmytro.o.ivashyn@gmail.com
-**Adresse :** Canada
+**Juridiction :** Canada
 **Délégué à la protection des données :** dmytro.o.ivashyn@gmail.com (pour les utilisateurs de l'UE)
 
-## 11. Avertissements juridiques
+## 13. Avertissements juridiques
 
-### 11.1 Divertissement uniquement
+### 13.1 Divertissement uniquement
 
-Tout le contenu fourni par Gertruda est uniquement À DES FINS DE DIVERTISSEMENT. Nos interprétations de rêves, analyses de compatibilité, horoscopes et réponses d'oracle ne sont PAS :
+Tout le contenu fourni par Gertruda est uniquement À DES FINS DE DIVERTISSEMENT. Nos interprétations de rêves, analyses de compatibilité, horoscopes et réponses d'oracle ne sont pas :
 
 - Des conseils médicaux, psychologiques ou thérapeutiques professionnels
 - Des conseils relationnels ou du coaching professionnel
 - Des conseils financiers, juridiques ou de carrière
 - Des prédictions d'événements futurs réels
 
-### 11.2 Absence de responsabilité
+### 13.2 Absence de responsabilité
 
 Nous ne sommes pas responsables des décisions ou actions que vous prenez en vous basant sur le contenu généré par l'Application. Consultez toujours des professionnels qualifiés pour des décisions de vie importantes.
 
-### 11.3 IA tierce
+### 13.3 IA tierce
 
-Le contenu généré par l'IA peut être inexact, biaisé ou inapproprié. Nous n'approuvons ni ne garantissons l'exactitude des réponses de l'IA.
+Le contenu généré par l'IA peut être inexact, biaisé ou inapproprié. Nous n'approuvons ni ne garantissons l'exactitude des réponses de l'IA. L'application utilise plusieurs fournisseurs d'IA (Google Gemini, OpenAI, Anthropic) avec basculement automatique pour la fiabilité du service.
 
 ---
 
