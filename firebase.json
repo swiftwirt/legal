@@ -5,6 +5,16 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/privacy",
+        "destination": "/PRIVACY_POLICY_EN.html"
+      },
+      {
+        "source": "/terms",
+        "destination": "/TERMS_OF_USE_EN.html"
+      }
     ]
   }
 }
