@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(for:*)",
+      "Bash(do sed -i '' 's/gertruda\\\\.app/gertruda.fun/g' \"$f\")",
+      "Bash(done)",
+      "Bash(grep:*)"
+    ]
+  }
+}

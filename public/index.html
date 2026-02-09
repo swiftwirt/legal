@@ -3,54 +3,259 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gertruda | Cosmic Intelligence</title>
+    <title>Gertruda</title>
+    <meta name="description" content="Gertruda — AI-powered astrology, dream interpretation, love compatibility, and oracle. iOS &amp; Android.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #7c4dff; --bg: #050505; --border: rgba(255,255,255,0.1); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        
-        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 0%, rgba(124,77,255,0.1) 0%, transparent 70%); }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{background:#030014;color:#fff;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        a{color:inherit;text-decoration:none}
 
-        h1 { font-size: clamp(50px, 10vw, 100px); font-weight: 900; letter-spacing: -4px; line-height: 0.85; margin-bottom: 20px; text-transform: uppercase; }
-        p { color: #888; font-size: 18px; max-width: 500px; margin-bottom: 40px; }
+        #stars{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
-        .btn { border: 1px solid #fff; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 800; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
-        .btn:hover { background: #fff; color: #000; }
+        .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(.16,1,.3,1),transform 0.8s cubic-bezier(.16,1,.3,1)}
+        .reveal.visible{opacity:1;transform:translateY(0)}
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); background: var(--border); gap: 1px; }
-        .item { background: var(--bg); padding: 60px 40px; transition: 0.3s; }
-        .item:hover { background: #0a0a0a; }
-        .item span { color: var(--accent); font-weight: 900; font-size: 10px; letter-spacing: 1px; display: block; margin-bottom: 10px; }
-        .item h3 { font-size: 20px; font-weight: 500; }
+        /* NAV */
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}
+        nav.scrolled{background:rgba(3,0,20,0.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.04);padding:16px 48px}
+        .logo{font-size:18px;font-weight:700;letter-spacing:-0.5px}
+        .nav-r{display:flex;gap:28px;align-items:center}
+        .nav-r a{font-size:13px;color:rgba(255,255,255,0.4);transition:color 0.3s;font-weight:500}
+        .nav-r a:hover{color:#fff}
 
-        footer { padding: 40px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 1px; color: #444; text-transform: uppercase; }
-        a { color: inherit; text-decoration: none; margin-left: 20px; }
-        a:hover { color: #fff; }
+        /* lang switch */
+        .lang-sw{display:flex;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;margin-left:4px}
+        .lang-sw button{background:none;border:none;color:rgba(255,255,255,0.3);font-family:inherit;font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.3s;letter-spacing:0.5px}
+        .lang-sw button.active{background:rgba(255,255,255,0.1);color:#fff}
+        .lang-sw button:hover:not(.active){color:rgba(255,255,255,0.6)}
+
+        /* HERO */
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;z-index:1;padding:0 24px}
+        .hero-glow{position:absolute;top:35%;left:50%;transform:translate(-50%,-50%);width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(120,80,255,0.12) 0%,rgba(200,60,180,0.06) 40%,transparent 70%);animation:breathe 6s ease-in-out infinite;pointer-events:none}
+        @keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.6}50%{transform:translate(-50%,-50%) scale(1.15);opacity:1}}
+        .hero-ring{position:absolute;top:35%;left:50%;transform:translate(-50%,-50%);width:320px;height:320px;border-radius:50%;border:1px solid rgba(140,100,255,0.08);animation:spin 60s linear infinite;pointer-events:none}
+        .hero-ring:nth-child(3){width:440px;height:440px;animation-duration:90s;animation-direction:reverse;border-color:rgba(200,100,255,0.05)}
+        @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+        .hero h1{font-size:clamp(64px,12vw,140px);font-weight:900;letter-spacing:-6px;line-height:0.85;margin-bottom:24px;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,0.3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.35);max-width:420px;line-height:1.6;margin-bottom:48px;font-weight:400}
+        .hero-stores{display:flex;gap:12px}
+        .store-btn{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:12px 24px;border-radius:14px;transition:all 0.3s;font-size:14px;font-weight:600}
+        .store-btn:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);transform:translateY(-2px)}
+        .store-btn svg{width:20px;height:20px;opacity:0.7}
+        .store-btn span{font-size:9px;display:block;opacity:0.4;font-weight:400;text-transform:uppercase;letter-spacing:1px;margin-bottom:1px}
+
+        .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+        .scroll-line{width:1px;height:32px;background:linear-gradient(180deg,rgba(255,255,255,0.2),transparent);animation:scrollPulse 2s ease-in-out infinite}
+        @keyframes scrollPulse{0%,100%{opacity:0.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.3)}}
+
+        /* STATEMENT */
+        .statement{position:relative;z-index:1;padding:80px 24px 120px;text-align:center}
+        .statement p{font-size:clamp(24px,4vw,48px);font-weight:300;letter-spacing:-1.5px;line-height:1.3;max-width:700px;margin:0 auto;color:rgba(255,255,255,0.12)}
+        .statement p em{font-style:normal;color:rgba(255,255,255,0.5)}
+
+        /* DISCLAIMER */
+        .disclaimer{position:relative;z-index:1;padding:0 24px 80px;text-align:center}
+        .disclaimer p{font-size:12px;color:rgba(255,255,255,0.15);max-width:500px;margin:0 auto;line-height:1.8}
+
+        /* FOOTER */
+        footer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,0.04);padding:48px 48px 32px}
+        .foot-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:48px}
+        .foot-brand{max-width:260px}
+        .foot-brand .logo{margin-bottom:12px;display:block}
+        .foot-brand p{font-size:13px;color:rgba(255,255,255,0.2);line-height:1.7}
+        .foot-cols{display:flex;gap:64px}
+        .foot-col h6{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.25);margin-bottom:14px;font-weight:600}
+        .foot-col a{display:block;font-size:13px;color:rgba(255,255,255,0.3);padding:4px 0;transition:color 0.3s}
+        .foot-col a:hover{color:rgba(255,255,255,0.7)}
+        .foot-bottom{max-width:1000px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+        .foot-bottom span,.foot-bottom a{font-size:11px;color:rgba(255,255,255,0.12)}
+        .foot-bottom a{transition:color 0.3s}
+        .foot-bottom a:hover{color:rgba(255,255,255,0.4)}
+        .foot-links{display:flex;gap:20px}
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            nav{padding:16px 20px}
+            nav.scrolled{padding:12px 20px}
+            .nav-r{gap:12px}
+            .nav-r a{font-size:12px}
+            .foot-inner{flex-direction:column;gap:32px}
+            .foot-cols{gap:40px}
+            .hero h1{letter-spacing:-3px}
+            .lang-sw button{padding:5px 10px;font-size:11px}
+        }
+        @media(max-width:480px){
+            .hero-stores{flex-direction:column}
+            .foot-cols{flex-direction:column;gap:24px}
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>GERTRUDA</h1>
-        <p>Deciphering the subconscious. Mapping the stars. Insights for the modern soul.</p>
-        <a href="mailto:dmytro.o.ivashyn@gmail.com" class="btn">Access Terminal</a>
-    </section>
+<canvas id="stars"></canvas>
 
-    <div class="grid">
-        <div class="item"><span>01</span><h3>Dream Interpreter</h3></div>
-        <div class="item"><span>02</span><h3>Horoscopes</h3></div>
-        <div class="item"><span>03</span><h3>Love Compatibility</h3></div>
-        <div class="item"><span>04</span><h3>Magic Oracle</h3></div>
-    </div>
-
-    <footer>
-        <div>Ontario, Canada</div>
-        <div>
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
+<nav>
+    <div class="logo">Gertruda</div>
+    <div class="nav-r">
+        <a href="/privacy" data-i="nav-privacy" data-link="privacy">Privacy</a>
+        <a href="/terms" data-i="nav-terms" data-link="terms">Terms</a>
+        <a href="mailto:legal@gertruda.fun">Contact</a>
+        <div class="lang-sw">
+            <button class="active" onclick="setLang('en')">EN</button>
+            <button onclick="setLang('fr')">FR</button>
         </div>
-    </footer>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <h1>Gertruda</h1>
+    <p class="hero-sub" data-i="hero-sub">Your stars. Your dreams. Your answers.</p>
+    <div class="hero-stores">
+        <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div><span>App Store</span><span data-i="download">Download</span></div>
+        </a>
+        <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33c.576.334.576 1.17 0 1.504L17.94 13.6l-2.515-2.515 2.272-2.578zM5.864 2.658L16.8 8.991l-2.302 2.302L5.864 2.658z"/></svg>
+            <div><span>Google Play</span><span data-i="download">Download</span></div>
+        </a>
+    </div>
+    <div class="scroll-hint"><div class="scroll-line"></div></div>
+</section>
+
+
+<section class="statement">
+    <p class="reveal" data-i="statement"><em data-i="statement-em">Made for the curious.</em><br>Powered by AI.<br data-i="statement-stars">Written in the stars.</p>
+</section>
+
+
+<section class="disclaimer">
+    <p class="reveal" data-i="disclaimer">For entertainment purposes only. Not professional advice. Rated 13+. All content is AI-generated and should not be used for important life decisions.</p>
+</section>
+
+<footer>
+    <div class="foot-inner">
+        <div class="foot-brand">
+            <div class="logo">Gertruda</div>
+            <p data-i="foot-desc">AI-powered astrology &amp; dream interpretation. iOS &amp; Android.</p>
+        </div>
+        <div class="foot-cols">
+            <div class="foot-col">
+                <h6 data-i="foot-legal">Legal</h6>
+                <a href="/privacy" data-i="foot-privacy" data-link="privacy">Privacy Policy</a>
+                <a href="/terms" data-i="foot-terms" data-link="terms">Terms of Use</a>
+            </div>
+            <div class="foot-col">
+                <h6>Contact</h6>
+                <a href="mailto:legal@gertruda.fun">Support</a>
+                <a href="mailto:privacy@gertruda.fun" data-i="foot-c-privacy">Privacy</a>
+                <a href="mailto:legal@gertruda.fun" data-i="foot-c-legal">Legal</a>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <span>&copy; 2026 Gertruda. Ontario, Canada.</span>
+        <div class="foot-links">
+            <a href="/privacy" data-link="privacy">Privacy</a>
+            <a href="/terms" data-link="terms">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// i18n
+var T={
+en:{
+    "nav-privacy":"Privacy",
+    "nav-terms":"Terms",
+    "hero-sub":"Your stars. Your dreams. Your answers.",
+    "download":"Download",
+    "disclaimer":"For entertainment purposes only. Not professional advice. Rated 13+. All content is AI-generated and should not be used for important life decisions.",
+    "foot-desc":"AI-powered astrology & dream interpretation. iOS & Android.",
+    "foot-legal":"Legal",
+    "foot-privacy":"Privacy Policy",
+    "foot-terms":"Terms of Use",
+    "foot-c-privacy":"Privacy",
+    "foot-c-legal":"Legal"
+},
+fr:{
+    "nav-privacy":"Confidentialit\u00e9",
+    "nav-terms":"Conditions",
+    "hero-sub":"Vos \u00e9toiles. Vos r\u00eaves. Vos r\u00e9ponses.",
+    "download":"T\u00e9l\u00e9charger",
+    "disclaimer":"Divertissement uniquement. Ne constitue pas un avis professionnel. D\u00e8s 13\u00a0ans. Tout le contenu est g\u00e9n\u00e9r\u00e9 par IA et ne doit pas \u00eatre utilis\u00e9 pour des d\u00e9cisions importantes.",
+    "foot-desc":"Astrologie et interpr\u00e9tation des r\u00eaves par IA. iOS et Android.",
+    "foot-legal":"L\u00e9gal",
+    "foot-privacy":"Politique de confidentialit\u00e9",
+    "foot-terms":"Conditions d\u2019utilisation",
+    "foot-c-privacy":"Confidentialit\u00e9",
+    "foot-c-legal":"L\u00e9gal"
+}
+};
+
+var stmtHtml={
+    en:'<em>Made for the curious.</em><br>Powered by AI.<br>Written in the stars.',
+    fr:'<em>Fait pour les curieux.</em><br>Propuls\u00e9 par l\u2019IA.<br>\u00c9crit dans les \u00e9toiles.'
+};
+
+var linkMap={
+    en:{privacy:'/privacy',terms:'/terms'},
+    fr:{privacy:'/privacy/fr',terms:'/terms/fr'}
+};
+
+var currentLang='en';
+
+function setLang(lang){
+    currentLang=lang;
+    document.documentElement.lang=lang;
+    // update toggle buttons
+    document.querySelectorAll('.lang-sw button').forEach(function(b){
+        b.classList.toggle('active',b.textContent.trim().toLowerCase()===lang)
+    });
+    // swap text
+    var dict=T[lang];
+    document.querySelectorAll('[data-i]').forEach(function(el){
+        var key=el.getAttribute('data-i');
+        if(dict[key]!==undefined) el.textContent=dict[key];
+    });
+    // swap statement innerHTML
+    var stEl=document.querySelector('.statement p');
+    if(stEl) stEl.innerHTML=stmtHtml[lang];
+    // swap privacy/terms hrefs
+    var routes=linkMap[lang];
+    document.querySelectorAll('a[data-link="privacy"]').forEach(function(a){a.href=routes.privacy});
+    document.querySelectorAll('a[data-link="terms"]').forEach(function(a){a.href=routes.terms});
+}
+
+// starfield
+(function(){
+    var c=document.getElementById('stars'),x=c.getContext('2d'),stars=[],count=200;
+    function resize(){c.width=window.innerWidth;c.height=window.innerHeight}
+    function init(){stars=[];for(var i=0;i<count;i++){stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.2,a:Math.random(),d:Math.random()*0.003+0.001,f:Math.random()>0.5?1:-1})}}
+    function draw(){x.clearRect(0,0,c.width,c.height);for(var i=0;i<stars.length;i++){var s=stars[i];s.a+=s.d*s.f;if(s.a>1||s.a<0.1)s.f*=-1;x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);x.fillStyle='rgba(255,255,255,'+s.a*0.6+')';x.fill()}requestAnimationFrame(draw)}
+    resize();init();draw();
+    window.addEventListener('resize',function(){resize();init()})
+})();
+
+// nav scroll
+window.addEventListener('scroll',function(){
+    document.querySelector('nav').classList.toggle('scrolled',window.scrollY>60)
+});
+
+// reveal on scroll
+var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+</script>
 
 </body>
 </html>

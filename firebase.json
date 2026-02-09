@@ -14,6 +14,62 @@
       {
         "source": "/terms",
         "destination": "/TERMS_OF_USE_EN.html"
+      },
+      {
+        "source": "/privacy/de",
+        "destination": "/PRIVACY_POLICY_DE.html"
+      },
+      {
+        "source": "/terms/de",
+        "destination": "/TERMS_OF_USE_DE.html"
+      },
+      {
+        "source": "/privacy/es",
+        "destination": "/PRIVACY_POLICY_ES.html"
+      },
+      {
+        "source": "/terms/es",
+        "destination": "/TERMS_OF_USE_ES.html"
+      },
+      {
+        "source": "/privacy/fr",
+        "destination": "/PRIVACY_POLICY_FR.html"
+      },
+      {
+        "source": "/terms/fr",
+        "destination": "/TERMS_OF_USE_FR.html"
+      },
+      {
+        "source": "/privacy/kk",
+        "destination": "/PRIVACY_POLICY_KK.html"
+      },
+      {
+        "source": "/terms/kk",
+        "destination": "/TERMS_OF_USE_KK.html"
+      },
+      {
+        "source": "/privacy/pt",
+        "destination": "/PRIVACY_POLICY_PT.html"
+      },
+      {
+        "source": "/terms/pt",
+        "destination": "/TERMS_OF_USE_PT.html"
+      },
+      {
+        "source": "/privacy/ru",
+        "destination": "/PRIVACY_POLICY_RU.html"
+      },
+      {
+        "source": "/terms/ru",
+        "destination": "/TERMS_OF_USE_RU.html"
+      },
+      {
+        "source": "/privacy/uk",
+        "destination": "/PRIVACY_POLICY_UK.html"
+      },
+      {
+        "source": "/terms/uk",
+        "destination": "/TERMS_OF_USE_UK.html"
       }
     ]
   }

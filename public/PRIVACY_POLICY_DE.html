@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - Gertruda</title>
+    <title>Datenschutzrichtlinie - Gertruda</title>
     <style>
         * {
             margin: 0;
@@ -32,10 +32,12 @@
         }
 
         h1 {
-            font-size: 2.2em;
+            font-size: 1.6em;
             color: #1a1a2e;
             margin-bottom: 8px;
             text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .meta {
@@ -73,6 +75,24 @@
             margin: 8px 0;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f3f5;
+            font-weight: 600;
+        }
+
         .contact-info {
             background-color: #f1f3f5;
             padding: 20px;
@@ -88,70 +108,238 @@
             text-align: center;
             color: #777;
         }
+
+        @media (max-width: 600px) {
+            .document { padding: 24px 16px; }
+            h1 { font-size: 1.4em; }
+            table { font-size: 0.85em; }
+            th, td { padding: 6px 8px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="document">
-            <h1>Datenschutzerklärung</h1>
+            <h1>Datenschutzrichtlinie</h1>
             <div class="meta">
-                <p><strong>Gültig ab:</strong> 4. Februar 2026</p>
-                <p><strong>App:</strong> Gertruda (iOS & Android)</p>
+                <p><strong>Geltungsdatum:</strong> 7. Februar 2026</p>
+                <p><strong>App:</strong> Gertruda (iOS &amp; Android)</p>
             </div>
 
-            <p>Willkommen bei Gertruda (<strong>"wir"</strong>, <strong>"uns"</strong> oder <strong>"die App"</strong>). Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer personenbezogenen Daten ein. Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere mobile Anwendung nutzen.</p>
+            <p>Willkommen bei Gertruda (<strong>„wir"</strong>, <strong>„uns"</strong> oder <strong>„die App"</strong>). Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer personenbezogenen Daten ein. Diese Datenschutzrichtlinie erläutert, wie wir Ihre Informationen erfassen, verwenden, weitergeben und schützen, wenn Sie unsere mobile Anwendung nutzen. Sie beschreibt auch Ihre Rechte in Bezug auf Ihre Daten.</p>
 
-            <h2>1. Informationen, die wir sammeln</h2>
+            <p>Gertruda ist in folgenden Sprachen verfügbar: Englisch, Deutsch, Französisch, Spanisch, Portugiesisch, Russisch, Ukrainisch und Kasachisch.</p>
+
+            <!-- ============================================================ -->
+            <h2>1. Von uns erfasste Informationen</h2>
+
             <h3>1.1 Von Ihnen bereitgestellte Informationen</h3>
             <ul>
-                <li><strong>Personenbezogene Daten:</strong> Um personalisierte <strong>Horoskope</strong> und Vorhersagen zu erstellen, erfassen wir Ihren Namen und Ihr Geburtsdatum.</li>
-                <li><strong>Funktionseingaben:</strong> Textbeschreibungen von Träumen für den Traumdeuter, spezifische Fragen für das Magische Orakel und Geburtsdaten für Liebeskompatibilitäts-Checks.</li>
-                <li><strong>Einstellungen:</strong> Ihre gewählte Sprache (Englisch, Deutsch, Französisch, Spanisch, Kasachisch oder Portugiesisch) und Benachrichtigungseinstellungen.</li>
+                <li><strong>Personenbezogene Daten:</strong> Ihr Name (optional) und Ihr Geburtsdatum, die zur Erstellung personalisierter Horoskope und Vorhersagen verwendet werden.</li>
+                <li><strong>Geburtsort:</strong> Eine textliche Beschreibung Ihres Geburtsortes (z. B. „Moskau"), die für Kompatibilitätsfunktionen verwendet wird. Dies ist <strong>nicht</strong> Ihr GPS-Standort.</li>
+                <li><strong>Funktionseingaben:</strong> Textbeschreibungen von Träumen für den Traumdeuter, Fragen für das Magische Orakel und Geburtsdaten für Liebeskompatibilitätsprüfungen.</li>
+                <li><strong>Einstellungen:</strong> Ihre gewählte Sprache und Benachrichtigungseinstellungen.</li>
             </ul>
 
             <h3>1.2 Automatisch erfasste Informationen</h3>
+            <p>Bestimmte Informationen werden automatisch durch in die App integrierte Drittanbieter-SDKs erfasst:</p>
             <ul>
-                <li><strong>Technische Daten:</strong> Gerätemodell, Betriebssystemversion und eindeutige Gerätekennungen für die Sitzungsverwaltung.</li>
-                <li><strong>Infrastruktur-Logs:</strong> Basis-Verbindungsmetadaten, die über Firebase für das Hosting (gertruda.fun) und die App-Stabilität verarbeitet werden.</li>
+                <li><strong>Werbedaten:</strong> Google AdMob erfasst Werbekennungen (einschließlich des Identifier for Advertisers, IDFA, auf iOS mit Ihrer Zustimmung), um Werbung anzuzeigen.</li>
+                <li><strong>Ungefährer Standort:</strong> AdMob leitet Ihren ungefähren (groben) Standort aus Ihrer IP-Adresse ab, um Werbung gezielt auszuspielen. Die App greift <strong>nicht</strong> auf das GPS Ihres Geräts zu und fordert keine Standortberechtigungen an.</li>
+                <li><strong>Absturz- und Diagnosedaten:</strong> Absturzberichte, Leistungskennzahlen und andere Diagnosedaten werden von AdMob- und Firebase-SDKs erfasst, um die Stabilität und Leistung der App aufrechtzuerhalten.</li>
+                <li><strong>Analysedaten:</strong> Firebase Analytics erfasst App-Nutzungsdaten wie Sitzungsdauer, Bildschirmaufrufe und Funktionsnutzung. Sie können Firebase Analytics in den App-Einstellungen deaktivieren.</li>
+                <li><strong>Verbindungsmetadaten:</strong> Firebase erfasst grundlegende Verbindungsmetadaten (IP-Adresse, Gerätetyp, Betriebssystemversion) für Infrastruktur- und Konfigurationsmanagement.</li>
             </ul>
 
+            <h3>1.3 Informationen, die wir nicht erfassen</h3>
+            <p>Wir erfassen <strong>keine</strong>: genauen GPS- oder Gerätestandorte, E-Mail-Adressen, Telefonnummern, Fotos, Kontakte, Gesundheitsdaten oder biometrische Informationen. Die App erfordert keine Kontoerstellung.</p>
+
+            <!-- ============================================================ -->
             <h2>2. Wie wir Ihre Informationen verwenden</h2>
-            <p>Wir verwenden Ihre Daten ausschließlich zur Bereitstellung der Unterhaltungsfunktionen der App:</p>
             <ul>
-                <li>Zur Erstellung von <strong>personalisierten Horoskopen</strong> und Vorhersagen.</li>
-                <li>Zur Bereitstellung von Kompatibilitätswerten und Traumdeutungen.</li>
-                <li>Zur Verwaltung der App-Konfiguration über Firebase Remote Config.</li>
-                <li>Zum Versenden von geplanten Benachrichtigungen zur Wiedereinstiegsförderung (falls aktiviert).</li>
+                <li>Zur Erstellung personalisierter Horoskope, Kompatibilitätswerte und Traumdeutungen.</li>
+                <li>Zur Verarbeitung Ihrer Eingaben durch KI-Dienste, um Antworten und Bilder zu generieren (siehe Abschnitt 3).</li>
+                <li>Zur Verwaltung der App-Konfiguration und Bereitstellung von Funktionsupdates über Firebase Remote Config.</li>
+                <li>Zum Versand geplanter Push-Benachrichtigungen wie Horoskop-Erinnerungen und Re-Engagement-Nachrichten (wenn von Ihnen aktiviert).</li>
+                <li>Zur Anzeige von Werbung über Google AdMob.</li>
+                <li>Zur Analyse der App-Nutzung und Verbesserung der Leistung durch Firebase Analytics.</li>
+                <li>Zur Diagnose und Behebung von Abstürzen und technischen Problemen.</li>
             </ul>
 
-            <h2>3. Drittanbieter-Dienste</h2>
-            <p>Wir nutzen vertrauenswürdige Drittanbieter-Dienste, um technische Funktionen bereitzustellen:</p>
+            <!-- ============================================================ -->
+            <h2>3. Drittanbieterdienste</h2>
+            <p>Wir nutzen die folgenden Drittanbieterdienste. Jeder kann Daten wie unten beschrieben erfassen und verarbeiten:</p>
+
+            <h3>3.1 Google AdMob</h3>
+            <p>Wir verwenden Google AdMob zur Anzeige von Bannerwerbung. AdMob erfasst Werbekennungen (IDFA auf iOS, Advertising ID auf Android), IP-Adressen (zur Ableitung des ungefähren Standorts), Absturzdaten, Leistungsdaten und andere Diagnosedaten. Diese Informationen werden für Drittanbieterwerbung, Analysen und Werbepersonalisierung verwendet. Die Datenerfassung durch AdMob gilt als „Tracking" gemäß Apple-Definition. Weitere Informationen finden Sie in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles Datenschutzrichtlinie</a>.</p>
+
+            <h3>3.2 Firebase (Google)</h3>
+            <p><strong>Firebase Analytics:</strong> Erfasst App-Nutzungsdaten für Analysezwecke. Sie können dies in den App-Einstellungen deaktivieren. <strong>Firebase Remote Config:</strong> Liefert Feature-Flags und Konfigurationsdaten an die App. <strong>Firebase Core:</strong> Stellt grundlegende Infrastrukturdienste bereit. Weitere Informationen finden Sie in den <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase-Datenschutzinformationen</a>.</p>
+
+            <h3>3.3 OpenAI</h3>
+            <p>Vom Benutzer eingegebener Text (Traumbeschreibungen, Orakelfragen und Horoskop-bezogene Anfragen) wird an die API von OpenAI gesendet, um KI-gestützte Antworten und Bilder zu generieren. Diese Anfragen werden in Echtzeit verarbeitet und nach Lieferung der Antwort nicht von uns gespeichert. OpenAI kann diese Daten gemäß seiner eigenen <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Datenschutzrichtlinie</a> und seinen <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Nutzungsbedingungen</a> verarbeiten.</p>
+
+            <h3>3.4 Apple App Store &amp; Google Play Store</h3>
+            <p>Alle In-App-Kauf- und Abonnementtransaktionen werden vollständig von Apple (App Store) oder Google (Play Store) verarbeitet und verwaltet. Wir erhalten oder speichern keine Zahlungsinformationen (Kreditkartennummern, Rechnungsadressen usw.). Ihr Kauf unterliegt den jeweiligen Geschäftsbedingungen und Datenschutzrichtlinien des Stores.</p>
+
+            <!-- ============================================================ -->
+            <h2>4. Werbung und Tracking</h2>
+            <p>Die App zeigt von Google AdMob bereitgestellte Werbung an. AdMob verwendet Tracking-Technologien, einschließlich Werbekennungen, um personalisierte Werbung auszuliefern und die Werbeleistung zu messen.</p>
+
+            <h3>4.1 Apple App Tracking Transparency (iOS)</h3>
+            <p>Auf iOS-Geräten wird die App Ihre Erlaubnis über Apples App Tracking Transparency (ATT)-Framework einholen, bevor AdMob auf Ihre IDFA für personalisierte Werbung und App-übergreifendes Tracking zugreifen darf. Sie können diese Erlaubnis erteilen oder verweigern. Wenn Sie das Tracking ablehnen, zeigt AdMob nicht personalisierte (kontextbezogene) Werbung an. Sie können Ihre Wahl jederzeit in den Geräteeinstellungen unter Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Tracking ändern.</p>
+
+            <h3>4.2 Werbepersonalisierung (Android)</h3>
+            <p>Auf Android-Geräten kann AdMob Ihre Werbe-ID verwenden, um Werbung zu personalisieren. Sie können die Werbepersonalisierung in den Geräteeinstellungen unter Einstellungen &gt; Google &gt; Anzeigen zurücksetzen oder deaktivieren.</p>
+
+            <h3>4.3 App Store Datenschutz-Labels</h3>
+            <p>Die folgenden Daten können erfasst und mit Ihrer Identität verknüpft werden und können für Tracking verwendet werden, wie in unseren App Store Datenschutz-Labels angegeben:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datentyp</th>
+                        <th>Mit Identität verknüpft</th>
+                        <th>Für Tracking verwendet</th>
+                        <th>Zwecke</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Werbedaten</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                        <td>Drittanbieterwerbung, Analysen, Produktpersonalisierung</td>
+                    </tr>
+                    <tr>
+                        <td>Absturzdaten</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                        <td>Drittanbieterwerbung, Analysen, App-Funktionalität</td>
+                    </tr>
+                    <tr>
+                        <td>Leistungsdaten</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                        <td>Drittanbieterwerbung, Analysen, App-Funktionalität</td>
+                    </tr>
+                    <tr>
+                        <td>Sonstige Diagnosedaten</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                        <td>Drittanbieterwerbung, Analysen, App-Funktionalität</td>
+                    </tr>
+                    <tr>
+                        <td>Ungefährer Standort (IP-basiert)</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                        <td>Drittanbieterwerbung, Analysen, Produktpersonalisierung</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Ein genauer Standort wird <strong>nicht</strong> erfasst.</p>
+
+            <!-- ============================================================ -->
+            <h2>5. Datenspeicherung und Sicherheit</h2>
+
+            <h3>5.1 Lokale Speicherung</h3>
+            <p>Die meisten personenbezogenen Daten — einschließlich Ihres Profils (Name, Geburtsdatum, Geburtsort), Traumverlauf, Orakelverlauf, Horoskop-Cache, Benachrichtigungseinstellungen und Diagnoseprotokolle — werden direkt auf Ihrem Gerät gespeichert, unter Verwendung von lokalem Speicher und Flutter Secure Storage (das Keychain auf iOS und EncryptedSharedPreferences auf Android nutzt).</p>
+
+            <h3>5.2 Cloud-Verarbeitung</h3>
+            <p>Wenn Sie KI-gestützte Funktionen nutzen, werden Ihre Eingaben zur Verarbeitung und Bildgenerierung an die Server von OpenAI übertragen. Diese Übertragungen sind flüchtig: Wir unterhalten keine permanente serverseitige Datenbank Ihrer Träume, Fragen oder Horoskopanfragen.</p>
+
+            <h3>5.3 Sicherheitsmaßnahmen</h3>
+            <p>Wir verwenden branchenübliche Sicherheitsmaßnahmen zum Schutz Ihrer Daten, darunter:</p>
             <ul>
-                <li><strong>Firebase (Google):</strong> Für die App-Infrastruktur, das Hosting der Landingpage und das Management der Remote-Konfiguration.</li>
-                <li><strong>KI-Analyse-APIs:</strong> Zur Echtzeitverarbeitung von Benutzereingaben (Träume und Orakelfragen), um Antworten zu generieren.</li>
-                <li><strong>App Stores:</strong> Apple und Google wickeln alle In-App-Kauftransaktionen sicher ab.</li>
+                <li>HTTPS (TLS-Verschlüsselung) für alle zwischen der App und Drittanbieterdiensten übertragenen Daten.</li>
+                <li>Sichere Speicherung auf Betriebssystemebene (Keychain auf iOS, EncryptedSharedPreferences auf Android) für sensible Daten auf Ihrem Gerät.</li>
+            </ul>
+            <p>Obwohl wir angemessene Schritte zum Schutz Ihrer Informationen unternehmen, ist keine Methode der elektronischen Übertragung oder Speicherung zu 100 % sicher.</p>
+
+            <!-- ============================================================ -->
+            <h2>6. Datenaufbewahrung</h2>
+            <p>Auf Ihrem Gerät lokal gespeicherte Daten bleiben bestehen, bis Sie die App löschen oder die App-Daten bereinigen. Wir speichern Ihre personenbezogenen Daten nicht auf unseren Servern.</p>
+            <p>Drittanbieterdienste (Google AdMob, Firebase, OpenAI) können die von ihnen erfassten Daten gemäß ihren eigenen Aufbewahrungsrichtlinien speichern. Bitte beachten Sie die jeweiligen Datenschutzrichtlinien, die in Abschnitt 3 verlinkt sind.</p>
+
+            <!-- ============================================================ -->
+            <h2>7. Cookies und ähnliche Technologien</h2>
+            <p>Die App selbst verwendet keine Cookies. Jedoch können in die App integrierte Drittanbieter-SDKs (AdMob und Firebase) Gerätekennungen, Werbekennungen und ähnliche Tracking-Technologien verwenden, um Daten wie in den Abschnitten 3 und 4 beschrieben zu erfassen. Diese Technologien funktionieren ähnlich wie Cookies und werden für Werbung, Analysen und Leistungsüberwachung eingesetzt.</p>
+
+            <!-- ============================================================ -->
+            <h2>8. Internationale Datenübermittlungen</h2>
+            <p>Ihre Daten können in Länder außerhalb Ihres Wohnsitzlandes übertragen und dort verarbeitet werden, einschließlich der Vereinigten Staaten, wo unsere Drittanbieter-Dienstleister (Google und OpenAI) Server betreiben. Diese Übertragungen sind notwendig, um die Dienste der App bereitzustellen. Soweit gesetzlich erforderlich, stützen wir uns auf geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SCCs), die von der Europäischen Kommission angenommen wurden, oder die Zertifizierung des Dienstleisters im Rahmen geltender Datenübertragungsrahmenwerke.</p>
+
+            <!-- ============================================================ -->
+            <h2>9. Datenschutz für Kinder</h2>
+            <p>Gertruda ist ab 13 Jahren freigegeben und nicht für Kinder unter 13 Jahren bestimmt. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind unter 13 Jahren uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, und wir werden Maßnahmen ergreifen, um diese Informationen zu löschen.</p>
+            <p>Wenn Sie zwischen 13 Jahren und dem Volljährigkeitsalter in Ihrer Rechtsordnung sind, sollten Sie diese Datenschutzrichtlinie mit einem Elternteil oder Erziehungsberechtigten überprüfen, um sicherzustellen, dass Sie sie verstehen.</p>
+
+            <!-- ============================================================ -->
+            <h2>10. Ihre Rechte und Wahlmöglichkeiten</h2>
+
+            <h3>10.1 Allgemeine Rechte</h3>
+            <p>Abhängig von Ihrer Rechtsordnung haben Sie möglicherweise folgende Rechte in Bezug auf Ihre personenbezogenen Daten:</p>
+            <ul>
+                <li><strong>Auskunft:</strong> Anforderung einer Kopie der personenbezogenen Daten, die wir über Sie gespeichert haben.</li>
+                <li><strong>Berichtigung:</strong> Anforderung der Berichtigung unrichtiger personenbezogener Daten.</li>
+                <li><strong>Löschung:</strong> Anforderung der Löschung Ihrer personenbezogenen Daten. Da die meisten Daten lokal auf Ihrem Gerät gespeichert werden, können Sie sie durch Deinstallation der App oder Bereinigung der App-Daten löschen.</li>
+                <li><strong>Datenübertragbarkeit:</strong> Anforderung Ihrer Daten in einem portablen Format, soweit anwendbar.</li>
+                <li><strong>Widerspruch gegen Tracking:</strong> Auf iOS können Sie Tracking über die ATT-Aufforderung ablehnen. Auf Android können Sie die Werbepersonalisierung in den Geräteeinstellungen deaktivieren.</li>
+                <li><strong>Analysen deaktivieren:</strong> Firebase Analytics in den App-Einstellungen ausschalten.</li>
+                <li><strong>Benachrichtigungen deaktivieren:</strong> Push-Benachrichtigungen in den App-Einstellungen oder Geräteeinstellungen ausschalten.</li>
             </ul>
 
-            <h2>4. Datenspeicherung & Sicherheit</h2>
-            <p><strong>Lokale Speicherung:</strong> Die meisten personenbezogenen Daten, einschließlich Ihres <strong>Horoskop</strong>-Profils, werden direkt auf Ihrem Gerät gespeichert. Wir führen keine dauerhafte zentrale Datenbank Ihrer privaten Traumbeschreibungen oder Orakelfragen.</p>
-            <p><strong>Cloud-Verarbeitung:</strong> Während Eingaben zur KI-Analyse in der Cloud verarbeitet werden, priorisieren wir die kurzlebige Verarbeitung (ephemeral processing) gegenüber einer dauerhaften Speicherung.</p>
+            <h3>10.2 Rechte für Einwohner des Europäischen Wirtschaftsraums (EWR) — DSGVO</h3>
+            <p>Wenn Sie sich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befinden, haben Sie folgende zusätzliche Rechte gemäß der Datenschutz-Grundverordnung (DSGVO):</p>
+            <ul>
+                <li><strong>Rechtsgrundlage der Verarbeitung:</strong> Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:
+                    <ul>
+                        <li><strong>Einwilligung:</strong> Für personalisierte Werbung und Tracking (über ATT auf iOS oder Werbeeinstellungen auf Android). Sie können Ihre Einwilligung jederzeit widerrufen.</li>
+                        <li><strong>Berechtigtes Interesse:</strong> Für Analysen, App-Funktionalität, Absturzdiagnose und App-Verbesserung.</li>
+                        <li><strong>Vertragserfüllung:</strong> Für die Bereitstellung der Kern-Unterhaltungsfunktionen der App basierend auf Ihren Eingaben.</li>
+                    </ul>
+                </li>
+                <li><strong>Widerspruchsrecht:</strong> Sie können der Verarbeitung auf Grundlage berechtigter Interessen widersprechen.</li>
+                <li><strong>Recht auf Einschränkung der Verarbeitung:</strong> Sie können verlangen, dass wir die Verarbeitung Ihrer Daten unter bestimmten Umständen einschränken.</li>
+                <li><strong>Beschwerderecht:</strong> Sie haben das Recht, eine Beschwerde bei Ihrer lokalen Datenschutzaufsichtsbehörde einzureichen.</li>
+                <li><strong>Datenschutzbeauftragter:</strong> Sie können unseren DSB unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a> kontaktieren.</li>
+            </ul>
 
-            <h2>5. Rechtliche Hinweise</h2>
-            <h3>5.1 Nur zur Unterhaltung</h3>
-            <p>Alle von der App bereitgestellten Inhalte – einschließlich <strong>Horoskope</strong>, Traumdeutungen, Kompatibilitätsanalysen und Orakelantworten – dienen <strong>AUSSCHLIESSLICH UNTERHALTUNGSZWECKEN</strong>. Sie stellen keine professionelle medizinische, rechtliche oder psychologische Beratung dar.</p>
+            <h3>10.3 Rechte für Einwohner Kaliforniens — CCPA</h3>
+            <p>Wenn Sie in Kalifornien ansässig sind, haben Sie folgende Rechte gemäß dem California Consumer Privacy Act (CCPA) und dem California Privacy Rights Act (CPRA):</p>
+            <ul>
+                <li><strong>Auskunftsrecht:</strong> Sie können Informationen über die Kategorien und spezifischen personenbezogenen Daten anfordern, die wir über Sie erfasst haben, die Quellen dieser Informationen, die Zwecke der Erfassung und die Kategorien von Dritten, an die wir sie weitergeben.</li>
+                <li><strong>Löschungsrecht:</strong> Sie können die Löschung Ihrer personenbezogenen Daten verlangen, vorbehaltlich bestimmter Ausnahmen.</li>
+                <li><strong>Recht auf Widerspruch gegen Verkauf/Weitergabe:</strong> Wir „verkaufen" Ihre personenbezogenen Daten nicht im herkömmlichen Sinne. Die Weitergabe von Daten an AdMob für personalisierte Werbung kann jedoch einen „Verkauf" oder eine „Weitergabe" im Sinne des CCPA darstellen. Sie können dem widersprechen, indem Sie das Tracking auf iOS ablehnen (ATT-Aufforderung) oder Ihre Werbepersonalisierungseinstellungen auf Android anpassen.</li>
+                <li><strong>Diskriminierungsverbot:</strong> Wir werden Sie nicht benachteiligen, weil Sie Ihre CCPA-Rechte ausüben.</li>
+            </ul>
+            <p>Um Ihre Rechte auszuüben, kontaktieren Sie uns unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>.</p>
 
-            <h3>5.2 MIT-Lizenz & Gewährleistungsausschluss</h3>
-            <p>Diese App wird "wie besehen" (as is) zur Verfügung gestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung. Gemäß unserer Softwarelizenzierung haften wir nicht für Ansprüche, Schäden oder andere Haftungsfragen, die sich aus Ihrer Nutzung der App ergeben.</p>
+            <h3>10.4 Rechte für kanadische Einwohner — PIPEDA</h3>
+            <p>Wenn Sie in Kanada ansässig sind, haben Sie Rechte gemäß dem Personal Information Protection and Electronic Documents Act (PIPEDA), einschließlich des Rechts auf Zugang zu Ihren personenbezogenen Daten, Berichtigung und Widerruf der Einwilligung zur Erfassung, Nutzung oder Weitergabe. Um diese Rechte auszuüben, kontaktieren Sie uns unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>.</p>
 
-            <h2>6. Kontaktieren Sie uns</h2>
+            <!-- ============================================================ -->
+            <h2>11. In-App-Käufe und Abonnements</h2>
+            <p>Gertruda kann In-App-Käufe und Abonnements anbieten. Alle Käufe und Abonnements werden über den Apple App Store oder Google Play Store abgewickelt. Wir erfassen, verarbeiten oder speichern keine Zahlungsinformationen. Ihr Abonnement wird vollständig über den jeweiligen Store verwaltet, und alle Rechnungsanfragen sollten an Apple oder Google gerichtet werden.</p>
+
+            <!-- ============================================================ -->
+            <h2>12. Unterhaltungshinweis</h2>
+            <p>Alle von der App bereitgestellten Inhalte — einschließlich Horoskope, Traumdeutungen, Kompatibilitätsanalysen und Orakelantworten — dienen <strong>AUSSCHLIESSLICH UNTERHALTUNGSZWECKEN</strong>. Sie stellen keine professionelle medizinische, rechtliche, psychologische, finanzielle oder andere professionelle Beratung dar. Verlassen Sie sich nicht auf App-Inhalte für wichtige Lebensentscheidungen.</p>
+
+            <!-- ============================================================ -->
+            <h2>13. Änderungen dieser Datenschutzrichtlinie</h2>
+            <p>Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Bei wesentlichen Änderungen werden wir Sie benachrichtigen, indem wir das „Geltungsdatum" oben auf dieser Seite aktualisieren und, soweit möglich, eine Benachrichtigung in der App bereitstellen. Ihre fortgesetzte Nutzung der App nach Änderungen gilt als Ihre Zustimmung zur aktualisierten Datenschutzrichtlinie. Wir empfehlen Ihnen, diese Datenschutzrichtlinie regelmäßig zu überprüfen.</p>
+
+            <!-- ============================================================ -->
+            <h2>14. Kontakt</h2>
             <div class="contact-info">
-                <p>Wenn Sie Fragen zu dieser Datenschutzerklärung oder Ihren Daten haben, kontaktieren Sie uns bitte:</p>
-                <p><strong>E-Mail:</strong> dmytro.o.ivashyn@gmail.com</p>
-                <p><strong>Datenschutzbeauftragter:</strong> dmytro.o.ivashyn@gmail.com (für Nutzer in der EU)</p>
+                <p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder Ihren Daten haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie uns bitte:</p>
+                <p><strong>E-Mail:</strong> <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a></p>
+                <p><strong>Datenschutzbeauftragter (für EWR/UK-Nutzer):</strong> <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a></p>
+                <p><strong>Gerichtsstand:</strong> Kanada (Provinz Ontario)</p>
             </div>
 
             <div class="footer-notice">
-                <p>Mit der Nutzung von Gertruda erklären Sie sich mit dieser Datenschutzerklärung einverstanden.</p>
+                <p>Durch die Nutzung von Gertruda bestätigen Sie, dass Sie diese Datenschutzrichtlinie gelesen und verstanden haben.</p>
             </div>
         </div>
     </div>
