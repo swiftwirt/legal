@@ -136,7 +136,7 @@
             <h3>1.1 Information You Provide</h3>
             <ul>
                 <li><strong>Personal Data:</strong> Your name (optional) and date of birth, used to generate personalized horoscopes and forecasts.</li>
-                <li><strong>Birth Place:</strong> A text description of your birth location (e.g., "Moscow") used for compatibility features. This is <strong>not</strong> your device GPS location.</li>
+                <li><strong>Birth Place:</strong> A text description of your birth location (e.g., "London") used for personalized horoscopes. This is <strong>not</strong> your device GPS location.</li>
                 <li><strong>Feature Inputs:</strong> Text descriptions of dreams for the Dream Interpreter, questions for the Magic Oracle, and birth data for Love Compatibility checks.</li>
                 <li><strong>Preferences:</strong> Your selected language and notification settings.</li>
             </ul>
@@ -147,7 +147,7 @@
                 <li><strong>Advertising Data:</strong> Google AdMob collects advertising identifiers (including the Identifier for Advertisers, or IDFA, on iOS with your consent) to serve ads.</li>
                 <li><strong>Coarse Location:</strong> AdMob derives your approximate (coarse) location from your IP address for ad targeting purposes. The App does <strong>not</strong> access your device's GPS or request location permissions.</li>
                 <li><strong>Crash and Diagnostic Data:</strong> Crash reports, performance metrics, and other diagnostic data are collected by AdMob and Firebase SDKs to maintain App stability and performance.</li>
-                <li><strong>Analytics Data:</strong> Firebase Analytics collects app usage data such as session duration, screen views, and feature engagement. You may disable Firebase Analytics in the App's Settings.</li>
+                <li><strong>Analytics Data:</strong> Firebase Analytics collects app usage data such as session duration, screen views, and feature engagement.</li>
                 <li><strong>Connection Metadata:</strong> Firebase collects basic connection metadata (IP address, device type, operating system version) for infrastructure and configuration management.</li>
             </ul>
 
@@ -242,7 +242,7 @@
             <h2>5. Data Storage and Security</h2>
 
             <h3>5.1 Local Storage</h3>
-            <p>Most personal data — including your profile (name, birth date, birth place), dream history, oracle history, horoscope cache, notification preferences, and diagnostic logs — is stored directly on your device using local storage and Flutter Secure Storage (which uses Keychain on iOS and EncryptedSharedPreferences on Android).</p>
+            <p>Most personal data — including your profile (name, birth date, birth place), dream history, oracle (e.g. Eight Ball) history, horoscope cache, and notification preferences — is stored only on your device using local storage (on-device files and preferences). A small amount of app configuration (e.g. subscription tier, selected provider) may also be stored on device using Flutter Secure Storage (Keychain on iOS, EncryptedSharedPreferences on Android).</p>
 
             <h3>5.2 Cloud Processing</h3>
             <p>When you use AI-powered features, your inputs are transmitted to OpenAI's servers for processing and image generation. These transmissions are ephemeral: we do not maintain a permanent server-side database of your dreams, questions, or horoscope requests.</p>
@@ -284,8 +284,8 @@
                 <li><strong>Deletion:</strong> Request deletion of your personal data. Since most data is stored locally on your device, you can delete it by uninstalling the App or clearing the App's data.</li>
                 <li><strong>Portability:</strong> Request your data in a portable format where applicable.</li>
                 <li><strong>Opt-Out of Tracking:</strong> On iOS, deny tracking through the ATT prompt. On Android, opt out of ad personalization in your device settings.</li>
-                <li><strong>Disable Analytics:</strong> Turn off Firebase Analytics in the App's Settings.</li>
-                <li><strong>Disable Notifications:</strong> Turn off push notifications in the App's Settings or your device settings.</li>
+                <li><strong>Disable Analytics:</strong> You can disable analytics at the system level where your operating system allows.</li>
+                <li><strong>Disable Notifications:</strong> You can disable push notifications at the system level where your operating system allows.</li>
             </ul>
 
             <h3>10.2 Rights for European Economic Area (EEA) Residents — GDPR</h3>
@@ -293,10 +293,11 @@
             <ul>
                 <li><strong>Legal Basis for Processing:</strong> We process your personal data based on the following legal grounds:
                     <ul>
-                        <li><strong>Consent:</strong> For personalized advertising and tracking (via ATT on iOS or ad settings on Android). You may withdraw consent at any time.</li>
-                        <li><strong>Legitimate Interest:</strong> For analytics, App functionality, crash diagnostics, and App improvement.</li>
-                        <li><strong>Contract Performance:</strong> For providing the App's core entertainment features based on your inputs.</li>
+                        <li><strong>Consent:</strong> For personalized advertising and tracking (via App Tracking Transparency on iOS or ad settings on Android). You may withdraw consent at any time through your device privacy settings or ad settings.</li>
+                        <li><strong>Legitimate Interest:</strong> For analytics, and for app improvement. You may object to processing based on legitimate interest.</li>
+                        <li><strong>Contract Performance:</strong> For providing the app's core entertainment features based on your inputs.</li>
                     </ul>
+                    <p>Analytics can be turned off in the App (Settings → Analytics).</p>
                 </li>
                 <li><strong>Right to Object:</strong> You may object to processing based on legitimate interest.</li>
                 <li><strong>Right to Restrict Processing:</strong> You may request that we restrict processing of your data in certain circumstances.</li>

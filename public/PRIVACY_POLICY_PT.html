@@ -136,7 +136,7 @@
             <h3>1.1 Informações que Você Fornece</h3>
             <ul>
                 <li><strong>Dados Pessoais:</strong> Seu nome (opcional) e data de nascimento, utilizados para gerar horóscopos e previsões personalizadas.</li>
-                <li><strong>Local de Nascimento:</strong> Uma descrição em texto do seu local de nascimento (por exemplo, "Moscou") utilizada para recursos de compatibilidade. Este <strong>não</strong> é a localização GPS do seu dispositivo.</li>
+                <li><strong>Local de Nascimento:</strong> Uma descrição em texto do seu local de nascimento (por exemplo, "Lisboa") utilizada para horóscopos personalizados. Este <strong>não</strong> é a localização GPS do seu dispositivo.</li>
                 <li><strong>Entradas de Funcionalidades:</strong> Descrições em texto de sonhos para o Intérprete de Sonhos, perguntas para o Oráculo Mágico e dados de nascimento para verificações de Compatibilidade Amorosa.</li>
                 <li><strong>Preferências:</strong> Seu idioma selecionado e configurações de notificação.</li>
             </ul>
@@ -147,7 +147,7 @@
                 <li><strong>Dados de Publicidade:</strong> Google AdMob coleta identificadores de publicidade (incluindo o Identificador para Anunciantes, ou IDFA, no iOS com o seu consentimento) para exibir anúncios.</li>
                 <li><strong>Localização Aproximada:</strong> O AdMob obtém a sua localização aproximada a partir do seu endereço IP para fins de direcionamento de anúncios. O Aplicativo <strong>não</strong> acessa o GPS do seu dispositivo nem solicita permissões de localização.</li>
                 <li><strong>Dados de Falhas e Diagnóstico:</strong> Relatórios de falhas, métricas de desempenho e outros dados de diagnóstico são coletados pelo AdMob e pelos SDKs do Firebase para manter a estabilidade e o desempenho do Aplicativo.</li>
-                <li><strong>Dados de Análise:</strong> Firebase Analytics coleta dados de uso do aplicativo, como duração da sessão, visualizações de tela e engajamento com funcionalidades. Você pode desativar o Firebase Analytics nas Configurações do Aplicativo.</li>
+                <li><strong>Dados de Análise:</strong> Firebase Analytics coleta dados de uso do aplicativo, como duração da sessão, visualizações de tela e engajamento com funcionalidades.</li>
                 <li><strong>Metadados de Conexão:</strong> O Firebase coleta metadados básicos de conexão (endereço IP, tipo de dispositivo, versão do sistema operacional) para gerenciamento de infraestrutura e configuração.</li>
             </ul>
 
@@ -242,7 +242,7 @@
             <h2>5. Armazenamento e Segurança de Dados</h2>
 
             <h3>5.1 Armazenamento Local</h3>
-            <p>A maioria dos dados pessoais — incluindo seu perfil (nome, data de nascimento, local de nascimento), histórico de sonhos, histórico do oráculo, cache de horóscopos, preferências de notificação e logs de diagnóstico — é armazenada diretamente no seu dispositivo utilizando armazenamento local e Flutter Secure Storage (que utiliza Keychain no iOS e EncryptedSharedPreferences no Android).</p>
+            <p>A maioria dos dados pessoais — incluindo seu perfil (nome, data de nascimento, local de nascimento), histórico de sonhos, histórico do oráculo (ex.: Eight Ball), cache de horóscopos e preferências de notificação — é armazenada apenas no seu dispositivo em armazenamento local (arquivos e preferências no dispositivo). Uma pequena quantidade de configuração do aplicativo (ex.: nível de assinatura, provedor selecionado) também pode ser armazenada no dispositivo usando Flutter Secure Storage (Keychain no iOS, EncryptedSharedPreferences no Android).</p>
 
             <h3>5.2 Processamento em Nuvem</h3>
             <p>Quando você utiliza funcionalidades baseadas em IA, suas entradas são transmitidas aos servidores da OpenAI para processamento e geração de imagens. Essas transmissões são efêmeras: nós não mantemos um banco de dados permanente no servidor com seus sonhos, perguntas ou solicitações de horóscopo.</p>
@@ -284,8 +284,8 @@
                 <li><strong>Exclusão:</strong> Solicitar a exclusão dos seus dados pessoais. Como a maioria dos dados é armazenada localmente no seu dispositivo, você pode excluí-los desinstalando o Aplicativo ou limpando os dados do Aplicativo.</li>
                 <li><strong>Portabilidade:</strong> Solicitar seus dados em formato portátil, quando aplicável.</li>
                 <li><strong>Desativação de Rastreamento:</strong> No iOS, negar o rastreamento por meio do prompt ATT. No Android, desativar a personalização de anúncios nas configurações do dispositivo.</li>
-                <li><strong>Desativar Análise:</strong> Desativar o Firebase Analytics nas Configurações do Aplicativo.</li>
-                <li><strong>Desativar Notificações:</strong> Desativar as notificações push nas Configurações do Aplicativo ou nas configurações do dispositivo.</li>
+                <li><strong>Desativar Análise:</strong> Você pode desativar a análise no nível do sistema quando o seu sistema operacional permitir.</li>
+                <li><strong>Desativar Notificações:</strong> Você pode desativar as notificações push no nível do sistema quando o seu sistema operacional permitir.</li>
             </ul>
 
             <h3>10.2 Direitos para Residentes do Espaço Econômico Europeu (EEE) — GDPR</h3>
@@ -293,10 +293,11 @@
             <ul>
                 <li><strong>Base Legal para o Processamento:</strong> Processamos seus dados pessoais com base nos seguintes fundamentos legais:
                     <ul>
-                        <li><strong>Consentimento:</strong> Para publicidade personalizada e rastreamento (via ATT no iOS ou configurações de anúncios no Android). Você pode retirar o consentimento a qualquer momento.</li>
-                        <li><strong>Interesse Legítimo:</strong> Para análise, funcionalidade do Aplicativo, diagnóstico de falhas e melhoria do Aplicativo.</li>
-                        <li><strong>Execução de Contrato:</strong> Para fornecer as funcionalidades principais de entretenimento do Aplicativo com base nas suas entradas.</li>
+                        <li><strong>Consentimento:</strong> Para publicidade personalizada e rastreamento (via App Tracking Transparency no iOS ou configurações de anúncios no Android). Você pode retirar o consentimento a qualquer momento através das configurações de privacidade ou de anúncios do seu dispositivo.</li>
+                        <li><strong>Interesse Legítimo:</strong> Para análise e melhoria do aplicativo. Você pode se opor ao processamento baseado em interesse legítimo.</li>
+                        <li><strong>Execução de Contrato:</strong> Para fornecer as funcionalidades principais de entretenimento do aplicativo com base nas suas entradas.</li>
                     </ul>
+                    <p>A análise pode ser desativada no Aplicativo (Configurações → Análise).</p>
                 </li>
                 <li><strong>Direito de Oposição:</strong> Você pode se opor ao processamento baseado em interesse legítimo.</li>
                 <li><strong>Direito de Restrição do Processamento:</strong> Você pode solicitar que restrinjamos o processamento dos seus dados em determinadas circunstâncias.</li>

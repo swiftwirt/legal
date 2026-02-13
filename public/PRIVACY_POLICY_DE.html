@@ -136,7 +136,7 @@
             <h3>1.1 Von Ihnen bereitgestellte Informationen</h3>
             <ul>
                 <li><strong>Personenbezogene Daten:</strong> Ihr Name (optional) und Ihr Geburtsdatum, die zur Erstellung personalisierter Horoskope und Vorhersagen verwendet werden.</li>
-                <li><strong>Geburtsort:</strong> Eine textliche Beschreibung Ihres Geburtsortes (z. B. „Moskau"), die für Kompatibilitätsfunktionen verwendet wird. Dies ist <strong>nicht</strong> Ihr GPS-Standort.</li>
+                <li><strong>Geburtsort:</strong> Eine textliche Beschreibung Ihres Geburtsortes (z. B. „Berlin"), die für personalisierte Horoskope verwendet wird. Dies ist <strong>nicht</strong> Ihr GPS-Standort.</li>
                 <li><strong>Funktionseingaben:</strong> Textbeschreibungen von Träumen für den Traumdeuter, Fragen für das Magische Orakel und Geburtsdaten für Liebeskompatibilitätsprüfungen.</li>
                 <li><strong>Einstellungen:</strong> Ihre gewählte Sprache und Benachrichtigungseinstellungen.</li>
             </ul>
@@ -147,7 +147,7 @@
                 <li><strong>Werbedaten:</strong> Google AdMob erfasst Werbekennungen (einschließlich des Identifier for Advertisers, IDFA, auf iOS mit Ihrer Zustimmung), um Werbung anzuzeigen.</li>
                 <li><strong>Ungefährer Standort:</strong> AdMob leitet Ihren ungefähren (groben) Standort aus Ihrer IP-Adresse ab, um Werbung gezielt auszuspielen. Die App greift <strong>nicht</strong> auf das GPS Ihres Geräts zu und fordert keine Standortberechtigungen an.</li>
                 <li><strong>Absturz- und Diagnosedaten:</strong> Absturzberichte, Leistungskennzahlen und andere Diagnosedaten werden von AdMob- und Firebase-SDKs erfasst, um die Stabilität und Leistung der App aufrechtzuerhalten.</li>
-                <li><strong>Analysedaten:</strong> Firebase Analytics erfasst App-Nutzungsdaten wie Sitzungsdauer, Bildschirmaufrufe und Funktionsnutzung. Sie können Firebase Analytics in den App-Einstellungen deaktivieren.</li>
+                <li><strong>Analysedaten:</strong> Firebase Analytics erfasst App-Nutzungsdaten wie Sitzungsdauer, Bildschirmaufrufe und Funktionsnutzung.</li>
                 <li><strong>Verbindungsmetadaten:</strong> Firebase erfasst grundlegende Verbindungsmetadaten (IP-Adresse, Gerätetyp, Betriebssystemversion) für Infrastruktur- und Konfigurationsmanagement.</li>
             </ul>
 
@@ -242,7 +242,7 @@
             <h2>5. Datenspeicherung und Sicherheit</h2>
 
             <h3>5.1 Lokale Speicherung</h3>
-            <p>Die meisten personenbezogenen Daten — einschließlich Ihres Profils (Name, Geburtsdatum, Geburtsort), Traumverlauf, Orakelverlauf, Horoskop-Cache, Benachrichtigungseinstellungen und Diagnoseprotokolle — werden direkt auf Ihrem Gerät gespeichert, unter Verwendung von lokalem Speicher und Flutter Secure Storage (das Keychain auf iOS und EncryptedSharedPreferences auf Android nutzt).</p>
+            <p>Die meisten personenbezogenen Daten — einschließlich Ihres Profils (Name, Geburtsdatum, Geburtsort), Traumverlauf, Orakelverlauf (z. B. Eight Ball), Horoskop-Cache und Benachrichtigungseinstellungen — werden nur auf Ihrem Gerät in lokalem Speicher (Dateien und Einstellungen auf dem Gerät) gespeichert. Eine kleine Menge an App-Konfiguration (z. B. Abo-Stufe, gewählter Anbieter) kann ebenfalls auf dem Gerät in Flutter Secure Storage (Keychain auf iOS, EncryptedSharedPreferences auf Android) gespeichert werden.</p>
 
             <h3>5.2 Cloud-Verarbeitung</h3>
             <p>Wenn Sie KI-gestützte Funktionen nutzen, werden Ihre Eingaben zur Verarbeitung und Bildgenerierung an die Server von OpenAI übertragen. Diese Übertragungen sind flüchtig: Wir unterhalten keine permanente serverseitige Datenbank Ihrer Träume, Fragen oder Horoskopanfragen.</p>
@@ -284,8 +284,8 @@
                 <li><strong>Löschung:</strong> Anforderung der Löschung Ihrer personenbezogenen Daten. Da die meisten Daten lokal auf Ihrem Gerät gespeichert werden, können Sie sie durch Deinstallation der App oder Bereinigung der App-Daten löschen.</li>
                 <li><strong>Datenübertragbarkeit:</strong> Anforderung Ihrer Daten in einem portablen Format, soweit anwendbar.</li>
                 <li><strong>Widerspruch gegen Tracking:</strong> Auf iOS können Sie Tracking über die ATT-Aufforderung ablehnen. Auf Android können Sie die Werbepersonalisierung in den Geräteeinstellungen deaktivieren.</li>
-                <li><strong>Analysen deaktivieren:</strong> Firebase Analytics in den App-Einstellungen ausschalten.</li>
-                <li><strong>Benachrichtigungen deaktivieren:</strong> Push-Benachrichtigungen in den App-Einstellungen oder Geräteeinstellungen ausschalten.</li>
+                <li><strong>Analysen deaktivieren:</strong> Sie können Analysen auf Systemebene deaktivieren, sofern Ihr Betriebssystem dies ermöglicht.</li>
+                <li><strong>Benachrichtigungen deaktivieren:</strong> Sie können Push-Benachrichtigungen auf Systemebene deaktivieren, sofern Ihr Betriebssystem dies ermöglicht.</li>
             </ul>
 
             <h3>10.2 Rechte für Einwohner des Europäischen Wirtschaftsraums (EWR) — DSGVO</h3>
@@ -293,10 +293,11 @@
             <ul>
                 <li><strong>Rechtsgrundlage der Verarbeitung:</strong> Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:
                     <ul>
-                        <li><strong>Einwilligung:</strong> Für personalisierte Werbung und Tracking (über ATT auf iOS oder Werbeeinstellungen auf Android). Sie können Ihre Einwilligung jederzeit widerrufen.</li>
-                        <li><strong>Berechtigtes Interesse:</strong> Für Analysen, App-Funktionalität, Absturzdiagnose und App-Verbesserung.</li>
+                        <li><strong>Einwilligung:</strong> Für personalisierte Werbung und Tracking (über App Tracking Transparency auf iOS oder Werbeeinstellungen auf Android). Sie können Ihre Einwilligung jederzeit über die Datenschutzeinstellungen oder Werbeeinstellungen Ihres Geräts widerrufen.</li>
+                        <li><strong>Berechtigtes Interesse:</strong> Für Analysen und App-Verbesserung. Sie können der Verarbeitung auf Grundlage berechtigter Interessen widersprechen.</li>
                         <li><strong>Vertragserfüllung:</strong> Für die Bereitstellung der Kern-Unterhaltungsfunktionen der App basierend auf Ihren Eingaben.</li>
                     </ul>
+                    <p>Analysen können in der App deaktiviert werden (Einstellungen → Analysen).</p>
                 </li>
                 <li><strong>Widerspruchsrecht:</strong> Sie können der Verarbeitung auf Grundlage berechtigter Interessen widersprechen.</li>
                 <li><strong>Recht auf Einschränkung der Verarbeitung:</strong> Sie können verlangen, dass wir die Verarbeitung Ihrer Daten unter bestimmten Umständen einschränken.</li>
