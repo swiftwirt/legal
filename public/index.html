@@ -70,17 +70,23 @@
 
         /* NAV */
         nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}
-        nav.scrolled{background:rgba(3,0,20,0.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.04);padding:16px 48px}
+        nav.scrolled{background:rgba(3,0,20,0.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:16px 48px}
         .logo{font-size:18px;font-weight:700;letter-spacing:-0.5px}
         .nav-r{display:flex;gap:28px;align-items:center}
         .nav-r a{font-size:13px;color:rgba(255,255,255,0.4);transition:color 0.3s;font-weight:500}
         .nav-r a:hover{color:#fff}
 
-        /* lang switch */
-        .lang-sw{display:flex;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;margin-left:4px}
-        .lang-sw button{background:none;border:none;color:rgba(255,255,255,0.3);font-family:inherit;font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.3s;letter-spacing:0.5px}
-        .lang-sw button.active{background:rgba(255,255,255,0.1);color:#fff}
-        .lang-sw button:hover:not(.active){color:rgba(255,255,255,0.6)}
+        /* lang dropdown */
+        .lang-dd{position:relative;margin-left:4px}
+        .lang-dd-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;color:#fff;font-family:inherit;font-size:12px;font-weight:600;padding:6px 24px 6px 12px;cursor:pointer;letter-spacing:0.5px;position:relative;transition:all 0.3s}
+        .lang-dd-btn::after{content:'';position:absolute;right:10px;top:50%;transform:translateY(-50%);border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid rgba(255,255,255,0.4);transition:transform 0.3s}
+        .lang-dd.open .lang-dd-btn::after{transform:translateY(-50%) rotate(180deg)}
+        .lang-dd-btn:hover{background:rgba(255,255,255,0.1)}
+        .lang-dd-menu{position:absolute;top:calc(100% + 6px);right:0;background:rgba(10,6,30,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:4px;min-width:100%;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all 0.2s;z-index:200}
+        .lang-dd.open .lang-dd-menu{opacity:1;visibility:visible;transform:translateY(0)}
+        .lang-dd-menu button{display:block;width:100%;background:none;border:none;color:rgba(255,255,255,0.4);font-family:inherit;font-size:12px;font-weight:600;padding:7px 14px;cursor:pointer;text-align:left;border-radius:6px;letter-spacing:0.5px;transition:all 0.2s}
+        .lang-dd-menu button:hover{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.7)}
+        .lang-dd-menu button.active{color:#fff;background:rgba(255,255,255,0.1)}
 
         /* HERO */
         .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;z-index:1;padding:0 24px}
@@ -93,9 +99,6 @@
         .hero h1{font-size:clamp(64px,12vw,140px);font-weight:900;letter-spacing:-6px;line-height:0.85;margin-bottom:24px;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,0.3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;width:100%}
         .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.35);max-width:420px;line-height:1.6;margin-bottom:48px;font-weight:400;text-align:center}
 
-        .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
-        .scroll-line{width:1px;height:32px;background:linear-gradient(180deg,rgba(255,255,255,0.2),transparent);animation:scrollPulse 2s ease-in-out infinite}
-        @keyframes scrollPulse{0%,100%{opacity:0.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.3)}}
 
         /* NAV LOGO */
         .nav-logo{display:flex;align-items:center;gap:10px}
@@ -105,7 +108,8 @@
         .qr-wrap{display:inline-flex;flex-direction:row;align-items:center;gap:24px;padding:16px;border-radius:16px;background:#000;border:1px solid rgba(255,255,255,0.06)}
         .qr-img{width:140px;height:140px;display:block;border-radius:6px}
         .qr-right{display:flex;flex-direction:column;align-items:center;gap:10px}
-        .qr-label{font-size:11px;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:2px;font-weight:600}
+        .qr-label{font-size:11px;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:2px;font-weight:600;text-align:center}
+        .qr-or{font-size:11px;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:2px;font-weight:600}
         .gp-badge{display:block;transition:opacity 0.3s}
         .gp-badge:hover{opacity:0.8}
         .gp-badge-img{height:auto;width:162px;display:block;object-fit:contain}
@@ -137,7 +141,7 @@
             nav{padding:16px 20px}
             nav.scrolled{padding:12px 20px}
             .nav-r{gap:12px}
-            .lang-sw button{padding:5px 10px;font-size:11px}
+            .lang-dd-btn{font-size:11px;padding:5px 20px 5px 10px}
             .hero h1{letter-spacing:-3px}
             .qr-wrap{flex-direction:column}
             .qr-img{width:120px;height:120px}
@@ -158,9 +162,18 @@
 <nav>
     <a href="/" class="nav-logo"><img src="/assets/images/logo.png" alt="Gertruda" width="28" height="28"><span class="logo">Gertruda</span></a>
     <div class="nav-r">
-        <div class="lang-sw">
-            <button class="active" onclick="setLang('en')">EN</button>
-            <button onclick="setLang('fr')">FR</button>
+        <div class="lang-dd" id="langDd">
+            <button class="lang-dd-btn" onclick="document.getElementById('langDd').classList.toggle('open')">EN</button>
+            <div class="lang-dd-menu">
+                <button class="active" onclick="setLang('en')">EN</button>
+                <button onclick="setLang('fr')">FR</button>
+                <button onclick="setLang('de')">DE</button>
+                <button onclick="setLang('es')">ES</button>
+                <button onclick="setLang('pt')">PT</button>
+                <button onclick="setLang('ru')">RU</button>
+                <button onclick="setLang('uk')">UK</button>
+                <button onclick="setLang('kk')">KK</button>
+            </div>
         </div>
     </div>
 </nav>
@@ -171,7 +184,6 @@
     <div class="hero-ring"></div>
     <h1>Gertruda</h1>
     <p class="hero-sub" data-i="hero-sub">Your stars. Your dreams. Your answers.</p>
-    <div class="scroll-hint"><div class="scroll-line"></div></div>
 </section>
 
 <section class="statement">
@@ -190,6 +202,7 @@
                 <img class="qr-img" src="/assets/images/qr-code.png" alt="Scan to download Gertruda" width="140" height="140">
                 <div class="qr-right">
                     <div class="qr-label" data-i="qr-label">Scan to download</div>
+                    <div class="qr-or" data-i="qr-or">or</div>
                     <a href="https://play.google.com/store/apps/details?id=com.natjam" class="gp-badge" target="_blank" rel="noopener">
                         <img class="gp-badge-img" data-lang="en" src="/assets/badges/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" width="162" height="48">
                     </a>
@@ -203,8 +216,8 @@
                 <a href="/terms" data-i="foot-terms" data-link="terms">Terms of Use</a>
             </div>
             <div class="foot-col">
-                <h6>Contact</h6>
-                <a href="mailto:legal@gertruda.fun">Support</a>
+                <h6 data-i="foot-contact">Contact</h6>
+                <a href="mailto:legal@gertruda.fun" data-i="foot-support">Support</a>
                 <a href="mailto:privacy@gertruda.fun" data-i="foot-c-privacy">Privacy</a>
                 <a href="mailto:legal@gertruda.fun" data-i="foot-c-legal">Legal</a>
             </div>
@@ -225,10 +238,13 @@ en:{
     "download":"Download",
     "disclaimer":"For entertainment purposes only. Not professional advice. Rated 17+. All content is AI-generated and should not be used for important life decisions.",
     "qr-label":"Scan to download",
+    "qr-or":"or",
     "foot-desc":"AI-powered astrology & dream interpretation. Android.",
     "foot-legal":"Legal",
     "foot-privacy":"Privacy Policy",
     "foot-terms":"Terms of Use",
+    "foot-contact":"Contact",
+    "foot-support":"Support",
     "foot-c-privacy":"Privacy",
     "foot-c-legal":"Legal"
 },
@@ -237,25 +253,118 @@ fr:{
     "nav-terms":"Conditions",
     "hero-sub":"Vos \u00e9toiles. Vos r\u00eaves. Vos r\u00e9ponses.",
     "download":"T\u00e9l\u00e9charger",
-    "disclaimer":"Divertissement uniquement. Ne constitue pas un avis professionnel. D\u00e8s 13\u00a0ans. Tout le contenu est g\u00e9n\u00e9r\u00e9 par IA et ne doit pas \u00eatre utilis\u00e9 pour des d\u00e9cisions importantes.",
+    "disclaimer":"Divertissement uniquement. Ne constitue pas un avis professionnel. D\u00e8s 17\u00a0ans. Tout le contenu est g\u00e9n\u00e9r\u00e9 par IA et ne doit pas \u00eatre utilis\u00e9 pour des d\u00e9cisions importantes.",
     "qr-label":"Scanner pour t\u00e9l\u00e9charger",
+    "qr-or":"ou",
     "foot-desc":"Astrologie et interpr\u00e9tation des r\u00eaves par IA. Android.",
     "foot-legal":"L\u00e9gal",
     "foot-privacy":"Politique de confidentialit\u00e9",
     "foot-terms":"Conditions d\u2019utilisation",
+    "foot-contact":"Contact",
+    "foot-support":"Assistance",
     "foot-c-privacy":"Confidentialit\u00e9",
     "foot-c-legal":"L\u00e9gal"
+},
+de:{
+    "hero-sub":"Deine Sterne. Deine Tr\u00e4ume. Deine Antworten.",
+    "disclaimer":"Nur zur Unterhaltung. Keine professionelle Beratung. Ab 17\u00a0Jahren. Alle Inhalte sind KI-generiert und sollten nicht f\u00fcr wichtige Lebensentscheidungen verwendet werden.",
+    "qr-label":"Scannen zum Herunterladen",
+    "qr-or":"oder",
+    "foot-legal":"Rechtliches",
+    "foot-privacy":"Datenschutzrichtlinie",
+    "foot-terms":"Nutzungsbedingungen",
+    "foot-contact":"Kontakt",
+    "foot-support":"Support",
+    "foot-c-privacy":"Datenschutz",
+    "foot-c-legal":"Rechtliches"
+},
+es:{
+    "hero-sub":"Tus estrellas. Tus sue\u00f1os. Tus respuestas.",
+    "disclaimer":"Solo con fines de entretenimiento. No es asesoramiento profesional. Clasificaci\u00f3n: 17+. Todo el contenido es generado por IA y no debe usarse para decisiones importantes.",
+    "qr-label":"Escanear para descargar",
+    "qr-or":"o",
+    "foot-legal":"Legal",
+    "foot-privacy":"Pol\u00edtica de privacidad",
+    "foot-terms":"Condiciones de uso",
+    "foot-contact":"Contacto",
+    "foot-support":"Soporte",
+    "foot-c-privacy":"Privacidad",
+    "foot-c-legal":"Legal"
+},
+pt:{
+    "hero-sub":"As tuas estrelas. Os teus sonhos. As tuas respostas.",
+    "disclaimer":"Apenas para entretenimento. N\u00e3o constitui aconselhamento profissional. Classifica\u00e7\u00e3o: 17+. Todo o conte\u00fado \u00e9 gerado por IA e n\u00e3o deve ser usado para decis\u00f5es importantes.",
+    "qr-label":"Digitalizar para transferir",
+    "qr-or":"ou",
+    "foot-legal":"Legal",
+    "foot-privacy":"Pol\u00edtica de privacidade",
+    "foot-terms":"Termos de utiliza\u00e7\u00e3o",
+    "foot-contact":"Contacto",
+    "foot-support":"Suporte",
+    "foot-c-privacy":"Privacidade",
+    "foot-c-legal":"Legal"
+},
+ru:{
+    "hero-sub":"\u0422\u0432\u043e\u0438 \u0437\u0432\u0451\u0437\u0434\u044b. \u0422\u0432\u043e\u0438 \u0441\u043d\u044b. \u0422\u0432\u043e\u0438 \u043e\u0442\u0432\u0435\u0442\u044b.",
+    "disclaimer":"\u0422\u043e\u043b\u044c\u043a\u043e \u0434\u043b\u044f \u0440\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f. \u041d\u0435 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u0435\u0439. \u0412\u043e\u0437\u0440\u0430\u0441\u0442: 17+. \u0412\u0435\u0441\u044c \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u0441\u043e\u0437\u0434\u0430\u043d \u0418\u0418 \u0438 \u043d\u0435 \u0434\u043e\u043b\u0436\u0435\u043d \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0434\u043b\u044f \u0432\u0430\u0436\u043d\u044b\u0445 \u0436\u0438\u0437\u043d\u0435\u043d\u043d\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439.",
+    "qr-label":"\u0421\u043a\u0430\u043d\u0438\u0440\u0443\u0439\u0442\u0435 \u0434\u043b\u044f \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438",
+    "qr-or":"\u0438\u043b\u0438",
+    "foot-legal":"\u041f\u0440\u0430\u0432\u043e\u0432\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f",
+    "foot-privacy":"\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+    "foot-terms":"\u0423\u0441\u043b\u043e\u0432\u0438\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f",
+    "foot-contact":"\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+    "foot-support":"\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430",
+    "foot-c-privacy":"\u041a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+    "foot-c-legal":"\u041f\u0440\u0430\u0432\u043e\u0432\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f"
+},
+uk:{
+    "hero-sub":"\u0422\u0432\u043e\u0457 \u0437\u0456\u0440\u043a\u0438. \u0422\u0432\u043e\u0457 \u0441\u043d\u0438. \u0422\u0432\u043e\u0457 \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0456.",
+    "disclaimer":"\u041b\u0438\u0448\u0435 \u0434\u043b\u044f \u0440\u043e\u0437\u0432\u0430\u0433. \u041d\u0435 \u0454 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u043e\u044e \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0456\u0454\u044e. \u0412\u0456\u043a: 17+. \u0423\u0432\u0435\u0441\u044c \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043e \u0428\u0406 \u0456 \u043d\u0435 \u0441\u043b\u0456\u0434 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0432\u0430\u0442\u0438 \u0434\u043b\u044f \u0432\u0430\u0436\u043b\u0438\u0432\u0438\u0445 \u0436\u0438\u0442\u0442\u0454\u0432\u0438\u0445 \u0440\u0456\u0448\u0435\u043d\u044c.",
+    "qr-label":"\u0421\u043a\u0430\u043d\u0443\u0439\u0442\u0435 \u0434\u043b\u044f \u0437\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0435\u043d\u043d\u044f",
+    "qr-or":"\u0430\u0431\u043e",
+    "foot-legal":"\u041f\u0440\u0430\u0432\u043e\u0432\u0430 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044f",
+    "foot-privacy":"\u041f\u043e\u043b\u0456\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u043e\u0441\u0442\u0456",
+    "foot-terms":"\u0423\u043c\u043e\u0432\u0438 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f",
+    "foot-contact":"\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u0438",
+    "foot-support":"\u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430",
+    "foot-c-privacy":"\u041a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u0456\u0441\u0442\u044c",
+    "foot-c-legal":"\u041f\u0440\u0430\u0432\u043e\u0432\u0430 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044f"
+},
+kk:{
+    "hero-sub":"\u0421\u0435\u043d\u0456\u04a3 \u0436\u04b1\u043b\u0434\u044b\u0437\u0434\u0430\u0440\u044b\u04a3. \u0421\u0435\u043d\u0456\u04a3 \u0442\u04af\u0441\u0442\u0435\u0440\u0456\u04a3. \u0421\u0435\u043d\u0456\u04a3 \u0436\u0430\u0443\u0430\u043f\u0442\u0430\u0440\u044b\u04a3.",
+    "disclaimer":"\u0422\u0435\u043a \u043a\u04e9\u04a3\u0456\u043b \u043a\u04e9\u0442\u0435\u0440\u0443 \u04af\u0448\u0456\u043d. \u041a\u04d9\u0441\u0456\u0431\u0438 \u043a\u0435\u04a3\u0435\u0441 \u0435\u043c\u0435\u0441. \u0416\u0430\u0441\u044b: 17+. \u0411\u0430\u0440\u043b\u044b\u049b \u043c\u0430\u0437\u043c\u04b1\u043d \u0416\u0418 \u0430\u0440\u049b\u044b\u043b\u044b \u0436\u0430\u0441\u0430\u043b\u0493\u0430\u043d \u0436\u04d9\u043d\u0435 \u043c\u0430\u04a3\u044b\u0437\u0434\u044b \u04e9\u043c\u0456\u0440\u043b\u0456\u043a \u0448\u0435\u0448\u0456\u043c\u0434\u0435\u0440 \u04af\u0448\u0456\u043d \u043f\u0430\u0439\u0434\u0430\u043b\u0430\u043d\u0443\u0493\u0430 \u0431\u043e\u043b\u043c\u0430\u0439\u0434\u044b.",
+    "qr-label":"\u0416\u04af\u043a\u0442\u0435\u0443 \u04af\u0448\u0456\u043d \u0441\u043a\u0430\u043d\u0435\u0440\u043b\u0435\u04a3\u0456\u0437",
+    "qr-or":"\u043d\u0435\u043c\u0435\u0441\u0435",
+    "foot-legal":"\u049a\u04b1\u049b\u044b\u049b\u0442\u044b\u049b \u0430\u049b\u043f\u0430\u0440\u0430\u0442",
+    "foot-privacy":"\u049a\u04b1\u043f\u0438\u044f\u043b\u044b\u043b\u044b\u049b \u0441\u0430\u044f\u0441\u0430\u0442\u044b",
+    "foot-terms":"\u049a\u043e\u043b\u0434\u0430\u043d\u0443 \u0448\u0430\u0440\u0442\u0442\u0430\u0440\u044b",
+    "foot-contact":"\u0411\u0430\u0439\u043b\u0430\u043d\u044b\u0441",
+    "foot-support":"\u049a\u043e\u043b\u0434\u0430\u0443",
+    "foot-c-privacy":"\u049a\u04b1\u043f\u0438\u044f\u043b\u044b\u043b\u044b\u049b",
+    "foot-c-legal":"\u049a\u04b1\u049b\u044b\u049b\u0442\u044b\u049b"
 }
 };
 
 var stmtHtml={
     en:'<em>Made for the curious.</em><br>Powered by AI.<br>Written in the stars.',
-    fr:'<em>Fait pour les curieux.</em><br>Propuls\u00e9 par l\u2019IA.<br>\u00c9crit dans les \u00e9toiles.'
+    fr:'<em>Fait pour les curieux.</em><br>Propuls\u00e9 par l\u2019IA.<br>\u00c9crit dans les \u00e9toiles.',
+    de:'<em>F\u00fcr die Neugierigen.</em><br>Angetrieben von KI.<br>Geschrieben in den Sternen.',
+    es:'<em>Hecho para los curiosos.</em><br>Impulsado por IA.<br>Escrito en las estrellas.',
+    pt:'<em>Feito para os curiosos.</em><br>Movido por IA.<br>Escrito nas estrelas.',
+    ru:'<em>\u0414\u043b\u044f \u043b\u044e\u0431\u043e\u043f\u044b\u0442\u043d\u044b\u0445.</em><br>\u041d\u0430 \u043e\u0441\u043d\u043e\u0432\u0435 \u0418\u0418.<br>\u041d\u0430\u043f\u0438\u0441\u0430\u043d\u043e \u0432 \u0437\u0432\u0451\u0437\u0434\u0430\u0445.',
+    uk:'<em>\u0414\u043b\u044f \u0434\u043e\u043f\u0438\u0442\u043b\u0438\u0432\u0438\u0445.</em><br>\u041d\u0430 \u043e\u0441\u043d\u043e\u0432\u0456 \u0428\u0406.<br>\u041d\u0430\u043f\u0438\u0441\u0430\u043d\u043e \u0443 \u0437\u0456\u0440\u043a\u0430\u0445.',
+    kk:'<em>\u0411\u0456\u043b\u0433\u0456\u0448 \u04af\u0448\u0456\u043d.</em><br>\u0416\u0418 \u043d\u0435\u0433\u0456\u0437\u0456\u043d\u0434\u0435.<br>\u0416\u04b1\u043b\u0434\u044b\u0437\u0434\u0430\u0440\u0434\u0430 \u0436\u0430\u0437\u044b\u043b\u0493\u0430\u043d.'
 };
 
 var linkMap={
     en:{privacy:'/privacy',terms:'/terms'},
-    fr:{privacy:'/privacy/fr',terms:'/terms/fr'}
+    fr:{privacy:'/privacy/fr',terms:'/terms/fr'},
+    de:{privacy:'/privacy/de',terms:'/terms/de'},
+    es:{privacy:'/privacy/es',terms:'/terms/es'},
+    pt:{privacy:'/privacy/pt',terms:'/terms/pt'},
+    ru:{privacy:'/privacy/ru',terms:'/terms/ru'},
+    uk:{privacy:'/privacy/uk',terms:'/terms/uk'},
+    kk:{privacy:'/privacy/kk',terms:'/terms/kk'}
 };
 
 var currentLang='en';
@@ -263,8 +372,11 @@ var currentLang='en';
 function setLang(lang){
     currentLang=lang;
     document.documentElement.lang=lang;
-    // update toggle buttons
-    document.querySelectorAll('.lang-sw button').forEach(function(b){
+    // update dropdown
+    var dd=document.getElementById('langDd');
+    dd.querySelector('.lang-dd-btn').textContent=lang.toUpperCase();
+    dd.classList.remove('open');
+    dd.querySelectorAll('.lang-dd-menu button').forEach(function(b){
         b.classList.toggle('active',b.textContent.trim().toLowerCase()===lang)
     });
     // swap text
@@ -281,9 +393,18 @@ function setLang(lang){
     document.querySelectorAll('a[data-link="privacy"]').forEach(function(a){a.href=routes.privacy});
     document.querySelectorAll('a[data-link="terms"]').forEach(function(a){a.href=routes.terms});
     // swap Google Play badge
-    var badgeMap={en:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_English.png',fr:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_French-CA.png'};
+    var badgeMap={
+        en:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_English.png',
+        fr:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_French-CA.png',
+        de:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_German.png',
+        es:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_Spanish.png',
+        pt:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_Portuguese-Portugal.png',
+        ru:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_Russian.png',
+        uk:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_Ukranian.png',
+        kk:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_Kazakh.png'
+    };
     var badge=document.querySelector('.gp-badge-img');
-    if(badge && badgeMap[lang]) badge.src=badgeMap[lang];
+    if(badge) badge.src=badgeMap[lang]||badgeMap.en;
 }
 
 // starfield
@@ -306,6 +427,12 @@ var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
 },{threshold:0.15});
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+// close lang dropdown on outside click
+document.addEventListener('click',function(e){
+    var dd=document.getElementById('langDd');
+    if(dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
 </script>
 
 </body>
