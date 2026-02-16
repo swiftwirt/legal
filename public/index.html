@@ -409,12 +409,47 @@ function setLang(lang){
 
 // starfield
 (function(){
-    var c=document.getElementById('stars'),x=c.getContext('2d'),stars=[],count=200;
+    var c=document.getElementById('stars'),x=c.getContext('2d'),stars=[],count=220,scrollY=0,targetScrollY=0;
     function resize(){c.width=window.innerWidth;c.height=window.innerHeight}
-    function init(){stars=[];for(var i=0;i<count;i++){stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.2,a:Math.random(),d:Math.random()*0.003+0.001,f:Math.random()>0.5?1:-1})}}
-    function draw(){x.clearRect(0,0,c.width,c.height);for(var i=0;i<stars.length;i++){var s=stars[i];s.a+=s.d*s.f;if(s.a>1||s.a<0.1)s.f*=-1;x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);x.fillStyle='rgba(255,255,255,'+s.a*0.6+')';x.fill()}requestAnimationFrame(draw)}
+    function init(){
+        stars=[];
+        var h=Math.max(c.height,document.body.scrollHeight);
+        for(var i=0;i<count;i++){
+            var depth=Math.random();
+            stars.push({
+                x:Math.random()*c.width,
+                y:Math.random()*h,
+                r:depth*1.2+0.2,
+                a:Math.random(),
+                d:Math.random()*0.002+0.0005,
+                f:Math.random()>0.5?1:-1,
+                depth:0.15+depth*0.85
+            })
+        }
+    }
+    function draw(){
+        scrollY+=(targetScrollY-scrollY)*0.1;
+        x.clearRect(0,0,c.width,c.height);
+        for(var i=0;i<stars.length;i++){
+            var s=stars[i];
+            s.a+=s.d*s.f;
+            if(s.a>1)s.f=-1;
+            if(s.a<0.15)s.f=1;
+            var py=s.y-scrollY*s.depth;
+            var totalH=Math.max(c.height,document.body.scrollHeight);
+            py=((py%totalH)+totalH)%totalH;
+            if(py>c.height+20)continue;
+            x.beginPath();
+            x.arc(s.x,py,s.r,0,Math.PI*2);
+            x.fillStyle='rgba(255,255,255,'+s.a*0.6+')';
+            x.fill()
+        }
+        requestAnimationFrame(draw)
+    }
+    window.addEventListener('scroll',function(){targetScrollY=window.scrollY},{passive:true});
+    var lastW=0;
     resize();init();draw();
-    window.addEventListener('resize',function(){resize();init()})
+    window.addEventListener('resize',function(){var w=window.innerWidth;resize();if(w!==lastW){lastW=w;init()}})
 })();
 
 // nav scroll
