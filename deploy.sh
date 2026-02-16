@@ -2,3 +2,4 @@
 set -e
 cd "$(dirname "$0")"
 firebase deploy --only hosting
+``

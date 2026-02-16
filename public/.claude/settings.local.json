@@ -5,7 +5,8 @@
       "Bash(for:*)",
       "Bash(do sed -i '' 's/gertruda\\\\.app/gertruda.fun/g' \"$f\")",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(sips:*)"
     ]
   }
 }

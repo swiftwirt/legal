@@ -3,8 +3,57 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gertruda</title>
-    <meta name="description" content="Gertruda — AI-powered astrology, dream interpretation, love compatibility, and oracle. iOS &amp; Android.">
+    <title>Gertruda — AI Astrology & Dream Interpretation</title>
+    <meta name="description" content="Gertruda — AI-powered astrology, dream interpretation, love compatibility, and oracle. Available on Android.">
+    <meta name="keywords" content="astrology, horoscope, dream interpretation, AI astrology, love compatibility, oracle, zodiac, tarot">
+    <meta name="author" content="Gertruda">
+    <meta name="theme-color" content="#030014">
+    <link rel="canonical" href="https://gertruda.fun/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gertruda.fun/">
+    <meta property="og:title" content="Gertruda — AI Astrology & Dream Interpretation">
+    <meta property="og:description" content="Your stars. Your dreams. Your answers. AI-powered astrology, dream interpretation, love compatibility, and oracle.">
+    <meta property="og:image" content="https://gertruda.fun/assets/images/logo.png">
+    <meta property="og:site_name" content="Gertruda">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://gertruda.fun/">
+    <meta name="twitter:title" content="Gertruda — AI Astrology & Dream Interpretation">
+    <meta name="twitter:description" content="Your stars. Your dreams. Your answers. AI-powered astrology, dream interpretation, love compatibility, and oracle.">
+    <meta name="twitter:image" content="https://gertruda.fun/assets/images/logo.png">
+
+    <!-- Google Play -->
+    <meta name="google-play-app" content="app-id=com.natjam">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Gertruda",
+        "description": "AI-powered astrology, dream interpretation, love compatibility, and oracle.",
+        "url": "https://gertruda.fun",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "installUrl": "https://play.google.com/store/apps/details?id=com.natjam"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,17 +90,25 @@
         .hero-ring:nth-child(3){width:440px;height:440px;animation-duration:90s;animation-direction:reverse;border-color:rgba(200,100,255,0.05)}
         @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 
-        .hero h1{font-size:clamp(64px,12vw,140px);font-weight:900;letter-spacing:-6px;line-height:0.85;margin-bottom:24px;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,0.3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.35);max-width:420px;line-height:1.6;margin-bottom:48px;font-weight:400}
-        .hero-stores{display:flex;gap:12px}
-        .store-btn{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:12px 24px;border-radius:14px;transition:all 0.3s;font-size:14px;font-weight:600}
-        .store-btn:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);transform:translateY(-2px)}
-        .store-btn svg{width:20px;height:20px;opacity:0.7}
-        .store-btn span{font-size:9px;display:block;opacity:0.4;font-weight:400;text-transform:uppercase;letter-spacing:1px;margin-bottom:1px}
+        .hero h1{font-size:clamp(64px,12vw,140px);font-weight:900;letter-spacing:-6px;line-height:0.85;margin-bottom:24px;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,0.3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;width:100%}
+        .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.35);max-width:420px;line-height:1.6;margin-bottom:48px;font-weight:400;text-align:center}
 
         .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
         .scroll-line{width:1px;height:32px;background:linear-gradient(180deg,rgba(255,255,255,0.2),transparent);animation:scrollPulse 2s ease-in-out infinite}
         @keyframes scrollPulse{0%,100%{opacity:0.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.3)}}
+
+        /* NAV LOGO */
+        .nav-logo{display:flex;align-items:center;gap:10px}
+        .nav-logo img{width:28px;height:28px;border-radius:6px}
+
+        /* QR + BADGE */
+        .qr-wrap{display:inline-flex;flex-direction:row;align-items:center;gap:24px;padding:16px;border-radius:16px;background:#000;border:1px solid rgba(255,255,255,0.06)}
+        .qr-img{width:140px;height:140px;display:block;border-radius:6px}
+        .qr-right{display:flex;flex-direction:column;align-items:center;gap:10px}
+        .qr-label{font-size:11px;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:2px;font-weight:600}
+        .gp-badge{display:block;transition:opacity 0.3s}
+        .gp-badge:hover{opacity:0.8}
+        .gp-badge-img{height:auto;width:162px;display:block;object-fit:contain}
 
         /* STATEMENT */
         .statement{position:relative;z-index:1;padding:80px 24px 120px;text-align:center}
@@ -72,25 +129,24 @@
         .foot-col h6{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.25);margin-bottom:14px;font-weight:600}
         .foot-col a{display:block;font-size:13px;color:rgba(255,255,255,0.3);padding:4px 0;transition:color 0.3s}
         .foot-col a:hover{color:rgba(255,255,255,0.7)}
-        .foot-bottom{max-width:1000px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-        .foot-bottom span,.foot-bottom a{font-size:11px;color:rgba(255,255,255,0.12)}
-        .foot-bottom a{transition:color 0.3s}
-        .foot-bottom a:hover{color:rgba(255,255,255,0.4)}
-        .foot-links{display:flex;gap:20px}
+        .foot-bottom{max-width:1000px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);text-align:center}
+        .foot-bottom span{font-size:11px;color:rgba(255,255,255,0.12)}
 
         /* RESPONSIVE */
         @media(max-width:768px){
             nav{padding:16px 20px}
             nav.scrolled{padding:12px 20px}
             .nav-r{gap:12px}
-            .nav-r a{font-size:12px}
-            .foot-inner{flex-direction:column;gap:32px}
-            .foot-cols{gap:40px}
-            .hero h1{letter-spacing:-3px}
             .lang-sw button{padding:5px 10px;font-size:11px}
+            .hero h1{letter-spacing:-3px}
+            .qr-wrap{flex-direction:column}
+            .qr-img{width:120px;height:120px}
+            .foot-inner{flex-direction:column;align-items:center;gap:32px;text-align:center}
+            .foot-brand{max-width:100%;display:flex;justify-content:center}
+            .foot-cols{gap:40px}
+            .foot-col{text-align:center}
         }
         @media(max-width:480px){
-            .hero-stores{flex-direction:column}
             .foot-cols{flex-direction:column;gap:24px}
         }
     </style>
@@ -100,11 +156,8 @@
 <canvas id="stars"></canvas>
 
 <nav>
-    <div class="logo">Gertruda</div>
+    <a href="/" class="nav-logo"><img src="/assets/images/logo.png" alt="Gertruda" width="28" height="28"><span class="logo">Gertruda</span></a>
     <div class="nav-r">
-        <a href="/privacy" data-i="nav-privacy" data-link="privacy">Privacy</a>
-        <a href="/terms" data-i="nav-terms" data-link="terms">Terms</a>
-        <a href="mailto:legal@gertruda.fun">Contact</a>
         <div class="lang-sw">
             <button class="active" onclick="setLang('en')">EN</button>
             <button onclick="setLang('fr')">FR</button>
@@ -118,19 +171,8 @@
     <div class="hero-ring"></div>
     <h1>Gertruda</h1>
     <p class="hero-sub" data-i="hero-sub">Your stars. Your dreams. Your answers.</p>
-    <div class="hero-stores">
-        <a href="#" class="store-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <div><span>App Store</span><span data-i="download">Download</span></div>
-        </a>
-        <a href="#" class="store-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33c.576.334.576 1.17 0 1.504L17.94 13.6l-2.515-2.515 2.272-2.578zM5.864 2.658L16.8 8.991l-2.302 2.302L5.864 2.658z"/></svg>
-            <div><span>Google Play</span><span data-i="download">Download</span></div>
-        </a>
-    </div>
     <div class="scroll-hint"><div class="scroll-line"></div></div>
 </section>
-
 
 <section class="statement">
     <p class="reveal" data-i="statement"><em data-i="statement-em">Made for the curious.</em><br>Powered by AI.<br data-i="statement-stars">Written in the stars.</p>
@@ -138,14 +180,21 @@
 
 
 <section class="disclaimer">
-    <p class="reveal" data-i="disclaimer">For entertainment purposes only. Not professional advice. Rated 13+. All content is AI-generated and should not be used for important life decisions.</p>
+    <p class="reveal" data-i="disclaimer">For entertainment purposes only. Not professional advice. Rated 17+. All content is AI-generated and should not be used for important life decisions.</p>
 </section>
 
 <footer>
     <div class="foot-inner">
         <div class="foot-brand">
-            <div class="logo">Gertruda</div>
-            <p data-i="foot-desc">AI-powered astrology &amp; dream interpretation. iOS &amp; Android.</p>
+            <div class="qr-wrap">
+                <img class="qr-img" src="/assets/images/qr-code.png" alt="Scan to download Gertruda" width="140" height="140">
+                <div class="qr-right">
+                    <div class="qr-label" data-i="qr-label">Scan to download</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.natjam" class="gp-badge" target="_blank" rel="noopener">
+                        <img class="gp-badge-img" data-lang="en" src="/assets/badges/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" width="162" height="48">
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="foot-cols">
             <div class="foot-col">
@@ -162,11 +211,7 @@
         </div>
     </div>
     <div class="foot-bottom">
-        <span>&copy; 2026 Gertruda. Ontario, Canada.</span>
-        <div class="foot-links">
-            <a href="/privacy" data-link="privacy">Privacy</a>
-            <a href="/terms" data-link="terms">Terms</a>
-        </div>
+        <span>&copy; 2026 Dmytro Ivashyn</span>
     </div>
 </footer>
 
@@ -178,8 +223,9 @@ en:{
     "nav-terms":"Terms",
     "hero-sub":"Your stars. Your dreams. Your answers.",
     "download":"Download",
-    "disclaimer":"For entertainment purposes only. Not professional advice. Rated 13+. All content is AI-generated and should not be used for important life decisions.",
-    "foot-desc":"AI-powered astrology & dream interpretation. iOS & Android.",
+    "disclaimer":"For entertainment purposes only. Not professional advice. Rated 17+. All content is AI-generated and should not be used for important life decisions.",
+    "qr-label":"Scan to download",
+    "foot-desc":"AI-powered astrology & dream interpretation. Android.",
     "foot-legal":"Legal",
     "foot-privacy":"Privacy Policy",
     "foot-terms":"Terms of Use",
@@ -192,7 +238,8 @@ fr:{
     "hero-sub":"Vos \u00e9toiles. Vos r\u00eaves. Vos r\u00e9ponses.",
     "download":"T\u00e9l\u00e9charger",
     "disclaimer":"Divertissement uniquement. Ne constitue pas un avis professionnel. D\u00e8s 13\u00a0ans. Tout le contenu est g\u00e9n\u00e9r\u00e9 par IA et ne doit pas \u00eatre utilis\u00e9 pour des d\u00e9cisions importantes.",
-    "foot-desc":"Astrologie et interpr\u00e9tation des r\u00eaves par IA. iOS et Android.",
+    "qr-label":"Scanner pour t\u00e9l\u00e9charger",
+    "foot-desc":"Astrologie et interpr\u00e9tation des r\u00eaves par IA. Android.",
     "foot-legal":"L\u00e9gal",
     "foot-privacy":"Politique de confidentialit\u00e9",
     "foot-terms":"Conditions d\u2019utilisation",
@@ -233,6 +280,10 @@ function setLang(lang){
     var routes=linkMap[lang];
     document.querySelectorAll('a[data-link="privacy"]').forEach(function(a){a.href=routes.privacy});
     document.querySelectorAll('a[data-link="terms"]').forEach(function(a){a.href=routes.terms});
+    // swap Google Play badge
+    var badgeMap={en:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_English.png',fr:'/assets/badges/GetItOnGooglePlay_Badge_Web_color_French-CA.png'};
+    var badge=document.querySelector('.gp-badge-img');
+    if(badge && badgeMap[lang]) badge.src=badgeMap[lang];
 }
 
 // starfield
