@@ -122,7 +122,7 @@
         <div class="document">
             <h1>Privacy Policy</h1>
             <div class="meta">
-                <p><strong>Effective Date:</strong> February 7, 2026</p>
+                <p><strong>Effective Date:</strong> April 16, 2026</p>
                 <p><strong>App:</strong> Gertruda (iOS &amp; Android)</p>
             </div>
 
@@ -138,6 +138,7 @@
                 <li><strong>Personal Data:</strong> Your name (optional) and date of birth, used to generate personalized horoscopes and forecasts.</li>
                 <li><strong>Birth Place:</strong> A text description of your birth location (e.g., "London") used for personalized horoscopes. This is <strong>not</strong> your device GPS location.</li>
                 <li><strong>Feature Inputs:</strong> Text descriptions of dreams for the Dream Interpreter, questions for the Magic Oracle, and birth data for Love Compatibility checks.</li>
+                <li><strong>Blood Type:</strong> Blood type (A, B, AB, O) voluntarily entered for the blood type compatibility feature. Your blood type is processed <strong>in-memory only for the duration of your session</strong> — it is <strong>not saved on your device or on our servers</strong>, and is not linked to your identity. If you close the compatibility screen or relaunch the App, any entered blood type is cleared. Blood type is treated as health-adjacent data under GDPR; it is used <strong>solely for entertainment and astrology purposes</strong> and carries <strong>no medical weight or significance</strong>.</li>
                 <li><strong>Preferences:</strong> Your selected language and notification settings.</li>
             </ul>
 
@@ -152,7 +153,7 @@
             </ul>
 
             <h3>1.3 Information We Do Not Collect</h3>
-            <p>We do <strong>not</strong> collect: precise GPS or device location, email addresses, phone numbers, photos, contacts, health data, or any biometric information. The App does not require account creation.</p>
+            <p>We do <strong>not</strong> collect: precise GPS or device location, email addresses, phone numbers, photos, contacts, verified health data, or any biometric information. The App does not require account creation.</p>
 
             <!-- ============================================================ -->
             <h2>2. How We Use Your Information</h2>
@@ -171,20 +172,17 @@
             <p>We use the following third-party services. Each may collect and process data as described below:</p>
 
             <h3>3.1 Google AdMob</h3>
-            <p>We use Google AdMob to display banner advertisements. AdMob collects advertising identifiers (IDFA on iOS, Advertising ID on Android), IP address (to derive coarse location), crash data, performance data, and other diagnostic data. This information is used for third-party advertising, analytics, and ad personalization. AdMob's data collection constitutes "tracking" as defined by Apple. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+            <p>We use Google AdMob to display banner, interstitial, and rewarded video advertisements. AdMob collects advertising identifiers (IDFA on iOS, Advertising ID on Android), IP address (to derive coarse location), crash data, performance data, and other diagnostic data. This information is used for third-party advertising, analytics, and ad personalization. AdMob's data collection constitutes "tracking" as defined by Apple. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
             <h3>3.2 Firebase (Google)</h3>
             <p><strong>Firebase Analytics:</strong> Collects app usage data for analytics purposes. You can opt out in the App's Settings. <strong>Firebase Remote Config:</strong> Delivers feature flags and configuration data to the App. <strong>Firebase Core:</strong> Provides base infrastructure services. For more information, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Information</a>.</p>
 
             <h3>3.3 OpenAI</h3>
-            <p>User-entered text (dream descriptions, oracle questions, and horoscope-related queries) is sent to OpenAI's API to generate AI-powered responses and images. These queries are processed in real time and are not stored by us after the response is delivered. OpenAI may process this data according to its own <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>.</p>
-
-            <h3>3.4 Apple App Store &amp; Google Play Store</h3>
-            <p>All in-app purchase and subscription transactions are processed and managed entirely by Apple (App Store) or Google (Play Store). We do not receive or store your payment information (credit card numbers, billing addresses, etc.). Your purchase is subject to the respective store's terms and privacy policy.</p>
+            <p>User-entered text (dream descriptions, oracle questions, and horoscope-related queries) is sent to OpenAI's API to generate AI-powered responses and images. For the blood type compatibility feature, only blood type labels and personality archetypes (not your name or identity) are transmitted to OpenAI; neutral placeholders ("Person A" / "Person B") are used in the request, and your name is substituted client-side after the response is received. <strong>Your name is never included in any transmission to OpenAI</strong> — this applies to all AI features. These queries are processed in real time and are not stored by us after the response is delivered. OpenAI may process this data according to its own <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>.</p>
 
             <!-- ============================================================ -->
             <h2>4. Advertising and Tracking</h2>
-            <p>The App displays advertisements served by Google AdMob. AdMob uses tracking technologies, including advertising identifiers, to deliver personalized ads and measure ad performance.</p>
+            <p>The App displays banner ads, interstitial (full-screen) ads, and rewarded video ads via Google AdMob. Banner and interstitial ads may appear during normal use; interstitials may appear after certain actions such as generating a horoscope, compatibility reading, or dream interpretation. Rewarded ads are optional — users may choose to watch a rewarded video in full to receive an AI-generated share image. AdMob uses tracking technologies, including advertising identifiers, to deliver personalized ads and measure ad performance.</p>
 
             <h3>4.1 Apple App Tracking Transparency (iOS)</h3>
             <p>On iOS devices, the App will request your permission through Apple's App Tracking Transparency (ATT) framework before allowing AdMob to access your IDFA for personalized advertising and cross-app tracking. You may grant or deny this permission. If you deny tracking, AdMob will serve non-personalized (contextual) ads. You can change your choice at any time in your device's Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
@@ -242,10 +240,10 @@
             <h2>5. Data Storage and Security</h2>
 
             <h3>5.1 Local Storage</h3>
-            <p>Most personal data — including your profile (name, birth date, birth place), dream history, oracle (e.g. Eight Ball) history, horoscope cache, and notification preferences — is stored only on your device using local storage (on-device files and preferences). A small amount of app configuration (e.g. subscription tier, selected provider) may also be stored on device using Flutter Secure Storage (Keychain on iOS, EncryptedSharedPreferences on Android).</p>
+            <p>Most personal data — including your profile (name, birth date, birth place), dream history, oracle (e.g. Eight Ball) history, horoscope cache, and notification preferences — is stored only on your device using local storage (on-device files and preferences). A small amount of app configuration (e.g. selected provider) may also be stored on device using Flutter Secure Storage (Keychain on iOS, EncryptedSharedPreferences on Android). <strong>Blood type and compatibility readings (both zodiac-based and blood-type) are not persisted anywhere — they exist only in memory for the duration of your session (see Section 1.1 and Section 5.2).</strong></p>
 
             <h3>5.2 Cloud Processing</h3>
-            <p>When you use AI-powered features, your inputs are transmitted to OpenAI's servers for processing and image generation. These transmissions are ephemeral: we do not maintain a permanent server-side database of your dreams, questions, or horoscope requests.</p>
+            <p>When you use AI-powered features, your inputs are transmitted to OpenAI's servers for processing and image generation. These transmissions are ephemeral: we do not maintain a permanent server-side database of your dreams, questions, horoscope requests, or compatibility readings.</p>
 
             <h3>5.3 Security Measures</h3>
             <p>We use industry-standard security measures to protect your data, including:</p>
@@ -257,7 +255,7 @@
 
             <!-- ============================================================ -->
             <h2>6. Data Retention</h2>
-            <p>Data stored locally on your device persists until you delete the App or clear the App's data. We do not retain your personal data on our servers.</p>
+            <p>Data stored locally on your device persists until you delete the App or clear the App's data. <strong>Blood type inputs and compatibility readings are an exception — they are session-only and are automatically discarded when you leave the compatibility screen or relaunch the App.</strong> We do not retain your personal data on our servers.</p>
             <p>Third-party services (Google AdMob, Firebase, OpenAI) may retain data they collect according to their own retention policies. Please refer to their respective privacy policies linked in Section 3 above.</p>
 
             <!-- ============================================================ -->
@@ -319,8 +317,8 @@
             <p>If you are a Canadian resident, you have rights under the Personal Information Protection and Electronic Documents Act (PIPEDA), including the right to access your personal information, request correction, and withdraw consent for its collection, use, or disclosure. To exercise these rights, contact us at <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>.</p>
 
             <!-- ============================================================ -->
-            <h2>11. In-App Purchases and Subscriptions</h2>
-            <p>Gertruda may offer in-app purchases and subscriptions. All purchases and subscriptions are processed by the Apple App Store or Google Play Store. We do not collect, process, or store any payment information. Your subscription is managed entirely through the respective store, and any billing inquiries should be directed to Apple or Google.</p>
+            <h2>11. Payments</h2>
+            <p>Gertruda does not currently offer in-app purchases or subscriptions, and we do not collect or process any payment information. If this changes in the future, we will update this Privacy Policy before any paid feature is introduced.</p>
 
             <!-- ============================================================ -->
             <h2>12. Entertainment Disclaimer</h2>

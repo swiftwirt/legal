@@ -122,7 +122,7 @@
         <div class="document">
             <h1>Politique de confidentialité</h1>
             <div class="meta">
-                <p><strong>Date d'entrée en vigueur :</strong> 7 février 2026</p>
+                <p><strong>Date d'entrée en vigueur :</strong> 16 avril 2026</p>
                 <p><strong>Application :</strong> Gertruda (iOS &amp; Android)</p>
             </div>
 
@@ -138,6 +138,7 @@
                 <li><strong>Données personnelles :</strong> Votre nom (facultatif) et votre date de naissance, utilisés pour générer des horoscopes et des prévisions personnalisés.</li>
                 <li><strong>Lieu de naissance :</strong> Une description textuelle de votre lieu de naissance (par ex., « Paris ») utilisée pour les horoscopes personnalisés. Il ne s'agit <strong>pas</strong> de la localisation GPS de votre appareil.</li>
                 <li><strong>Données de fonctionnalités :</strong> Descriptions textuelles de rêves pour l'Interpréteur de rêves, questions pour l'Oracle magique et données de naissance pour les vérifications de Compatibilité amoureuse.</li>
+                <li><strong>Groupe sanguin :</strong> Groupe sanguin (A, B, AB, O) saisi volontairement pour la fonction de compatibilité des groupes sanguins. Votre groupe sanguin est traité <strong>uniquement en mémoire et seulement pendant la durée de votre session</strong> — il <strong>n'est enregistré ni sur votre appareil ni sur nos serveurs</strong> et n'est pas lié à votre identité. Si vous fermez l'écran de compatibilité ou relancez l'Application, tout groupe sanguin saisi est effacé. Le groupe sanguin est considéré comme une donnée proche de la santé au sens du RGPD ; il est utilisé <strong>uniquement à des fins de divertissement et d'astrologie</strong> et n'a <strong>aucune valeur ni signification médicale</strong>.</li>
                 <li><strong>Préférences :</strong> Votre langue sélectionnée et vos paramètres de notification.</li>
             </ul>
 
@@ -152,7 +153,7 @@
             </ul>
 
             <h3>1.3 Informations que nous ne collectons pas</h3>
-            <p>Nous ne collectons <strong>pas</strong> : la localisation GPS précise ou de l'appareil, les adresses e-mail, les numéros de téléphone, les photos, les contacts, les données de santé, ni aucune information biométrique. L'Application ne nécessite pas la création d'un compte.</p>
+            <p>Nous ne collectons <strong>pas</strong> : la localisation GPS précise ou de l'appareil, les adresses e-mail, les numéros de téléphone, les photos, les contacts, les données de santé vérifiées, ni aucune information biométrique. L'Application ne nécessite pas la création d'un compte.</p>
 
             <!-- ============================================================ -->
             <h2>2. Comment nous utilisons vos informations</h2>
@@ -171,20 +172,17 @@
             <p>Nous utilisons les services tiers suivants. Chacun peut collecter et traiter des données comme décrit ci-dessous :</p>
 
             <h3>3.1 Google AdMob</h3>
-            <p>Nous utilisons Google AdMob pour afficher des bannières publicitaires. AdMob collecte des identifiants publicitaires (IDFA sur iOS, identifiant publicitaire sur Android), l'adresse IP (pour déterminer la localisation approximative), les données de plantage, les données de performance et d'autres données de diagnostic. Ces informations sont utilisées pour la publicité tierce, l'analyse et la personnalisation des publicités. La collecte de données par AdMob constitue un « suivi » tel que défini par Apple. Pour plus d'informations, consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
+            <p>Nous utilisons Google AdMob pour afficher des bannières, des interstitiels (plein écran) et des vidéos publicitaires récompensées. AdMob collecte des identifiants publicitaires (IDFA sur iOS, identifiant publicitaire sur Android), l'adresse IP (pour déterminer la localisation approximative), les données de plantage, les données de performance et d'autres données de diagnostic. Ces informations sont utilisées pour la publicité tierce, l'analyse et la personnalisation des publicités. La collecte de données par AdMob constitue un « suivi » tel que défini par Apple. Pour plus d'informations, consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
 
             <h3>3.2 Firebase (Google)</h3>
             <p><strong>Firebase Analytics :</strong> Collecte des données d'utilisation de l'application à des fins d'analyse. Vous pouvez vous désinscrire dans les Paramètres de l'Application. <strong>Firebase Remote Config :</strong> Fournit des indicateurs de fonctionnalités et des données de configuration à l'Application. <strong>Firebase Core :</strong> Fournit les services d'infrastructure de base. Pour plus d'informations, consultez les <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Informations de confidentialité de Firebase</a>.</p>
 
             <h3>3.3 OpenAI</h3>
-            <p>Le texte saisi par l'utilisateur (descriptions de rêves, questions à l'oracle et requêtes liées à l'horoscope) est envoyé à l'API d'OpenAI pour générer des réponses et des images alimentées par l'IA. Ces requêtes sont traitées en temps réel et ne sont pas conservées par nous après la livraison de la réponse. OpenAI peut traiter ces données conformément à sa propre <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité</a> et ses <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Conditions d'utilisation</a>.</p>
-
-            <h3>3.4 Apple App Store &amp; Google Play Store</h3>
-            <p>Toutes les transactions d'achats intégrés et d'abonnements sont traitées et gérées entièrement par Apple (App Store) ou Google (Play Store). Nous ne recevons ni ne stockons vos informations de paiement (numéros de carte de crédit, adresses de facturation, etc.). Votre achat est soumis aux conditions et à la politique de confidentialité du magasin concerné.</p>
+            <p>Le texte saisi par l'utilisateur (descriptions de rêves, questions à l'oracle et requêtes liées à l'horoscope) est envoyé à l'API d'OpenAI pour générer des réponses et des images alimentées par l'IA. Pour la fonction de compatibilité des groupes sanguins, seuls les types sanguins et archétypes de personnalité (pas votre nom ni votre identité) sont transmis à OpenAI ; des espaces réservés neutres (« Personne A » / « Personne B ») sont utilisés dans la requête, et votre nom est substitué côté client après réception de la réponse. <strong>Votre nom n'est jamais inclus dans une transmission à OpenAI</strong> — cela s'applique à toutes les fonctionnalités IA. Ces requêtes sont traitées en temps réel et ne sont pas conservées par nous après la livraison de la réponse. OpenAI peut traiter ces données conformément à sa propre <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité</a> et ses <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Conditions d'utilisation</a>.</p>
 
             <!-- ============================================================ -->
             <h2>4. Publicité et suivi</h2>
-            <p>L'Application affiche des publicités diffusées par Google AdMob. AdMob utilise des technologies de suivi, y compris des identifiants publicitaires, pour diffuser des publicités personnalisées et mesurer les performances publicitaires.</p>
+            <p>L'Application affiche des bannières publicitaires, des annonces interstitielles (plein écran) et des vidéos publicitaires récompensées via Google AdMob. Les bannières et interstitiels peuvent apparaître lors d'une utilisation normale ; les interstitiels peuvent apparaître après certaines actions comme la génération d'un horoscope, une lecture de compatibilité ou une interprétation de rêve. Les annonces récompensées sont optionnelles — les utilisateurs peuvent choisir de regarder une vidéo récompensée en entier pour recevoir une image de partage générée par IA. AdMob utilise des technologies de suivi, y compris des identifiants publicitaires, pour diffuser des publicités personnalisées et mesurer les performances publicitaires.</p>
 
             <h3>4.1 Apple App Tracking Transparency (iOS)</h3>
             <p>Sur les appareils iOS, l'Application vous demandera votre autorisation via le cadre App Tracking Transparency (ATT) d'Apple avant de permettre à AdMob d'accéder à votre IDFA pour la publicité personnalisée et le suivi inter-applications. Vous pouvez accorder ou refuser cette autorisation. Si vous refusez le suivi, AdMob diffusera des publicités non personnalisées (contextuelles). Vous pouvez modifier votre choix à tout moment dans les Réglages de votre appareil &gt; Confidentialité et sécurité &gt; Suivi.</p>
@@ -242,10 +240,10 @@
             <h2>5. Stockage et sécurité des données</h2>
 
             <h3>5.1 Stockage local</h3>
-            <p>La plupart des données personnelles — y compris votre profil (nom, date de naissance, lieu de naissance), l'historique des rêves, l'historique de l'oracle (p. ex. Eight Ball), le cache des horoscopes et les préférences de notification — sont stockées uniquement sur votre appareil dans le stockage local (fichiers et préférences sur l'appareil). Une petite quantité de configuration de l'application (p. ex. niveau d'abonnement, fournisseur sélectionné) peut également être stockée sur l'appareil via Flutter Secure Storage (Keychain sur iOS, EncryptedSharedPreferences sur Android).</p>
+            <p>La plupart des données personnelles — y compris votre profil (nom, date de naissance, lieu de naissance), l'historique des rêves, l'historique de l'oracle (p. ex. Eight Ball), le cache des horoscopes et les préférences de notification — sont stockées uniquement sur votre appareil dans le stockage local (fichiers et préférences sur l'appareil). Une petite quantité de configuration de l'application (p. ex. fournisseur sélectionné) peut également être stockée sur l'appareil via Flutter Secure Storage (Keychain sur iOS, EncryptedSharedPreferences sur Android). <strong>Le groupe sanguin et les lectures de compatibilité (zodiacales comme par groupe sanguin) ne sont conservés nulle part — ils n'existent qu'en mémoire pendant la durée de votre session (voir la Section 1.1 et la Section 5.2).</strong></p>
 
             <h3>5.2 Traitement en nuage</h3>
-            <p>Lorsque vous utilisez les fonctionnalités alimentées par l'IA, vos saisies sont transmises aux serveurs d'OpenAI pour traitement et génération d'images. Ces transmissions sont éphémères : nous ne maintenons pas de base de données permanente côté serveur de vos rêves, questions ou demandes d'horoscope.</p>
+            <p>Lorsque vous utilisez les fonctionnalités alimentées par l'IA, vos saisies sont transmises aux serveurs d'OpenAI pour traitement et génération d'images. Ces transmissions sont éphémères : nous ne maintenons pas de base de données permanente côté serveur de vos rêves, questions, demandes d'horoscope ou lectures de compatibilité.</p>
 
             <h3>5.3 Mesures de sécurité</h3>
             <p>Nous utilisons des mesures de sécurité conformes aux normes de l'industrie pour protéger vos données, notamment :</p>
@@ -257,7 +255,7 @@
 
             <!-- ============================================================ -->
             <h2>6. Conservation des données</h2>
-            <p>Les données stockées localement sur votre appareil persistent jusqu'à ce que vous supprimiez l'Application ou effaciez les données de l'Application. Nous ne conservons pas vos données personnelles sur nos serveurs.</p>
+            <p>Les données stockées localement sur votre appareil persistent jusqu'à ce que vous supprimiez l'Application ou effaciez les données de l'Application. <strong>Les saisies de groupe sanguin et les lectures de compatibilité font exception — elles sont limitées à la session et sont automatiquement supprimées lorsque vous quittez l'écran de compatibilité ou relancez l'Application.</strong> Nous ne conservons pas vos données personnelles sur nos serveurs.</p>
             <p>Les services tiers (Google AdMob, Firebase, OpenAI) peuvent conserver les données qu'ils collectent conformément à leurs propres politiques de conservation. Veuillez consulter leurs politiques de confidentialité respectives référencées dans la Section 3 ci-dessus.</p>
 
             <!-- ============================================================ -->
@@ -319,8 +317,8 @@
             <p>Si vous êtes résident canadien, vous disposez de droits en vertu de la Loi sur la protection des renseignements personnels et les documents électroniques (PIPEDA), y compris le droit d'accéder à vos informations personnelles, de demander leur correction et de retirer votre consentement à leur collecte, utilisation ou divulgation. Pour exercer ces droits, contactez-nous à <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>.</p>
 
             <!-- ============================================================ -->
-            <h2>11. Achats intégrés et abonnements</h2>
-            <p>Gertruda peut proposer des achats intégrés et des abonnements. Tous les achats et abonnements sont traités par l'Apple App Store ou le Google Play Store. Nous ne collectons, ne traitons ni ne stockons aucune information de paiement. Votre abonnement est géré entièrement par le magasin concerné, et toute question de facturation doit être adressée à Apple ou Google.</p>
+            <h2>11. Paiements</h2>
+            <p>Gertruda ne propose actuellement aucun achat intégré ni abonnement, et nous ne collectons ni ne traitons aucune information de paiement. Si cela change à l'avenir, nous mettrons à jour cette Politique de confidentialité avant l'introduction de toute fonctionnalité payante.</p>
 
             <!-- ============================================================ -->
             <h2>12. Avertissement relatif au divertissement</h2>
