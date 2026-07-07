@@ -31,7 +31,7 @@
             <h1>Terms of Use</h1>
 
             <div class="meta">
-                <p><strong>Effective Date:</strong> April 16, 2026</p>
+                <p><strong>Effective Date:</strong> July 6, 2026</p>
                 <p><strong>App:</strong> Gertruda (iOS &amp; Android)</p>
             </div>
 
@@ -41,8 +41,8 @@
 
             <!-- ============================================================ -->
             <h2>2. Eligibility and Age Requirement</h2>
-            <p>You must be at least <strong>13 years of age</strong> to use the App. By using the App, you represent and warrant that you are at least 13 years old. If you are between 13 and the age of majority in your jurisdiction, you represent that your parent or legal guardian has reviewed and agrees to these Terms on your behalf.</p>
-            <p>We do not knowingly collect personal information from children under 13. If we learn that a user is under 13, we will take steps to remove their data and terminate their access.</p>
+            <p>You must be at least <strong>16 years of age</strong> to use the App. By using the App, you represent and warrant that you are at least 16 years old. If you are between 16 and the age of majority in your jurisdiction, you represent that your parent or legal guardian has reviewed and agrees to these Terms on your behalf.</p>
+            <p>We do not knowingly collect personal information from children under 16. If we learn that a user is under 16, we will take steps to remove their data and terminate their access.</p>
 
             <!-- ============================================================ -->
             <h2>3. Description of Service</h2>
@@ -52,12 +52,16 @@
                     <li><strong>Horoscope Readings:</strong> Daily, weekly, and monthly astrological forecasts.</li>
                     <li><strong>Dream Interpretation:</strong> AI-powered analysis of dream descriptions.</li>
                     <li><strong>Love Compatibility:</strong> Zodiac-based compatibility matching with scoring across 8 categories.</li>
-                    <li><strong>Blood Type Compatibility:</strong> Entertainment and novelty only; not medical, health, or scientific advice. Blood type data you enter is not verified and carries no medical implications within the App.</li>
+                    <li><strong>Blood Type Compatibility:</strong> Entertainment and novelty only; not medical, health, or scientific advice. Blood type data you enter is not verified and carries no medical implications within the App. Generated blood type readings may be saved to your account for sync, continuity, and reporting/safety purposes.</li>
                     <li><strong>Magic Oracle (8-Ball):</strong> AI-powered responses to user-submitted questions.</li>
+                    <li><strong>Discuss with the Oracle (Chat):</strong> An AI chat that lets you discuss your readings in a conversation. Conversations are saved to your account so you can continue them later.</li>
                 </ul>
             </div>
 
-            <p><strong>Session-only compatibility readings.</strong> Compatibility readings (Love Compatibility and Blood Type Compatibility) are processed only in memory for the duration of your session. They are not saved on your device or on our servers; closing the compatibility screen or relaunching the App clears them.</p>
+            <p><strong>Compatibility reading storage.</strong> Zodiac-based Love Compatibility readings are session-only: they are displayed during your session and are not saved to your device or your account (server-side generation records under Section 7.3 allow reported content to be verified). Blood Type Compatibility readings are saved locally and, when you are signed in, synced to your account so related Oracle chats can continue and reported content can be reviewed.</p>
+
+            <h3>3.1 Accounts and Cross-Device Sync</h3>
+            <p>To save your content and sync it across devices, the App uses an account system provided by Firebase Authentication. An anonymous account is created automatically when you first use account-based features; you may optionally link a Google account to enable cross-device sync. You are responsible for maintaining the security of any Google account you link and for all activity that occurs under your account. Accounts are intended for a single individual; do not share, sell, or transfer your account, and do not use another person's account without authorization. You can delete your account at any time (see Section 14).</p>
 
             <div class="warning-box">
                 <p><strong>IMPORTANT DISCLAIMER:</strong> All services are for <strong>ENTERTAINMENT PURPOSES ONLY</strong>. The App does not provide medical, psychological, legal, financial, or any other professional advice. Never use the App as a substitute for professional guidance. You should not make important life decisions based on content provided by the App.</p>
@@ -80,7 +84,7 @@
 
             <!-- ============================================================ -->
             <h2>5. Payments</h2>
-            <p>Gertruda is offered free of charge. The App does not currently sell subscriptions or in-app purchases. If this changes in the future, we will update these Terms and provide notice before any paid feature is introduced.</p>
+            <p>Gertruda is currently offered free of charge with advertisements and daily usage limits for AI-powered features. The App may include dormant or limited in-app purchase/subscription functionality, and if paid features are made available to you, pricing, trial terms, renewal terms, and cancellation instructions will be shown in the App Store or Google Play purchase flow before you purchase. Active subscriptions are managed through the App Store or Google Play and are not cancelled automatically when you delete your Gertruda account, uninstall the App, stop using the App, or if a specific Gertruda feature becomes unavailable. You are responsible for managing cancellation through the store where you purchased the subscription. Refunds, billing disputes, and cancellation timing are handled by the App Store or Google Play unless applicable law requires otherwise.</p>
 
             <!-- ============================================================ -->
             <h2>6. Advertising</h2>
@@ -92,15 +96,19 @@
             <h2>7. User Content and AI Processing</h2>
 
             <h3>7.1 Your Content</h3>
-            <p>You retain ownership of any text you input into the App (dream descriptions, oracle questions, etc.). By submitting content, you grant us a non-exclusive, worldwide, royalty-free license to process that content solely for the purpose of providing the App's features to you.</p>
+            <p>You retain ownership of any text you input into the App (dream descriptions, oracle questions, <strong>Oracle chat messages</strong>, etc.). By submitting content, you grant us a non-exclusive, worldwide, royalty-free license to process that content solely for the purpose of providing the App's features to you, operating sync and account features, and reviewing content reports you submit. When you are signed in, your content (including your Oracle chat conversations, blood type readings, synced settings, and generated share images) is stored in the cloud and synced across your devices, as described in our <a href="/privacy">Privacy Policy</a>.</p>
 
             <h3>7.2 AI Processing</h3>
-            <p>To provide dream interpretations, oracle responses, horoscope readings, love compatibility readings, and blood type compatibility readings, the App sends your inputs to <strong>OpenAI's API</strong> for processing and image generation. <strong>For compatibility readings, only non-identifying data is transmitted — zodiac signs, blood type labels (A, B, AB, O), genders, and personality archetypes. Your name is never sent to OpenAI; neutral placeholders ("Person A" / "Person B") are used in the request, and your name is substituted client-side after the response is received.</strong> These queries are processed in real time and are ephemeral — we do not permanently store your inputs on our servers. OpenAI may process this data according to its own policies.</p>
+            <p>To provide dream interpretations, oracle responses, horoscope readings, compatibility readings, and the Oracle chat, the App sends your inputs to <strong>OpenAI's API</strong>, routed through our own servers (Cloud Functions), for processing and image generation. For one-off compatibility readings, we minimize identifying information where practical: zodiac signs, blood type labels (A, B, AB, O), genders, and personality archetypes may be transmitted, and neutral placeholders ("Person A" / "Person B") may be used with names substituted client-side. If you choose to discuss a reading in Oracle chat, the source-reading context and your chat messages may be sent to OpenAI and may include names or other details already shown in that reading so the conversation can stay grounded. One-off readings are processed in real time and are not permanently stored at OpenAI; however, your Oracle chat conversation history is stored on our servers so you can continue the conversation. OpenAI may process this data according to its own policies.</p>
+            <p>The Oracle chat is limited to the App's entertainment and mystical subject matter (such as dreams, astrology, and compatibility) and may decline requests that fall outside that scope or that are unsafe. AI features are subject to per-account <strong>daily usage limits</strong>; once a limit is reached, the feature becomes available again the following day.</p>
 
             <h3>7.3 AI-Generated Content</h3>
             <p>Content generated by AI, including text responses and images, is provided for entertainment only and may be inaccurate, incomplete, or inappropriate. We do not guarantee the accuracy, reliability, or suitability of AI-generated content. You use such content at your own risk.</p>
+            <p>As between you and us, we do not claim ownership of the user-specific AI-generated readings, oracle responses, chat replies, or share images that the App generates for you, to the extent such rights can be owned or assigned under applicable law. You may use them for personal, non-commercial entertainment and sharing, subject to these Terms and applicable law. Generated outputs may not be unique; the same or similar content may be generated for other users. We and our licensors retain all rights in the App, including its software, design, templates, prompts, systems, trademarks, branding, and service presentation. You are responsible for ensuring that your use of generated content does not violate law, third-party rights, platform rules, or these Terms.</p>
 
             <!-- ============================================================ -->
+            <p>Our servers keep a tamper-proof generation record (including a cryptographic fingerprint) of AI-generated outputs. If you report content, we may use these records to verify whether the reported content was genuinely generated by the App; content that fails verification may be treated as fabricated, and knowingly reporting fabricated content violates Section 8.</p>
+            <p>To keep the service fast and affordable, readings and artwork that depend only on non-personal inputs (for example, a zodiac sign and period, or a blood-type pair) may be generated once and shown to every user who requests the same combination. Content based on your personal inputs — dreams, chat messages, questions — is always generated individually and is never shared with other users.</p>
             <h2>8. Prohibited Conduct</h2>
             <p>You agree not to:</p>
             <ul>
@@ -111,6 +119,10 @@
                 <li>Use automated means (bots, scrapers, etc.) to access or interact with the App.</li>
                 <li>Attempt to reverse engineer, decompile, or extract the source code of the App.</li>
                 <li>Use the App to generate content that promotes violence, hatred, or discrimination.</li>
+                <li>Attempt to manipulate, "jailbreak," or otherwise circumvent the AI's safety constraints, or to extract, reveal, or alter its underlying instructions.</li>
+                <li>Share, sell, or transfer your account, or access or use another person's account without authorization.</li>
+                <li>Submit other people's personal data without a lawful basis or their consent.</li>
+                <li>Submit content reports in bad faith, or include unnecessary personal, sensitive, or third-party information in a report.</li>
                 <li>Circumvent, disable, or otherwise interfere with any security features of the App.</li>
                 <li>Resell, redistribute, or commercially exploit the App or its content without authorization.</li>
             </ul>
@@ -121,22 +133,27 @@
             <p>We recommend enabling automatic updates on your device to ensure the best experience.</p>
 
             <!-- ============================================================ -->
-            <h2>10. Privacy</h2>
+            <h2>10. Service Availability, Changes, and Shutdown</h2>
+            <p>The App and its features may be interrupted, delayed, limited, or unavailable from time to time, including because of maintenance, updates, bugs, network issues, device or operating-system changes, abuse prevention, security incidents, legal or compliance requirements, force updates, or outages and changes affecting third-party services such as Firebase, OpenAI, Google AdMob, the App Store, or Google Play. We do not guarantee that the App, any particular feature, AI model, generated content history, sync function, advertisement, or account service will be available continuously or remain available in its current form.</p>
+            <p>We may modify, suspend, limit, discontinue, or permanently shut down any part of the App or the entire service at any time. Where practical, we may provide notice, but urgent security, operational, legal, third-party platform, or compliance reasons may require changes or shutdowns without prior notice. We are not liable for service interruptions, feature removals, discontinued services, loss of access to generated content or saved history, or your inability to generate, retrieve, sync, share, or continue content, except where liability cannot be excluded under applicable law.</p>
+
+            <!-- ============================================================ -->
+            <h2>11. Privacy</h2>
             <p>Your use of the App is also governed by our <a href="/privacy">Privacy Policy</a>, which describes how we collect, use, and protect your data. By using the App, you consent to the practices described in the Privacy Policy.</p>
 
             <!-- ============================================================ -->
-            <h2>11. Third-Party Content and Links</h2>
+            <h2>12. Third-Party Content and Links</h2>
             <p>The App may display content from third parties, including advertisements from Google AdMob and AI-generated content (text and images) from OpenAI. We are not responsible for the accuracy, completeness, or reliability of third-party content. Any links to third-party websites or services within the App or in advertisements are provided for convenience only. We do not endorse and are not responsible for the content or practices of any third-party websites or services.</p>
 
             <!-- ============================================================ -->
-            <h2>12. Disclaimers and Limitation of Liability</h2>
+            <h2>13. Disclaimers and Limitation of Liability</h2>
 
-            <h3>12.1 Disclaimer of Warranties</h3>
+            <h3>13.1 Disclaimer of Warranties</h3>
             <div class="legal-caps">
                 THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
             </div>
 
-            <h3>12.2 Limitation of Liability</h3>
+            <h3>13.2 Limitation of Liability</h3>
             <div class="legal-caps">
                 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE, OR GOODWILL, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED ONE HUNDRED U.S. DOLLARS (US$100.00).
             </div>
@@ -144,7 +161,7 @@
             <p>We are not liable for any decisions you make based on App content, including AI-generated interpretations, horoscope forecasts, compatibility readings, or oracle answers.</p>
 
             <!-- ============================================================ -->
-            <h2>13. Indemnification</h2>
+            <h2>14. Indemnification</h2>
             <p>You agree to indemnify, defend, and hold harmless the developer of Gertruda and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable legal fees) arising out of or in any way connected with:</p>
             <ul>
                 <li>Your use of the App or violation of these Terms.</li>
@@ -154,25 +171,26 @@
             </ul>
 
             <!-- ============================================================ -->
-            <h2>14. Termination</h2>
+            <h2>15. Termination</h2>
             <p>We may suspend or terminate your access to the App at any time, without prior notice, if you violate these Terms or for any other reason at our sole discretion.</p>
             <p>You may terminate these Terms at any time by:</p>
             <ul>
+                <li>Deleting your account in the App (<strong>Settings → Account → Delete account</strong>), which permanently removes your account and its associated server-side data, including synced readings, Oracle conversations, settings/legal records, and generated share images. Reports already sent by email may remain in our legal/support mailbox as needed to review and respond to the report. Active subscriptions are not cancelled automatically; manage them through the App Store or Google Play; and/or</li>
                 <li>Uninstalling the App from your device.</li>
             </ul>
-            <p>Upon termination, the following sections survive: Sections 4 (Intellectual Property), 12 (Disclaimers and Limitation of Liability), 13 (Indemnification), 15 (Governing Law), and 16 (Dispute Resolution).</p>
+            <p>Termination of these Terms or deletion of your account does not require us to continue operating the App or any feature, restore deleted content, maintain access to generated content, or continue any service that has been modified, suspended, or discontinued. Upon termination, the following sections survive: Sections 4 (Intellectual Property), 7 (User Content and AI Processing), 10 (Service Availability, Changes, and Shutdown), 13 (Disclaimers and Limitation of Liability), 14 (Indemnification), 16 (Governing Law), and 17 (Dispute Resolution).</p>
 
             <!-- ============================================================ -->
-            <h2>15. Governing Law</h2>
+            <h2>16. Governing Law</h2>
             <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Province of Ontario, Canada</strong>, and the federal laws of Canada applicable therein, without regard to conflict of law principles. You agree to submit to the exclusive jurisdiction of the courts located in the Province of Ontario, Canada, for the resolution of any disputes arising under these Terms.</p>
 
             <!-- ============================================================ -->
-            <h2>16. Dispute Resolution</h2>
+            <h2>17. Dispute Resolution</h2>
             <p>In the event of any dispute arising out of or relating to these Terms or the App, you agree to first attempt to resolve the dispute informally by contacting us at <a href="mailto:legal@gertruda.fun">legal@gertruda.fun</a>. We will attempt to resolve the dispute through good-faith negotiation within 30 days.</p>
-            <p>If the dispute cannot be resolved informally within 30 days, either party may pursue resolution through the courts of the Province of Ontario, Canada, as specified in Section 15.</p>
+            <p>If the dispute cannot be resolved informally within 30 days, either party may pursue resolution through the courts of the Province of Ontario, Canada, as specified in Section 16.</p>
 
             <!-- ============================================================ -->
-            <h2>17. Modifications to These Terms</h2>
+            <h2>18. Modifications to These Terms</h2>
             <p>We reserve the right to modify these Terms at any time. When we make material changes, we will:</p>
             <ul>
                 <li>Update the "Effective Date" at the top of this page.</li>
@@ -181,15 +199,15 @@
             <p>Your continued use of the App after any modifications constitutes your acceptance of the updated Terms. If you do not agree with the changes, you must stop using the App and uninstall it. We encourage you to review these Terms periodically.</p>
 
             <!-- ============================================================ -->
-            <h2>18. Severability</h2>
+            <h2>19. Severability</h2>
             <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall remain in full force and effect. The invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</p>
 
             <!-- ============================================================ -->
-            <h2>19. Entire Agreement</h2>
+            <h2>20. Entire Agreement</h2>
             <p>These Terms, together with our <a href="/privacy">Privacy Policy</a>, constitute the entire agreement between you and us regarding the use of the App and supersede all prior agreements, understandings, and communications, whether written or oral.</p>
 
             <!-- ============================================================ -->
-            <h2>20. Contact Information</h2>
+            <h2>21. Contact Information</h2>
             <div class="contact-box">
                 <p>If you have any questions about these Terms, please contact us:</p>
                 <p><strong>Email:</strong> <a href="mailto:legal@gertruda.fun">legal@gertruda.fun</a></p>

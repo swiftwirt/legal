@@ -122,8 +122,12 @@
         <div class="document">
             <h1>Política de Privacidade</h1>
             <div class="meta">
-                <p><strong>Data de Vigência:</strong> 16 de abril de 2026</p>
+                <p><strong>Data de Vigência:</strong> 6 de julho de 2026</p>
                 <p><strong>Aplicativo:</strong> Gertruda (iOS &amp; Android)</p>
+            </div>
+
+            <div style="background:#fff3e0;border-left:4px solid #ff9800;padding:16px;margin:24px 0;border-radius:0 8px 8px 0;">
+                <p><strong>Important update (June 18, 2026):</strong> Gertruda now supports account sync for blood type readings, Oracle chat conversations, generated share images, selected user settings (language, analytics, caching), report metadata, and legal-acceptance records. Blood type readings may be saved locally and in Cloud Firestore. Oracle chat source context may include names or other details already shown in the reading. If any translated sentence below conflicts with this update, the current English Privacy Policy controls until this translation is fully updated.</p>
             </div>
 
             <p>Bem-vindo ao Gertruda (<strong>"nós"</strong>, <strong>"nos"</strong> ou <strong>"o Aplicativo"</strong>). Respeitamos a sua privacidade e estamos comprometidos em proteger os seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos as suas informações quando você utiliza nosso aplicativo móvel. Ela também descreve os seus direitos em relação aos seus dados.</p>
@@ -138,11 +142,19 @@
                 <li><strong>Dados Pessoais:</strong> Seu nome (opcional) e data de nascimento, utilizados para gerar horóscopos e previsões personalizadas.</li>
                 <li><strong>Local de Nascimento:</strong> Uma descrição em texto do seu local de nascimento (por exemplo, "Lisboa") utilizada para horóscopos personalizados. Este <strong>não</strong> é a localização GPS do seu dispositivo.</li>
                 <li><strong>Entradas de Funcionalidades:</strong> Descrições em texto de sonhos para o Intérprete de Sonhos, perguntas para o Oráculo Mágico e dados de nascimento para verificações de Compatibilidade Amorosa.</li>
-                <li><strong>Tipo Sanguíneo:</strong> Tipo sanguíneo (A, B, AB, O) inserido voluntariamente para o recurso de compatibilidade por tipo sanguíneo. Seu tipo sanguíneo é processado <strong>apenas em memória e somente durante a sua sessão</strong> — <strong>não é salvo no seu dispositivo nem em nossos servidores</strong> e não está vinculado à sua identidade. Se você fechar a tela de compatibilidade ou reiniciar o Aplicativo, qualquer tipo sanguíneo inserido é apagado. O tipo sanguíneo é tratado como dado relacionado à saúde sob o GDPR; é usado <strong>exclusivamente para fins de entretenimento e astrologia</strong> e não tem <strong>nenhum peso ou significado médico</strong>.</li>
-                <li><strong>Preferências:</strong> Seu idioma selecionado e configurações de notificação.</li>
+                <li><strong>Tipo Sanguíneo:</strong> Tipo sanguíneo (A, B, AB, O) inserido voluntariamente para o recurso de compatibilidade por tipo sanguíneo. O tipo sanguíneo é tratado como dado relacionado à saúde sob o GDPR; é usado <strong>exclusivamente para fins de entretenimento, astrologia e novidade</strong> e não tem <strong>nenhum peso ou significado médico</strong>. O Aplicativo pode salvar a leitura de tipo sanguíneo gerada por IA, identificadores de perfil relacionados e contexto limitado de tipo sanguíneo necessário para exibir, sincronizar, continuar ou denunciar essa leitura. Não usamos dados de tipo sanguíneo para fins médicos, diagnósticos, de seguro, emprego ou perfilamento de saúde.</li>
+                <li><strong>Preferências:</strong> Seu idioma selecionado, preferência de análise, preferência de cache, configurações de notificação e outras configurações do aplicativo.</li>
             </ul>
 
-            <h3>1.2 Informações Coletadas Automaticamente</h3>
+            <h3>1.2 Dados de Conta e de Login</h3>
+            <p>Para salvar seu conteúdo e sincronizá-lo entre dispositivos, o Aplicativo utiliza o Firebase Authentication para criar uma conta para você:</p>
+            <ul>
+                <li><strong>Conta Anônima:</strong> Quando você utiliza pela primeira vez os recursos baseados em conta, uma conta anônima associada a um identificador de usuário gerado aleatoriamente é criada automaticamente. Ela não contém identificadores pessoais e é usada apenas para associar seu conteúdo salvo ao seu dispositivo.</li>
+                <li><strong>Login com Google (opcional):</strong> Se você optar por vincular uma conta do Google para sincronização entre dispositivos, recebemos do Google seu <strong>endereço de e-mail, nome de exibição, foto de perfil e identificador da conta do Google</strong>. Essas informações são usadas para identificar sua conta, exibir seu perfil e sincronizar seus dados entre seus dispositivos.</li>
+                <li><strong>Conteúdo Armazenado:</strong> Quando você está conectado, seu perfil (nome, data de nascimento, local de nascimento), seu histórico de sonhos, seu histórico de horóscopos e de Eight Ball, suas <strong>conversas de chat com o Oráculo</strong> e um registro da sua aceitação dos Termos/Privacidade são armazenados na nuvem para que estejam disponíveis em seus outros dispositivos (consulte a Seção 5).</li>
+            </ul>
+
+            <h3>1.3 Informações Coletadas Automaticamente</h3>
             <p>Certas informações são coletadas automaticamente por SDKs de terceiros integrados ao Aplicativo:</p>
             <ul>
                 <li><strong>Dados de Publicidade:</strong> Google AdMob coleta identificadores de publicidade (incluindo o Identificador para Anunciantes, ou IDFA, no iOS com o seu consentimento) para exibir anúncios.</li>
@@ -152,14 +164,18 @@
                 <li><strong>Metadados de Conexão:</strong> O Firebase coleta metadados básicos de conexão (endereço IP, tipo de dispositivo, versão do sistema operacional) para gerenciamento de infraestrutura e configuração.</li>
             </ul>
 
-            <h3>1.3 Informações que Não Coletamos</h3>
-            <p>Nós <strong>não</strong> coletamos: localização GPS precisa ou do dispositivo, endereços de e-mail, números de telefone, fotos, contatos, dados de saúde verificados ou qualquer informação biométrica. O Aplicativo não requer criação de conta.</p>
+            <h3>1.4 Informações que Não Coletamos</h3>
+            <p>Nós <strong>não</strong> coletamos: localização GPS precisa ou do dispositivo, números de telefone, fotos da sua galeria, contatos, dados de saúde verificados ou qualquer informação biométrica. Coletamos um endereço de e-mail apenas se você optar voluntariamente por fazer login com o Google (consulte a Seção 1.2); nunca solicitamos nem armazenamos uma senha, pois a autenticação é gerenciada inteiramente pelo Google e pelo Firebase. O uso do Aplicativo não exige que você crie uma conta nominal — uma conta anônima é criada automaticamente, e vincular uma conta do Google é opcional.</p>
 
             <!-- ============================================================ -->
             <h2>2. Como Usamos Suas Informações</h2>
             <ul>
                 <li>Para gerar horóscopos personalizados, pontuações de compatibilidade e interpretações de sonhos.</li>
                 <li>Para processar suas entradas por meio de serviços de IA para fornecer respostas e gerar imagens (consulte a Seção 3).</li>
+                <li>Para criar e gerenciar sua conta, armazenar seu conteúdo e sincronizá-lo entre seus dispositivos.</li>
+                <li>Para fornecer o recurso de chat com o Oráculo e manter seu histórico de conversas, para que você possa continuá-las.</li>
+                <li>Para aplicar limites de uso diários por conta que mantêm os recursos de IA disponíveis e previnem abusos.</li>
+                <li>Para processar sua solicitação de exclusão da sua conta e dos dados associados.</li>
                 <li>Para gerenciar a configuração do Aplicativo e fornecer atualizações de funcionalidades via Firebase Remote Config.</li>
                 <li>Para enviar notificações push agendadas, como lembretes de horóscopo e mensagens de reengajamento (se ativadas por você).</li>
                 <li>Para exibir anúncios por meio do Google AdMob.</li>
@@ -174,11 +190,21 @@
             <h3>3.1 Google AdMob</h3>
             <p>Utilizamos o Google AdMob para exibir anúncios em banner, intersticiais e de vídeo recompensado. O AdMob coleta identificadores de publicidade (IDFA no iOS, ID de Publicidade no Android), endereço IP (para obter localização aproximada), dados de falhas, dados de desempenho e outros dados de diagnóstico. Essas informações são utilizadas para publicidade de terceiros, análise e personalização de anúncios. A coleta de dados do AdMob constitui "rastreamento" conforme definido pela Apple. Para mais informações, consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
 
-            <h3>3.2 Firebase (Google)</h3>
-            <p><strong>Firebase Analytics:</strong> Coleta dados de uso do aplicativo para fins de análise. Você pode desativar nas Configurações do Aplicativo. <strong>Firebase Remote Config:</strong> Fornece sinalizadores de funcionalidades e dados de configuração ao Aplicativo. <strong>Firebase Core:</strong> Fornece serviços de infraestrutura base. Para mais informações, consulte as <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Informações de Privacidade do Firebase</a>.</p>
+            <h3>3.2 Firebase e Google (Google LLC)</h3>
+            <p>Utilizamos os seguintes serviços do Google e do Firebase:</p>
+            <ul>
+                <li><strong>Firebase Authentication e Login com Google:</strong> Criam e gerenciam sua conta e, se você consentir, vinculam sua conta do Google para sincronização entre dispositivos.</li>
+                <li><strong>Cloud Firestore:</strong> Armazena o conteúdo da sua conta (perfil, sonhos, histórico de horóscopos e de Eight Ball, conversas de chat com o Oráculo e registros de aceitação legal). Este banco de dados é hospedado na <strong>União Europeia</strong>.</li>
+                <li><strong>Cloud Functions:</strong> Nossas funções do lado do servidor (hospedadas na União Europeia) recebem suas solicitações de IA e as encaminham à OpenAI, de modo que a chave de acesso da OpenAI nunca é incluída no Aplicativo.</li>
+                <li><strong>Cloud Storage:</strong> Armazena as imagens de compartilhamento geradas por IA associadas à sua conta.</li>
+                <li><strong>Firebase Analytics:</strong> Coleta dados de uso do aplicativo para fins de análise. Você pode desativar nas Configurações do Aplicativo.</li>
+                <li><strong>Firebase Remote Config:</strong> Fornece sinalizadores de funcionalidades e dados de configuração ao Aplicativo.</li>
+                <li><strong>Firebase Core:</strong> Fornece serviços de infraestrutura base.</li>
+            </ul>
+            <p>Para mais informações, consulte as <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Informações de Privacidade do Firebase</a> e a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
 
             <h3>3.3 OpenAI</h3>
-            <p>O texto inserido pelo usuário (descrições de sonhos, perguntas ao oráculo e consultas relacionadas a horóscopos) é enviado à API da OpenAI para gerar respostas e imagens baseadas em IA. Para o recurso de compatibilidade por tipo sanguíneo, apenas os rótulos de tipo sanguíneo e arquétipos de personalidade (não seu nome ou identidade) são transmitidos à OpenAI; placeholders neutros (\"Pessoa A\" / \"Pessoa B\") são usados na solicitação, e seu nome é substituído no cliente após o recebimento da resposta. <strong>Seu nome nunca é incluído em qualquer transmissão à OpenAI</strong> — isso se aplica a todos os recursos de IA. Essas consultas são processadas em tempo real e não são armazenadas por nós após a entrega da resposta. A OpenAI pode processar esses dados de acordo com sua própria <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidade</a> e <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Termos de Uso</a>.</p>
+            <p>O texto inserido pelo usuário (descrições de sonhos, perguntas ao oráculo, consultas relacionadas a horóscopos e suas <strong>mensagens de chat com o Oráculo</strong>) é enviado à API da OpenAI — por meio de nossas próprias Cloud Functions (consulte a Seção 3.2) — para gerar respostas e imagens baseadas em IA. Para leituras pontuais de compatibilidade, limitamos informações identificáveis quando possível: signos do zodíaco, rótulos de tipo sanguíneo, gêneros e arquétipos de personalidade podem ser transmitidos, enquanto placeholders neutros ("Pessoa A" / "Pessoa B") geralmente são usados na solicitação e nomes são substituídos no cliente após o recebimento da resposta. Se você optar por discutir uma leitura no <strong>chat com o Oráculo</strong>, o contexto da leitura de origem e suas mensagens de chat podem ser enviados à OpenAI, e esse contexto pode incluir nomes ou outros detalhes já exibidos na leitura para manter a conversa contextualizada. A OpenAI processa essas solicitações em tempo real e não as utiliza para treinar seus modelos; a OpenAI pode reter dados da API por um período limitado (atualmente até 30 dias) para monitoramento de abusos, conforme suas políticas de uso de dados da API. Observe que, diferentemente das leituras pontuais, <strong>o histórico das suas conversas de chat com o Oráculo é armazenado por nós</strong> no Cloud Firestore para que você possa continuar a conversa (consulte a Seção 5). A OpenAI pode processar esses dados de acordo com sua própria <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidade</a> e <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Termos de Uso</a>.</p>
 
             <!-- ============================================================ -->
             <h2>4. Publicidade e Rastreamento</h2>
@@ -232,30 +258,54 @@
                         <td>Sim</td>
                         <td>Publicidade de Terceiros, Análise, Personalização do Produto</td>
                     </tr>
+                    <tr>
+                        <td>Informações de Contato (e-mail, nome — Login com Google)</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Funcionalidade do Aplicativo</td>
+                    </tr>
+                    <tr>
+                        <td>Conteúdo do Usuário (sonhos, mensagens de chat com o Oráculo, etc.)</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Funcionalidade do Aplicativo</td>
+                    </tr>
+                    <tr>
+                        <td>Identificadores (ID de conta/usuário)</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Funcionalidade do Aplicativo</td>
+                    </tr>
                 </tbody>
             </table>
-            <p>A localização precisa <strong>não</strong> é coletada.</p>
+            <p>A localização precisa <strong>não</strong> é coletada. Os dados de conta e de conteúdo do usuário acima (Informações de Contato, Conteúdo do Usuário, Identificadores) são usados apenas para operar os recursos de conta, sincronização e Oráculo do Aplicativo e <strong>não</strong> são usados para rastreamento.</p>
 
             <!-- ============================================================ -->
             <h2>5. Armazenamento e Segurança de Dados</h2>
 
             <h3>5.1 Armazenamento Local</h3>
-            <p>A maioria dos dados pessoais — incluindo seu perfil (nome, data de nascimento, local de nascimento), histórico de sonhos, histórico do oráculo (ex.: Eight Ball), cache de horóscopos e preferências de notificação — é armazenada apenas no seu dispositivo em armazenamento local (arquivos e preferências no dispositivo). Uma pequena quantidade de configuração do aplicativo (ex.: provedor selecionado) também pode ser armazenada no dispositivo usando Flutter Secure Storage (Keychain no iOS, EncryptedSharedPreferences no Android). <strong>O tipo sanguíneo e as leituras de compatibilidade (tanto por zodíaco quanto por tipo sanguíneo) não são persistidos em lugar algum — existem apenas em memória durante a sua sessão (consulte a Seção 1.1 e a Seção 5.2).</strong></p>
+            <p>Seu perfil (nome, data de nascimento, local de nascimento), seu histórico de sonhos, seu histórico do oráculo (ex.: Eight Ball), seu cache de horóscopos, suas leituras de tipo sanguíneo, preferências de notificação, marcadores de denúncia e configurações do aplicativo são armazenados no seu dispositivo em armazenamento local (arquivos e preferências no dispositivo). Uma pequena quantidade de configuração do aplicativo também pode ser armazenada no dispositivo usando Flutter Secure Storage (Keychain no iOS, EncryptedSharedPreferences no Android). Quando você está conectado, conteúdo vinculado à conta e configurações sincronizadas também são armazenados na nuvem e sincronizados entre seus dispositivos (consulte a Seção 5.2). Leituras de compatibilidade zodiacal são exclusivas da sessão — são exibidas durante a sua sessão e não são salvas no seu dispositivo nem na sua conta; leituras de tipo sanguíneo são armazenadas conforme descrito na Seção 1.1.</p>
 
-            <h3>5.2 Processamento em Nuvem</h3>
-            <p>Quando você utiliza funcionalidades baseadas em IA, suas entradas são transmitidas aos servidores da OpenAI para processamento e geração de imagens. Essas transmissões são efêmeras: nós não mantemos um banco de dados permanente no servidor com seus sonhos, perguntas, solicitações de horóscopo ou leituras de compatibilidade.</p>
+            <h3>5.2 Armazenamento e Processamento em Nuvem</h3>
+            <p>Quando você utiliza recursos baseados em conta, seu conteúdo — seu perfil, seu histórico de sonhos, seu histórico de horóscopos e de Eight Ball, suas leituras de tipo sanguíneo, configurações sincronizadas e suas <strong>conversas de chat com o Oráculo</strong> — é armazenado no <strong>Google Cloud Firestore, hospedado na União Europeia</strong>. O acesso é restrito por regras de segurança de modo que cada conta só pode ler e gravar seus próprios dados. Mantemos esses dados para que estejam disponíveis em seus dispositivos e para operar recursos de conta, denúncia e segurança; você pode removê-los a qualquer momento (consulte as Seções 6 e 10).</p>
+            <p>Quando você utiliza recursos baseados em IA, suas entradas são enviadas por meio de nossas Cloud Functions (hospedadas na União Europeia) à OpenAI para processamento e geração de imagens. As leituras pontuais (sonhos, horóscopos, compatibilidade, Eight Ball) são processadas em tempo real e não são usadas para treinar os modelos da OpenAI; consulte a Seção 3.3 sobre a retenção limitada para monitoramento de abusos. As imagens de compartilhamento geradas por IA podem ser armazenadas no Cloud Storage sob sua conta.</p>
 
+            <p><strong>Registos de geração:</strong> para proteger a integridade das denúncias de conteúdo, os nossos servidores guardam um registo à prova de adulteração («receipt») de cada leitura e pedido de imagem gerados por IA — uma cópia do conteúdo gerado (para imagens: a solicitação de geração e uma impressão digital do arquivo entregue) e uma impressão digital criptográfica (SHA-256), gravada do lado do servidor na sua conta e não modificável a partir da App. Usamos estes registos apenas para verificar se o conteúdo apresentado numa denúncia foi realmente produzido pela App. Não contêm mais dados pessoais do que o próprio conteúdo gerado e são eliminados juntamente com a sua conta.</p>
             <h3>5.3 Medidas de Segurança</h3>
             <p>Utilizamos medidas de segurança padrão da indústria para proteger seus dados, incluindo:</p>
             <ul>
-                <li>HTTPS (criptografia TLS) para todos os dados transmitidos entre o Aplicativo e serviços de terceiros.</li>
+                <li>HTTPS (criptografia TLS) para todos os dados transmitidos entre o Aplicativo, nossos servidores e serviços de terceiros.</li>
+                <li>Controles de acesso por conta (Regras de Segurança do Firestore) para que seus dados na nuvem sejam acessíveis apenas à sua conta autenticada.</li>
+                <li>Gerenciamento do lado do servidor da chave de acesso da OpenAI, de modo que ela nunca seja exposta no Aplicativo.</li>
                 <li>Armazenamento seguro em nível de sistema operacional (Keychain no iOS, EncryptedSharedPreferences no Android) para dados sensíveis armazenados no seu dispositivo.</li>
             </ul>
             <p>Embora tomemos medidas razoáveis para proteger suas informações, nenhum método de transmissão eletrônica ou armazenamento é 100% seguro.</p>
 
             <!-- ============================================================ -->
             <h2>6. Retenção de Dados</h2>
-            <p>Os dados armazenados localmente no seu dispositivo permanecem até que você exclua o Aplicativo ou limpe os dados do Aplicativo. <strong>As entradas de tipo sanguíneo e as leituras de compatibilidade são uma exceção — são exclusivas da sessão e são descartadas automaticamente quando você sai da tela de compatibilidade ou reinicia o Aplicativo.</strong> Nós não retemos seus dados pessoais em nossos servidores.</p>
+            <p>Os dados armazenados localmente no seu dispositivo permanecem até que você exclua o Aplicativo ou limpe os dados do Aplicativo. Leituras de compatibilidade zodiacal são exclusivas da sessão e são descartadas quando você sai da tela de compatibilidade; elas não são retidas em nossos servidores, embora os registros de geração descritos na Seção 5.2 permaneçam para verificação de denúncias. Leituras de tipo sanguíneo são salvas localmente e na nuvem conforme descrito acima.</p>
+            <p>O conteúdo armazenado na nuvem (Seção 5.2) é retido enquanto sua conta existir, para que permaneça disponível em seus dispositivos. Você pode encerrar essa retenção a qualquer momento: sair da conta interrompe a sincronização em um dispositivo, e excluir sua conta no Aplicativo (Configurações → Conta → Excluir conta) remove permanentemente sua conta e seus dados do lado do servidor — incluindo seus dados de perfil, sonhos, horóscopos, Eight Ball, tipo sanguíneo, chat com o Oráculo, configurações/registros legais sincronizados, bem como quaisquer imagens de compartilhamento armazenadas (consulte a Seção 10). Denúncias de conteúdo já enviadas por e-mail podem permanecer em nossa caixa jurídica/suporte quando necessário para revisar e responder à denúncia.</p>
+            <p>Se descontinuarmos uma funcionalidade ou encerrarmos o Aplicativo ou serviço, poderemos excluir, exportar, anonimizar ou reter conteúdo da conta por um período limitado conforme razoavelmente necessário para encerrar o serviço, cumprir obrigações legais, resolver disputas, prevenir abuso e manter a segurança. Não reteremos conteúdo da conta por mais tempo do que o razoavelmente necessário para esses fins, exceto quando a lei aplicável exigir ou permitir um período mais longo.</p>
             <p>Serviços de terceiros (Google AdMob, Firebase, OpenAI) podem reter os dados que coletam de acordo com suas próprias políticas de retenção. Consulte as respectivas políticas de privacidade indicadas na Seção 3 acima.</p>
 
             <!-- ============================================================ -->
@@ -264,12 +314,12 @@
 
             <!-- ============================================================ -->
             <h2>8. Transferências Internacionais de Dados</h2>
-            <p>Seus dados podem ser transferidos para e processados em países fora do seu país de residência, incluindo os Estados Unidos, onde nossos prestadores de serviços terceirizados (Google e OpenAI) mantêm servidores. Essas transferências são necessárias para fornecer os serviços do Aplicativo. Quando exigido por lei, contamos com salvaguardas apropriadas, como Cláusulas Contratuais Padrão (SCCs) adotadas pela Comissão Europeia, ou a certificação do prestador de serviços sob estruturas de transferência de dados aplicáveis.</p>
+            <p>O conteúdo da sua conta (Seção 5.2) é armazenado na <strong>União Europeia</strong> (Google Cloud Firestore e Cloud Functions). Ainda assim, parte do processamento ocorre em outros países, incluindo os Estados Unidos — por exemplo, o processamento de IA pela OpenAI e a publicidade e análise pelo Google/AdMob. Como resultado, seus dados podem ser transferidos para e processados em países fora do seu país de residência. Essas transferências são necessárias para fornecer os serviços do Aplicativo. Quando exigido por lei, contamos com salvaguardas apropriadas, como Cláusulas Contratuais Padrão (SCCs) adotadas pela Comissão Europeia, ou a certificação do prestador de serviços sob estruturas de transferência de dados aplicáveis.</p>
 
             <!-- ============================================================ -->
             <h2>9. Privacidade de Crianças</h2>
-            <p>Gertruda é classificado como 13+ e não é destinado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se você é pai, mãe ou responsável legal e acredita que seu filho menor de 13 anos nos forneceu informações pessoais, entre em contato conosco em <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, e tomaremos as medidas necessárias para excluir tais informações.</p>
-            <p>Se você tem entre 13 anos e a maioridade legal em sua jurisdição, deve revisar esta Política de Privacidade com um pai, mãe ou responsável legal para garantir que a compreenda.</p>
+            <p>Gertruda é classificado como 16+ e não é destinado a crianças menores de 16 anos. Não coletamos intencionalmente informações pessoais de crianças menores de 16 anos. Se você é pai, mãe ou responsável legal e acredita que seu filho menor de 16 anos nos forneceu informações pessoais, entre em contato conosco em <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, e tomaremos as medidas necessárias para excluir tais informações.</p>
+            <p>Se você tem entre 16 anos e a maioridade legal em sua jurisdição, deve revisar esta Política de Privacidade com um pai, mãe ou responsável legal para garantir que a compreenda.</p>
 
             <!-- ============================================================ -->
             <h2>10. Seus Direitos e Escolhas</h2>
@@ -279,7 +329,7 @@
             <ul>
                 <li><strong>Acesso:</strong> Solicitar uma cópia dos dados pessoais que mantemos sobre você.</li>
                 <li><strong>Correção:</strong> Solicitar a correção de dados pessoais imprecisos.</li>
-                <li><strong>Exclusão:</strong> Solicitar a exclusão dos seus dados pessoais. Como a maioria dos dados é armazenada localmente no seu dispositivo, você pode excluí-los desinstalando o Aplicativo ou limpando os dados do Aplicativo.</li>
+                <li><strong>Exclusão:</strong> Solicitar a exclusão dos seus dados pessoais. Você pode excluir sua conta e todos os seus dados do lado do servidor diretamente no Aplicativo em <strong>Configurações → Conta → Excluir conta</strong>. Os dados armazenados localmente no seu dispositivo também podem ser removidos desinstalando o Aplicativo ou limpando os dados do Aplicativo.</li>
                 <li><strong>Portabilidade:</strong> Solicitar seus dados em formato portátil, quando aplicável.</li>
                 <li><strong>Desativação de Rastreamento:</strong> No iOS, negar o rastreamento por meio do prompt ATT. No Android, desativar a personalização de anúncios nas configurações do dispositivo.</li>
                 <li><strong>Desativar Análise:</strong> Você pode desativar a análise no nível do sistema quando o seu sistema operacional permitir.</li>
@@ -293,7 +343,7 @@
                     <ul>
                         <li><strong>Consentimento:</strong> Para publicidade personalizada e rastreamento (via App Tracking Transparency no iOS ou configurações de anúncios no Android). Você pode retirar o consentimento a qualquer momento através das configurações de privacidade ou de anúncios do seu dispositivo.</li>
                         <li><strong>Interesse Legítimo:</strong> Para análise e melhoria do aplicativo. Você pode se opor ao processamento baseado em interesse legítimo.</li>
-                        <li><strong>Execução de Contrato:</strong> Para fornecer as funcionalidades principais de entretenimento do aplicativo com base nas suas entradas.</li>
+                        <li><strong>Execução de Contrato:</strong> Para fornecer as funcionalidades principais de entretenimento do aplicativo com base nas suas entradas, e para operar sua conta, a sincronização na nuvem e o recurso de chat com o Oráculo.</li>
                     </ul>
                     <p>A análise pode ser desativada no Aplicativo (Configurações → Análise).</p>
                 </li>
@@ -318,7 +368,7 @@
 
             <!-- ============================================================ -->
             <h2>11. Pagamentos</h2>
-            <p>Gertruda não oferece atualmente compras dentro do aplicativo ou assinaturas, e não coletamos nem processamos informações de pagamento. Caso isso mude no futuro, atualizaremos esta Política de Privacidade antes de introduzir qualquer funcionalidade paga.</p>
+            <p>Gertruda é atualmente oferecido gratuitamente com anúncios e limites diários de uso para recursos baseados em IA. O Aplicativo pode incluir funcionalidades de compra dentro do aplicativo ou assinatura inativas ou de disponibilidade limitada. Se funcionalidades pagas forem oferecidas a você, o preço, os termos de teste, os termos de renovação e as instruções de cancelamento serão exibidos no fluxo de compra da App Store ou do Google Play antes da compra. Assinaturas ativas são gerenciadas pela App Store ou pelo Google Play e não são canceladas automaticamente quando você exclui sua conta Gertruda.</p>
 
             <!-- ============================================================ -->
             <h2>12. Aviso de Entretenimento</h2>

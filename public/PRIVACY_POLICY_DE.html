@@ -122,8 +122,12 @@
         <div class="document">
             <h1>Datenschutzrichtlinie</h1>
             <div class="meta">
-                <p><strong>Geltungsdatum:</strong> 16. April 2026</p>
+                <p><strong>Geltungsdatum:</strong> 6. Juli 2026</p>
                 <p><strong>App:</strong> Gertruda (iOS &amp; Android)</p>
+            </div>
+
+            <div style="background:#fff3e0;border-left:4px solid #ff9800;padding:16px;margin:24px 0;border-radius:0 8px 8px 0;">
+                <p><strong>Important update (June 18, 2026):</strong> Gertruda now supports account sync for blood type readings, Oracle chat conversations, generated share images, selected user settings (language, analytics, caching), report metadata, and legal-acceptance records. Blood type readings may be saved locally and in Cloud Firestore. Oracle chat source context may include names or other details already shown in the reading. If any translated sentence below conflicts with this update, the current English Privacy Policy controls until this translation is fully updated.</p>
             </div>
 
             <p>Willkommen bei Gertruda (<strong>„wir"</strong>, <strong>„uns"</strong> oder <strong>„die App"</strong>). Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer personenbezogenen Daten ein. Diese Datenschutzrichtlinie erläutert, wie wir Ihre Informationen erfassen, verwenden, weitergeben und schützen, wenn Sie unsere mobile Anwendung nutzen. Sie beschreibt auch Ihre Rechte in Bezug auf Ihre Daten.</p>
@@ -138,11 +142,19 @@
                 <li><strong>Personenbezogene Daten:</strong> Ihr Name (optional) und Ihr Geburtsdatum, die zur Erstellung personalisierter Horoskope und Vorhersagen verwendet werden.</li>
                 <li><strong>Geburtsort:</strong> Eine textliche Beschreibung Ihres Geburtsortes (z. B. „Berlin"), die für personalisierte Horoskope verwendet wird. Dies ist <strong>nicht</strong> Ihr GPS-Standort.</li>
                 <li><strong>Funktionseingaben:</strong> Textbeschreibungen von Träumen für den Traumdeuter, Fragen für das Magische Orakel und Geburtsdaten für Liebeskompatibilitätsprüfungen.</li>
-                <li><strong>Blutgruppe:</strong> Blutgruppe (A, B, AB, O), freiwillig eingegeben für die Blutgruppen-Kompatibilitätsfunktion. Ihre Blutgruppe wird <strong>ausschließlich im Arbeitsspeicher und nur für die Dauer Ihrer Sitzung</strong> verarbeitet — sie wird <strong>weder auf Ihrem Gerät noch auf unseren Servern gespeichert</strong> und ist nicht mit Ihrer Identität verknüpft. Wenn Sie den Kompatibilitätsbildschirm schließen oder die App neu starten, wird jede eingegebene Blutgruppe gelöscht. Blutgruppe gilt unter der DSGVO als gesundheitsnahe Daten; sie wird <strong>ausschließlich zu Unterhaltungs- und Astrologiezwecken</strong> verwendet und hat <strong>keine medizinische Bedeutung</strong>.</li>
-                <li><strong>Einstellungen:</strong> Ihre gewählte Sprache und Benachrichtigungseinstellungen.</li>
+                <li><strong>Blutgruppe:</strong> Blutgruppe (A, B, AB, O), freiwillig eingegeben für die Blutgruppen-Kompatibilitätsfunktion. Blutgruppe gilt unter der DSGVO als gesundheitsnahe Daten; sie wird <strong>ausschließlich zu Unterhaltungs-, Astrologie- und Novelty-Zwecken</strong> verwendet und hat <strong>keine medizinische Bedeutung</strong>. Die App kann die KI-generierte Blutgruppenlesung, die zugehörigen Profilkennungen und begrenzten Blutgruppenkontext speichern, der erforderlich ist, um die Lesung anzuzeigen, zu synchronisieren, fortzusetzen oder zu melden. Wir verwenden Blutgruppendaten nicht für medizinische, diagnostische, Versicherungs-, Beschäftigungs- oder Gesundheitsprofiling-Zwecke.</li>
+                <li><strong>Einstellungen:</strong> Ihre gewählte Sprache, Analysepräferenz, Cache-Präferenz, Benachrichtigungseinstellungen und andere App-Einstellungen.</li>
             </ul>
 
-            <h3>1.2 Automatisch erfasste Informationen</h3>
+            <h3>1.2 Konto- und Anmeldedaten</h3>
+            <p>Um Ihre Inhalte zu speichern und geräteübergreifend zu synchronisieren, verwendet die App Firebase Authentication, um ein Konto für Sie zu erstellen:</p>
+            <ul>
+                <li><strong>Anonymes Konto:</strong> Wenn Sie kontobasierte Funktionen erstmals nutzen, wird automatisch ein anonymes Konto mit einer zufällig generierten Benutzer-ID erstellt. Es enthält keine personenbezogenen Kennungen und dient nur dazu, Ihre gespeicherten Inhalte Ihrem Gerät zuzuordnen.</li>
+                <li><strong>Google-Anmeldung (optional):</strong> Wenn Sie sich für die Verknüpfung eines Google-Kontos zur geräteübergreifenden Synchronisierung entscheiden, erhalten wir von Google Ihre <strong>E-Mail-Adresse, Ihren Anzeigenamen, Ihr Profilbild und Ihre Google-Konto-Kennung</strong>. Diese Informationen werden verwendet, um Ihr Konto zu identifizieren, Ihr Profil anzuzeigen und Ihre Daten über Ihre Geräte hinweg zu synchronisieren.</li>
+                <li><strong>Gespeicherte Inhalte:</strong> Wenn Sie angemeldet sind, werden Ihr Profil (Name, Geburtsdatum, Geburtsort), Ihr Traumverlauf, Ihr Horoskop- und Eight-Ball-Verlauf, Ihre <strong>Orakel-Chat-Unterhaltungen</strong> sowie ein Nachweis Ihrer Zustimmung zu den Nutzungsbedingungen/der Datenschutzrichtlinie in der Cloud gespeichert, damit sie auf Ihren anderen Geräten verfügbar sind (siehe Abschnitt 5).</li>
+            </ul>
+
+            <h3>1.3 Automatisch erfasste Informationen</h3>
             <p>Bestimmte Informationen werden automatisch durch in die App integrierte Drittanbieter-SDKs erfasst:</p>
             <ul>
                 <li><strong>Werbedaten:</strong> Google AdMob erfasst Werbekennungen (einschließlich des Identifier for Advertisers, IDFA, auf iOS mit Ihrer Zustimmung), um Werbung anzuzeigen.</li>
@@ -152,14 +164,18 @@
                 <li><strong>Verbindungsmetadaten:</strong> Firebase erfasst grundlegende Verbindungsmetadaten (IP-Adresse, Gerätetyp, Betriebssystemversion) für Infrastruktur- und Konfigurationsmanagement.</li>
             </ul>
 
-            <h3>1.3 Informationen, die wir nicht erfassen</h3>
-            <p>Wir erfassen <strong>keine</strong>: genauen GPS- oder Gerätestandorte, E-Mail-Adressen, Telefonnummern, Fotos, Kontakte, verifizierte Gesundheitsdaten oder biometrische Informationen. Die App erfordert keine Kontoerstellung.</p>
+            <h3>1.4 Informationen, die wir nicht erfassen</h3>
+            <p>Wir erfassen <strong>keine</strong>: genauen GPS- oder Gerätestandorte, Telefonnummern, Fotos aus Ihrer Fotomediathek, Kontakte, verifizierte Gesundheitsdaten oder biometrische Informationen. Eine E-Mail-Adresse erfassen wir nur, wenn Sie sich freiwillig mit Google anmelden (siehe Abschnitt 1.2); wir fragen niemals ein Passwort ab und speichern keines, da die Authentifizierung vollständig von Google und Firebase übernommen wird. Die Nutzung der App erfordert nicht, dass Sie ein benanntes Konto erstellen — ein anonymes Konto wird automatisch erstellt, und die Verknüpfung eines Google-Kontos ist optional.</p>
 
             <!-- ============================================================ -->
             <h2>2. Wie wir Ihre Informationen verwenden</h2>
             <ul>
                 <li>Zur Erstellung personalisierter Horoskope, Kompatibilitätswerte und Traumdeutungen.</li>
                 <li>Zur Verarbeitung Ihrer Eingaben durch KI-Dienste, um Antworten und Bilder zu generieren (siehe Abschnitt 3).</li>
+                <li>Zur Erstellung und Verwaltung Ihres Kontos, zur Speicherung Ihrer Inhalte und zu deren Synchronisierung über Ihre Geräte hinweg.</li>
+                <li>Zur Bereitstellung der Orakel-Chat-Funktion und zur Aufbewahrung Ihres Gesprächsverlaufs, damit Sie Unterhaltungen fortsetzen können.</li>
+                <li>Zur Anwendung kontobezogener täglicher Nutzungslimits, die KI-Funktionen verfügbar halten und Missbrauch verhindern.</li>
+                <li>Zur Bearbeitung Ihrer Anfrage zur Löschung Ihres Kontos und der zugehörigen Daten.</li>
                 <li>Zur Verwaltung der App-Konfiguration und Bereitstellung von Funktionsupdates über Firebase Remote Config.</li>
                 <li>Zum Versand geplanter Push-Benachrichtigungen wie Horoskop-Erinnerungen und Re-Engagement-Nachrichten (wenn von Ihnen aktiviert).</li>
                 <li>Zur Anzeige von Werbung über Google AdMob.</li>
@@ -174,11 +190,21 @@
             <h3>3.1 Google AdMob</h3>
             <p>Wir verwenden Google AdMob zur Anzeige von Banner-, Interstitial- und Belohnungsvideowerbung. AdMob erfasst Werbekennungen (IDFA auf iOS, Advertising ID auf Android), IP-Adressen (zur Ableitung des ungefähren Standorts), Absturzdaten, Leistungsdaten und andere Diagnosedaten. Diese Informationen werden für Drittanbieterwerbung, Analysen und Werbepersonalisierung verwendet. Die Datenerfassung durch AdMob gilt als „Tracking" gemäß Apple-Definition. Weitere Informationen finden Sie in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles Datenschutzrichtlinie</a>.</p>
 
-            <h3>3.2 Firebase (Google)</h3>
-            <p><strong>Firebase Analytics:</strong> Erfasst App-Nutzungsdaten für Analysezwecke. Sie können dies in den App-Einstellungen deaktivieren. <strong>Firebase Remote Config:</strong> Liefert Feature-Flags und Konfigurationsdaten an die App. <strong>Firebase Core:</strong> Stellt grundlegende Infrastrukturdienste bereit. Weitere Informationen finden Sie in den <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase-Datenschutzinformationen</a>.</p>
+            <h3>3.2 Firebase und Google (Google LLC)</h3>
+            <p>Wir nutzen die folgenden Google- und Firebase-Dienste:</p>
+            <ul>
+                <li><strong>Firebase Authentication &amp; Google-Anmeldung:</strong> Erstellung und Verwaltung Ihres Kontos und, falls Sie zustimmen, Verknüpfung Ihres Google-Kontos zur geräteübergreifenden Synchronisierung.</li>
+                <li><strong>Cloud Firestore:</strong> Speichert Ihre Kontoinhalte (Profil, Träume, Horoskop- und Eight-Ball-Verlauf, Orakel-Chat-Unterhaltungen und Zustimmungsnachweise). Diese Datenbank wird in der <strong>Europäischen Union</strong> gehostet.</li>
+                <li><strong>Cloud Functions:</strong> Unsere serverseitigen Funktionen (in der Europäischen Union gehostet) empfangen Ihre KI-Anfragen und leiten sie an OpenAI weiter, sodass der OpenAI-Zugriffsschlüssel niemals in der App ausgeliefert wird.</li>
+                <li><strong>Cloud Storage:</strong> Speichert KI-generierte Freigabebilder, die Ihrem Konto zugeordnet sind.</li>
+                <li><strong>Firebase Analytics:</strong> Erfasst App-Nutzungsdaten für Analysezwecke. Sie können dies in den App-Einstellungen deaktivieren.</li>
+                <li><strong>Firebase Remote Config:</strong> Liefert Feature-Flags und Konfigurationsdaten an die App.</li>
+                <li><strong>Firebase Core:</strong> Stellt grundlegende Infrastrukturdienste bereit.</li>
+            </ul>
+            <p>Weitere Informationen finden Sie in den <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase-Datenschutzinformationen</a> und in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles Datenschutzrichtlinie</a>.</p>
 
             <h3>3.3 OpenAI</h3>
-            <p>Vom Benutzer eingegebener Text (Traumbeschreibungen, Orakelfragen und Horoskop-bezogene Anfragen) wird an die API von OpenAI gesendet, um KI-gestützte Antworten und Bilder zu generieren. Bei der Blutgruppen-Kompatibilitätsfunktion werden nur Blutgruppenbezeichnungen und Persönlichkeitsarchetypen (nicht Ihr Name oder Ihre Identität) an OpenAI übermittelt; neutrale Platzhalter („Person A" / „Person B") werden in der Anfrage verwendet, und Ihr Name wird clientseitig nach Erhalt der Antwort ersetzt. <strong>Ihr Name wird niemals in einer Übermittlung an OpenAI einbezogen</strong> — dies gilt für alle KI-Funktionen. Diese Anfragen werden in Echtzeit verarbeitet und nach Lieferung der Antwort nicht von uns gespeichert. OpenAI kann diese Daten gemäß seiner eigenen <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Datenschutzrichtlinie</a> und seinen <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Nutzungsbedingungen</a> verarbeiten.</p>
+            <p>Vom Benutzer eingegebener Text (Traumbeschreibungen, Orakelfragen, Horoskop-bezogene Anfragen und Ihre <strong>Orakel-Chat-Nachrichten</strong>) wird — über unsere eigenen Cloud Functions (siehe Abschnitt 3.2) — an die API von OpenAI gesendet, um KI-gestützte Antworten und Bilder zu generieren. Bei einmaligen Kompatibilitätslesungen begrenzen wir identifizierende Informationen, soweit möglich: Tierkreiszeichen, Blutgruppenbezeichnungen, Geschlechter und Persönlichkeitsarchetypen können übermittelt werden, während in der Anfrage in der Regel neutrale Platzhalter („Person A" / „Person B") verwendet werden und Namen nach Erhalt der Antwort clientseitig ersetzt werden. Wenn Sie eine Lesung im <strong>Orakel-Chat</strong> besprechen, können der Kontext der Ausgangslesung und Ihre Chat-Nachrichten an OpenAI gesendet werden; dieser Kontext kann Namen oder andere Details enthalten, die bereits in der Lesung angezeigt wurden, damit die Unterhaltung kontextbezogen bleibt. OpenAI verarbeitet diese Anfragen in Echtzeit und verwendet sie nicht zum Trainieren seiner Modelle; OpenAI kann API-Daten für einen begrenzten Zeitraum (derzeit bis zu 30 Tage) zur Missbrauchsüberwachung gemäß seinen API-Datenrichtlinien aufbewahren. Beachten Sie, dass im Gegensatz zu einmaligen Auswertungen Ihr <strong>Orakel-Chat-Gesprächsverlauf von uns</strong> in Cloud Firestore gespeichert wird, damit Sie die Unterhaltung fortsetzen können (siehe Abschnitt 5). OpenAI kann diese Daten gemäß seiner eigenen <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Datenschutzrichtlinie</a> und seinen <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Nutzungsbedingungen</a> verarbeiten.</p>
 
             <!-- ============================================================ -->
             <h2>4. Werbung und Tracking</h2>
@@ -232,30 +258,54 @@
                         <td>Ja</td>
                         <td>Drittanbieterwerbung, Analysen, Produktpersonalisierung</td>
                     </tr>
+                    <tr>
+                        <td>Kontaktdaten (E-Mail, Name — Google-Anmeldung)</td>
+                        <td>Ja</td>
+                        <td>Nein</td>
+                        <td>App-Funktionalität</td>
+                    </tr>
+                    <tr>
+                        <td>Benutzerinhalte (Träume, Orakel-Chat-Nachrichten usw.)</td>
+                        <td>Ja</td>
+                        <td>Nein</td>
+                        <td>App-Funktionalität</td>
+                    </tr>
+                    <tr>
+                        <td>Kennungen (Konto-/Benutzer-ID)</td>
+                        <td>Ja</td>
+                        <td>Nein</td>
+                        <td>App-Funktionalität</td>
+                    </tr>
                 </tbody>
             </table>
-            <p>Ein genauer Standort wird <strong>nicht</strong> erfasst.</p>
+            <p>Ein genauer Standort wird <strong>nicht</strong> erfasst. Die oben genannten Konto- und Benutzerinhaltsdaten (Kontaktdaten, Benutzerinhalte, Kennungen) werden ausschließlich zum Betrieb der Konto-, Synchronisierungs- und Orakelfunktionen der App verwendet und <strong>nicht</strong> für Tracking.</p>
 
             <!-- ============================================================ -->
             <h2>5. Datenspeicherung und Sicherheit</h2>
 
             <h3>5.1 Lokale Speicherung</h3>
-            <p>Die meisten personenbezogenen Daten — einschließlich Ihres Profils (Name, Geburtsdatum, Geburtsort), Traumverlauf, Orakelverlauf (z. B. Eight Ball), Horoskop-Cache und Benachrichtigungseinstellungen — werden nur auf Ihrem Gerät in lokalem Speicher (Dateien und Einstellungen auf dem Gerät) gespeichert. Eine kleine Menge an App-Konfiguration (z. B. gewählter Anbieter) kann ebenfalls auf dem Gerät in Flutter Secure Storage (Keychain auf iOS, EncryptedSharedPreferences auf Android) gespeichert werden. <strong>Blutgruppe und Kompatibilitätslesungen (sowohl Tierkreis- als auch Blutgruppen-basiert) werden nirgends dauerhaft gespeichert — sie existieren nur im Arbeitsspeicher für die Dauer Ihrer Sitzung (siehe Abschnitt 1.1 und Abschnitt 5.2).</strong></p>
+            <p>Ihr Profil (Name, Geburtsdatum, Geburtsort), Ihr Traumverlauf, Ihr Orakelverlauf (z. B. Eight Ball), Ihr Horoskop-Cache, Ihre Blutgruppenlesungen, Benachrichtigungseinstellungen, Meldekennzeichnungen und App-Einstellungen werden auf Ihrem Gerät in lokalem Speicher (Dateien und Einstellungen auf dem Gerät) gespeichert. Eine kleine Menge an App-Konfiguration kann ebenfalls auf dem Gerät in Flutter Secure Storage (Keychain auf iOS, EncryptedSharedPreferences auf Android) gespeichert werden. Wenn Sie angemeldet sind, werden kontobezogene Inhalte und synchronisierte Einstellungen zudem in der Cloud gespeichert und über Ihre Geräte hinweg synchronisiert (siehe Abschnitt 5.2). Tierkreis-Kompatibilitätslesungen sind sitzungsgebunden — sie werden während Ihrer Sitzung angezeigt und weder auf Ihrem Gerät noch in Ihrem Konto gespeichert; Blutgruppenlesungen werden wie in Abschnitt 1.1 beschrieben gespeichert.</p>
 
-            <h3>5.2 Cloud-Verarbeitung</h3>
-            <p>Wenn Sie KI-gestützte Funktionen nutzen, werden Ihre Eingaben zur Verarbeitung und Bildgenerierung an die Server von OpenAI übertragen. Diese Übertragungen sind flüchtig: Wir unterhalten keine permanente serverseitige Datenbank Ihrer Träume, Fragen, Horoskopanfragen oder Kompatibilitätslesungen.</p>
+            <h3>5.2 Cloud-Speicherung und -Verarbeitung</h3>
+            <p>Wenn Sie kontobasierte Funktionen nutzen, werden Ihre Inhalte — Ihr Profil, Ihr Traumverlauf, Ihr Horoskop- und Eight-Ball-Verlauf, Ihre Blutgruppenlesungen, synchronisierten Einstellungen sowie Ihre <strong>Orakel-Chat-Unterhaltungen</strong> — in <strong>Google Cloud Firestore gespeichert, das in der Europäischen Union gehostet wird</strong>. Der Zugriff ist durch Sicherheitsregeln beschränkt, sodass jedes Konto nur seine eigenen Daten lesen und schreiben kann. Wir bewahren diese Daten auf, damit sie auf Ihren Geräten verfügbar sind und Konto-, Melde- und Sicherheitsfunktionen betrieben werden können; Sie können sie jederzeit entfernen (siehe Abschnitte 6 und 10).</p>
+            <p>Wenn Sie KI-gestützte Funktionen nutzen, werden Ihre Eingaben über unsere Cloud Functions (in der Europäischen Union gehostet) zur Verarbeitung und Bildgenerierung an OpenAI gesendet. Einmalige Auswertungen (Träume, Horoskope, Kompatibilität, Eight Ball) werden in Echtzeit verarbeitet und nicht zum Trainieren der Modelle von OpenAI verwendet; zur begrenzten Aufbewahrung zur Missbrauchsüberwachung siehe Abschnitt 3.3. KI-generierte Freigabebilder können in Cloud Storage unter Ihrem Konto gespeichert werden.</p>
 
+            <p><strong>Generierungsnachweise:</strong> Zum Schutz der Integrität von Inhaltsmeldungen speichern unsere Server für jede KI-generierte Deutung und Bildanfrage einen manipulationssicheren Nachweis („Receipt“) — eine Kopie des generierten Inhalts (bei Bildern: die Generierungsanfrage und ein Fingerabdruck der gelieferten Datei) und einen kryptografischen Fingerabdruck (SHA-256), der serverseitig in Ihrem Konto gespeichert wird und aus der App heraus nicht veränderbar ist. Wir verwenden diese Nachweise ausschließlich, um zu prüfen, ob gemeldete Inhalte tatsächlich von der App erzeugt wurden. Sie enthalten nicht mehr personenbezogene Daten als der generierte Inhalt selbst und werden zusammen mit Ihrem Konto gelöscht.</p>
             <h3>5.3 Sicherheitsmaßnahmen</h3>
             <p>Wir verwenden branchenübliche Sicherheitsmaßnahmen zum Schutz Ihrer Daten, darunter:</p>
             <ul>
-                <li>HTTPS (TLS-Verschlüsselung) für alle zwischen der App und Drittanbieterdiensten übertragenen Daten.</li>
+                <li>HTTPS (TLS-Verschlüsselung) für alle zwischen der App, unseren Servern und Drittanbieterdiensten übertragenen Daten.</li>
+                <li>Kontobezogene Zugriffskontrollen (Firestore-Sicherheitsregeln), sodass Ihre Cloud-Daten nur für Ihr authentifiziertes Konto zugänglich sind.</li>
+                <li>Serverseitige Handhabung des OpenAI-Zugriffsschlüssels, sodass dieser niemals in der App offengelegt wird.</li>
                 <li>Sichere Speicherung auf Betriebssystemebene (Keychain auf iOS, EncryptedSharedPreferences auf Android) für sensible Daten auf Ihrem Gerät.</li>
             </ul>
             <p>Obwohl wir angemessene Schritte zum Schutz Ihrer Informationen unternehmen, ist keine Methode der elektronischen Übertragung oder Speicherung zu 100 % sicher.</p>
 
             <!-- ============================================================ -->
             <h2>6. Datenaufbewahrung</h2>
-            <p>Auf Ihrem Gerät lokal gespeicherte Daten bleiben bestehen, bis Sie die App löschen oder die App-Daten bereinigen. <strong>Blutgruppeneingaben und Kompatibilitätslesungen sind eine Ausnahme — sie sind sitzungsgebunden und werden automatisch verworfen, wenn Sie den Kompatibilitätsbildschirm verlassen oder die App neu starten.</strong> Wir speichern Ihre personenbezogenen Daten nicht auf unseren Servern.</p>
+            <p>Auf Ihrem Gerät lokal gespeicherte Daten bleiben bestehen, bis Sie die App löschen oder die App-Daten bereinigen. Tierkreis-Kompatibilitätslesungen sind sitzungsgebunden und werden verworfen, wenn Sie den Kompatibilitätsbildschirm verlassen; sie werden nicht auf unseren Servern aufbewahrt, wobei die in Abschnitt 5.2 beschriebenen Generierungsnachweise zur Prüfung von Meldungen erhalten bleiben. Blutgruppenlesungen werden wie oben beschrieben lokal und in der Cloud gespeichert.</p>
+            <p>In der Cloud gespeicherte Inhalte (Abschnitt 5.2) werden so lange aufbewahrt, wie Ihr Konto besteht, damit sie auf Ihren Geräten verfügbar bleiben. Sie können diese Aufbewahrung jederzeit beenden: Durch Abmelden wird die Synchronisierung auf einem Gerät gestoppt, und durch Löschen Ihres Kontos in der App (Einstellungen → Konto → Konto löschen) werden Ihr Konto und seine serverseitigen Daten dauerhaft entfernt — einschließlich Ihrer Profil-, Traum-, Horoskop-, Eight-Ball-, Blutgruppen- und Orakel-Chat-Daten, synchronisierten Einstellungen/Rechtsnachweise sowie aller gespeicherten Freigabebilder (siehe Abschnitt 10). Bereits per E-Mail übermittelte Inhaltsmeldungen können in unserem Rechts-/Support-Postfach verbleiben, soweit dies zur Prüfung und Beantwortung der Meldung erforderlich ist.</p>
+            <p>Wenn wir eine Funktion einstellen oder die App oder den Dienst abschalten, können wir Kontoinhalte für einen begrenzten Zeitraum löschen, exportieren, anonymisieren oder aufbewahren, soweit dies angemessen erforderlich ist, um den Dienst abzuwickeln, gesetzlichen Verpflichtungen nachzukommen, Streitigkeiten zu lösen, Missbrauch zu verhindern und die Sicherheit aufrechtzuerhalten. Wir bewahren Kontoinhalte nicht länger auf, als für diese Zwecke angemessen erforderlich ist, außer soweit geltendes Recht einen längeren Zeitraum verlangt oder erlaubt.</p>
             <p>Drittanbieterdienste (Google AdMob, Firebase, OpenAI) können die von ihnen erfassten Daten gemäß ihren eigenen Aufbewahrungsrichtlinien speichern. Bitte beachten Sie die jeweiligen Datenschutzrichtlinien, die in Abschnitt 3 verlinkt sind.</p>
 
             <!-- ============================================================ -->
@@ -264,12 +314,12 @@
 
             <!-- ============================================================ -->
             <h2>8. Internationale Datenübermittlungen</h2>
-            <p>Ihre Daten können in Länder außerhalb Ihres Wohnsitzlandes übertragen und dort verarbeitet werden, einschließlich der Vereinigten Staaten, wo unsere Drittanbieter-Dienstleister (Google und OpenAI) Server betreiben. Diese Übertragungen sind notwendig, um die Dienste der App bereitzustellen. Soweit gesetzlich erforderlich, stützen wir uns auf geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SCCs), die von der Europäischen Kommission angenommen wurden, oder die Zertifizierung des Dienstleisters im Rahmen geltender Datenübertragungsrahmenwerke.</p>
+            <p>Ihre Kontoinhalte (Abschnitt 5.2) werden in der <strong>Europäischen Union</strong> gespeichert (Google Cloud Firestore und Cloud Functions). Ein Teil der Verarbeitung findet dennoch in anderen Ländern statt, einschließlich der Vereinigten Staaten — zum Beispiel die KI-Verarbeitung durch OpenAI sowie Werbung und Analysen durch Google/AdMob. Daher können Ihre Daten in Länder außerhalb Ihres Wohnsitzlandes übertragen und dort verarbeitet werden. Diese Übertragungen sind notwendig, um die Dienste der App bereitzustellen. Soweit gesetzlich erforderlich, stützen wir uns auf geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SCCs), die von der Europäischen Kommission angenommen wurden, oder die Zertifizierung des Dienstleisters im Rahmen geltender Datenübertragungsrahmenwerke.</p>
 
             <!-- ============================================================ -->
             <h2>9. Datenschutz für Kinder</h2>
-            <p>Gertruda ist ab 13 Jahren freigegeben und nicht für Kinder unter 13 Jahren bestimmt. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind unter 13 Jahren uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, und wir werden Maßnahmen ergreifen, um diese Informationen zu löschen.</p>
-            <p>Wenn Sie zwischen 13 Jahren und dem Volljährigkeitsalter in Ihrer Rechtsordnung sind, sollten Sie diese Datenschutzrichtlinie mit einem Elternteil oder Erziehungsberechtigten überprüfen, um sicherzustellen, dass Sie sie verstehen.</p>
+            <p>Gertruda ist ab 16 Jahren freigegeben und nicht für Kinder unter 16 Jahren bestimmt. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 16 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind unter 16 Jahren uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte unter <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, und wir werden Maßnahmen ergreifen, um diese Informationen zu löschen.</p>
+            <p>Wenn Sie zwischen 16 Jahren und dem Volljährigkeitsalter in Ihrer Rechtsordnung sind, sollten Sie diese Datenschutzrichtlinie mit einem Elternteil oder Erziehungsberechtigten überprüfen, um sicherzustellen, dass Sie sie verstehen.</p>
 
             <!-- ============================================================ -->
             <h2>10. Ihre Rechte und Wahlmöglichkeiten</h2>
@@ -279,7 +329,7 @@
             <ul>
                 <li><strong>Auskunft:</strong> Anforderung einer Kopie der personenbezogenen Daten, die wir über Sie gespeichert haben.</li>
                 <li><strong>Berichtigung:</strong> Anforderung der Berichtigung unrichtiger personenbezogener Daten.</li>
-                <li><strong>Löschung:</strong> Anforderung der Löschung Ihrer personenbezogenen Daten. Da die meisten Daten lokal auf Ihrem Gerät gespeichert werden, können Sie sie durch Deinstallation der App oder Bereinigung der App-Daten löschen.</li>
+                <li><strong>Löschung:</strong> Anforderung der Löschung Ihrer personenbezogenen Daten. Sie können Ihr Konto und alle zugehörigen serverseitigen Daten direkt in der App über <strong>Einstellungen → Konto → Konto löschen</strong> löschen. Lokal auf Ihrem Gerät gespeicherte Daten können Sie zudem durch Deinstallation der App oder Bereinigung der App-Daten entfernen.</li>
                 <li><strong>Datenübertragbarkeit:</strong> Anforderung Ihrer Daten in einem portablen Format, soweit anwendbar.</li>
                 <li><strong>Widerspruch gegen Tracking:</strong> Auf iOS können Sie Tracking über die ATT-Aufforderung ablehnen. Auf Android können Sie die Werbepersonalisierung in den Geräteeinstellungen deaktivieren.</li>
                 <li><strong>Analysen deaktivieren:</strong> Sie können Analysen auf Systemebene deaktivieren, sofern Ihr Betriebssystem dies ermöglicht.</li>
@@ -293,7 +343,7 @@
                     <ul>
                         <li><strong>Einwilligung:</strong> Für personalisierte Werbung und Tracking (über App Tracking Transparency auf iOS oder Werbeeinstellungen auf Android). Sie können Ihre Einwilligung jederzeit über die Datenschutzeinstellungen oder Werbeeinstellungen Ihres Geräts widerrufen.</li>
                         <li><strong>Berechtigtes Interesse:</strong> Für Analysen und App-Verbesserung. Sie können der Verarbeitung auf Grundlage berechtigter Interessen widersprechen.</li>
-                        <li><strong>Vertragserfüllung:</strong> Für die Bereitstellung der Kern-Unterhaltungsfunktionen der App basierend auf Ihren Eingaben.</li>
+                        <li><strong>Vertragserfüllung:</strong> Für die Bereitstellung der Kern-Unterhaltungsfunktionen der App basierend auf Ihren Eingaben sowie für den Betrieb Ihres Kontos, der Cloud-Synchronisierung und der Orakel-Chat-Funktion.</li>
                     </ul>
                     <p>Analysen können in der App deaktiviert werden (Einstellungen → Analysen).</p>
                 </li>
@@ -318,7 +368,7 @@
 
             <!-- ============================================================ -->
             <h2>11. Zahlungen</h2>
-            <p>Gertruda bietet derzeit keine In-App-Käufe oder Abonnements an, und wir erfassen oder verarbeiten keine Zahlungsinformationen. Sollte sich dies in Zukunft ändern, werden wir diese Datenschutzerklärung aktualisieren, bevor eine kostenpflichtige Funktion eingeführt wird.</p>
+            <p>Gertruda wird derzeit kostenlos mit Werbung und täglichen Nutzungslimits für KI-gestützte Funktionen angeboten. Die App kann inaktive oder begrenzt verfügbare In-App-Kauf- oder Abonnementfunktionen enthalten. Wenn Ihnen kostenpflichtige Funktionen angeboten werden, werden Preis, Testbedingungen, Verlängerungsbedingungen und Kündigungsanweisungen im Kaufablauf des App Store oder von Google Play vor dem Kauf angezeigt. Aktive Abonnements werden vom App Store oder von Google Play verwaltet und nicht automatisch gekündigt, wenn Sie Ihr Gertruda-Konto löschen.</p>
 
             <!-- ============================================================ -->
             <h2>12. Unterhaltungshinweis</h2>

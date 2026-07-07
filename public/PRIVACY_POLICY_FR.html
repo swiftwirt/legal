@@ -122,8 +122,12 @@
         <div class="document">
             <h1>Politique de confidentialité</h1>
             <div class="meta">
-                <p><strong>Date d'entrée en vigueur :</strong> 16 avril 2026</p>
+                <p><strong>Date d'entrée en vigueur :</strong> 6 juillet 2026</p>
                 <p><strong>Application :</strong> Gertruda (iOS &amp; Android)</p>
+            </div>
+
+            <div style="background:#fff3e0;border-left:4px solid #ff9800;padding:16px;margin:24px 0;border-radius:0 8px 8px 0;">
+                <p><strong>Important update (June 18, 2026):</strong> Gertruda now supports account sync for blood type readings, Oracle chat conversations, generated share images, selected user settings (language, analytics, caching), report metadata, and legal-acceptance records. Blood type readings may be saved locally and in Cloud Firestore. Oracle chat source context may include names or other details already shown in the reading. If any translated sentence below conflicts with this update, the current English Privacy Policy controls until this translation is fully updated.</p>
             </div>
 
             <p>Bienvenue sur Gertruda (<strong>« nous »</strong>, <strong>« notre »</strong> ou <strong>« l'Application »</strong>). Nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. La présente Politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez notre application mobile. Elle décrit également vos droits concernant vos données.</p>
@@ -138,11 +142,19 @@
                 <li><strong>Données personnelles :</strong> Votre nom (facultatif) et votre date de naissance, utilisés pour générer des horoscopes et des prévisions personnalisés.</li>
                 <li><strong>Lieu de naissance :</strong> Une description textuelle de votre lieu de naissance (par ex., « Paris ») utilisée pour les horoscopes personnalisés. Il ne s'agit <strong>pas</strong> de la localisation GPS de votre appareil.</li>
                 <li><strong>Données de fonctionnalités :</strong> Descriptions textuelles de rêves pour l'Interpréteur de rêves, questions pour l'Oracle magique et données de naissance pour les vérifications de Compatibilité amoureuse.</li>
-                <li><strong>Groupe sanguin :</strong> Groupe sanguin (A, B, AB, O) saisi volontairement pour la fonction de compatibilité des groupes sanguins. Votre groupe sanguin est traité <strong>uniquement en mémoire et seulement pendant la durée de votre session</strong> — il <strong>n'est enregistré ni sur votre appareil ni sur nos serveurs</strong> et n'est pas lié à votre identité. Si vous fermez l'écran de compatibilité ou relancez l'Application, tout groupe sanguin saisi est effacé. Le groupe sanguin est considéré comme une donnée proche de la santé au sens du RGPD ; il est utilisé <strong>uniquement à des fins de divertissement et d'astrologie</strong> et n'a <strong>aucune valeur ni signification médicale</strong>.</li>
-                <li><strong>Préférences :</strong> Votre langue sélectionnée et vos paramètres de notification.</li>
+                <li><strong>Groupe sanguin :</strong> Groupe sanguin (A, B, AB, O) saisi volontairement pour la fonction de compatibilité des groupes sanguins. Le groupe sanguin est considéré comme une donnée proche de la santé au sens du RGPD ; il est utilisé <strong>uniquement à des fins de divertissement, d'astrologie et de nouveauté</strong> et n'a <strong>aucune valeur ni signification médicale</strong>. L'Application peut enregistrer la lecture de groupe sanguin générée par l'IA, les identifiants de profil associés et un contexte limité de groupe sanguin nécessaire pour afficher, synchroniser, poursuivre ou signaler cette lecture. Nous n'utilisons pas les données de groupe sanguin à des fins médicales, diagnostiques, d'assurance, d'emploi ou de profilage de santé.</li>
+                <li><strong>Préférences :</strong> Votre langue sélectionnée, votre préférence d'analyse, votre préférence de cache, vos paramètres de notification et d'autres réglages de l'application.</li>
             </ul>
 
-            <h3>1.2 Informations collectées automatiquement</h3>
+            <h3>1.2 Données de compte et de connexion</h3>
+            <p>Pour enregistrer votre contenu et le synchroniser entre vos appareils, l'Application utilise Firebase Authentication afin de créer un compte pour vous :</p>
+            <ul>
+                <li><strong>Compte anonyme :</strong> Lorsque vous utilisez pour la première fois les fonctionnalités liées au compte, un compte anonyme associé à un identifiant d'utilisateur généré aléatoirement est créé automatiquement. Il ne contient aucun identifiant personnel et sert uniquement à associer votre contenu enregistré à votre appareil.</li>
+                <li><strong>Connexion Google (facultative) :</strong> Si vous choisissez de lier un compte Google pour la synchronisation entre appareils, nous recevons de Google votre <strong>adresse e-mail, votre nom d'affichage, votre photo de profil et votre identifiant de compte Google</strong>. Ces informations servent à identifier votre compte, à afficher votre profil et à synchroniser vos données entre vos appareils.</li>
+                <li><strong>Contenu stocké :</strong> Lorsque vous êtes connecté, votre profil (nom, date de naissance, lieu de naissance), votre historique de rêves, votre historique d'horoscopes et d'Eight Ball, vos <strong>conversations de chat avec l'Oracle</strong> ainsi qu'un enregistrement de votre acceptation des Conditions/de la Confidentialité sont stockés dans le cloud afin d'être disponibles sur vos autres appareils (voir la Section 5).</li>
+            </ul>
+
+            <h3>1.3 Informations collectées automatiquement</h3>
             <p>Certaines informations sont collectées automatiquement par des SDK tiers intégrés dans l'Application :</p>
             <ul>
                 <li><strong>Données publicitaires :</strong> Google AdMob collecte des identifiants publicitaires (y compris l'identifiant pour les annonceurs, ou IDFA, sur iOS avec votre consentement) pour diffuser des publicités.</li>
@@ -152,14 +164,18 @@
                 <li><strong>Métadonnées de connexion :</strong> Firebase collecte des métadonnées de connexion de base (adresse IP, type d'appareil, version du système d'exploitation) pour la gestion de l'infrastructure et de la configuration.</li>
             </ul>
 
-            <h3>1.3 Informations que nous ne collectons pas</h3>
-            <p>Nous ne collectons <strong>pas</strong> : la localisation GPS précise ou de l'appareil, les adresses e-mail, les numéros de téléphone, les photos, les contacts, les données de santé vérifiées, ni aucune information biométrique. L'Application ne nécessite pas la création d'un compte.</p>
+            <h3>1.4 Informations que nous ne collectons pas</h3>
+            <p>Nous ne collectons <strong>pas</strong> : la localisation GPS précise ou de l'appareil, les numéros de téléphone, les photos de votre photothèque, les contacts, les données de santé vérifiées, ni aucune information biométrique. Nous ne collectons une adresse e-mail que si vous choisissez volontairement de vous connecter avec Google (voir la Section 1.2) ; nous ne demandons ni ne stockons jamais de mot de passe, l'authentification étant entièrement gérée par Google et Firebase. L'utilisation de l'Application ne vous oblige pas à créer un compte nominatif — un compte anonyme est créé automatiquement, et lier un compte Google est facultatif.</p>
 
             <!-- ============================================================ -->
             <h2>2. Comment nous utilisons vos informations</h2>
             <ul>
                 <li>Pour générer des horoscopes personnalisés, des scores de compatibilité et des interprétations de rêves.</li>
                 <li>Pour traiter vos saisies via des services d'IA afin de fournir des réponses et générer des images (voir Section 3).</li>
+                <li>Pour créer et gérer votre compte, stocker votre contenu et le synchroniser entre vos appareils.</li>
+                <li>Pour fournir la fonctionnalité de chat avec l'Oracle et conserver votre historique de conversations afin que vous puissiez les poursuivre.</li>
+                <li>Pour appliquer des limites d'utilisation quotidiennes par compte qui maintiennent les fonctionnalités d'IA disponibles et préviennent les abus.</li>
+                <li>Pour traiter votre demande de suppression de votre compte et des données associées.</li>
                 <li>Pour gérer la configuration de l'Application et fournir des mises à jour de fonctionnalités via Firebase Remote Config.</li>
                 <li>Pour envoyer des notifications push programmées telles que des rappels d'horoscope et des messages de réengagement (si activés par vous).</li>
                 <li>Pour afficher des publicités via Google AdMob.</li>
@@ -174,11 +190,21 @@
             <h3>3.1 Google AdMob</h3>
             <p>Nous utilisons Google AdMob pour afficher des bannières, des interstitiels (plein écran) et des vidéos publicitaires récompensées. AdMob collecte des identifiants publicitaires (IDFA sur iOS, identifiant publicitaire sur Android), l'adresse IP (pour déterminer la localisation approximative), les données de plantage, les données de performance et d'autres données de diagnostic. Ces informations sont utilisées pour la publicité tierce, l'analyse et la personnalisation des publicités. La collecte de données par AdMob constitue un « suivi » tel que défini par Apple. Pour plus d'informations, consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
 
-            <h3>3.2 Firebase (Google)</h3>
-            <p><strong>Firebase Analytics :</strong> Collecte des données d'utilisation de l'application à des fins d'analyse. Vous pouvez vous désinscrire dans les Paramètres de l'Application. <strong>Firebase Remote Config :</strong> Fournit des indicateurs de fonctionnalités et des données de configuration à l'Application. <strong>Firebase Core :</strong> Fournit les services d'infrastructure de base. Pour plus d'informations, consultez les <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Informations de confidentialité de Firebase</a>.</p>
+            <h3>3.2 Firebase et Google (Google LLC)</h3>
+            <p>Nous utilisons les services Google et Firebase suivants :</p>
+            <ul>
+                <li><strong>Firebase Authentication et Connexion Google :</strong> Créent et gèrent votre compte et, si vous y consentez, lient votre compte Google pour la synchronisation entre appareils.</li>
+                <li><strong>Cloud Firestore :</strong> Stocke le contenu de votre compte (profil, rêves, historique d'horoscopes et d'Eight Ball, conversations de chat avec l'Oracle et enregistrements d'acceptation juridique). Cette base de données est hébergée dans l'<strong>Union européenne</strong>.</li>
+                <li><strong>Cloud Functions :</strong> Nos fonctions côté serveur (hébergées dans l'Union européenne) reçoivent vos requêtes d'IA et les transmettent à OpenAI, de sorte que la clé d'accès OpenAI n'est jamais incluse dans l'Application.</li>
+                <li><strong>Cloud Storage :</strong> Stocke les images de partage générées par l'IA associées à votre compte.</li>
+                <li><strong>Firebase Analytics :</strong> Collecte des données d'utilisation de l'application à des fins d'analyse. Vous pouvez vous désinscrire dans les Paramètres de l'Application.</li>
+                <li><strong>Firebase Remote Config :</strong> Fournit des indicateurs de fonctionnalités et des données de configuration à l'Application.</li>
+                <li><strong>Firebase Core :</strong> Fournit les services d'infrastructure de base.</li>
+            </ul>
+            <p>Pour plus d'informations, consultez les <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Informations de confidentialité de Firebase</a> et la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
 
             <h3>3.3 OpenAI</h3>
-            <p>Le texte saisi par l'utilisateur (descriptions de rêves, questions à l'oracle et requêtes liées à l'horoscope) est envoyé à l'API d'OpenAI pour générer des réponses et des images alimentées par l'IA. Pour la fonction de compatibilité des groupes sanguins, seuls les types sanguins et archétypes de personnalité (pas votre nom ni votre identité) sont transmis à OpenAI ; des espaces réservés neutres (« Personne A » / « Personne B ») sont utilisés dans la requête, et votre nom est substitué côté client après réception de la réponse. <strong>Votre nom n'est jamais inclus dans une transmission à OpenAI</strong> — cela s'applique à toutes les fonctionnalités IA. Ces requêtes sont traitées en temps réel et ne sont pas conservées par nous après la livraison de la réponse. OpenAI peut traiter ces données conformément à sa propre <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité</a> et ses <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Conditions d'utilisation</a>.</p>
+            <p>Le texte saisi par l'utilisateur (descriptions de rêves, questions à l'oracle, requêtes liées à l'horoscope et vos <strong>messages de chat avec l'Oracle</strong>) est envoyé à l'API d'OpenAI — par l'intermédiaire de nos propres Cloud Functions (voir la Section 3.2) — pour générer des réponses et des images alimentées par l'IA. Pour les lectures de compatibilité ponctuelles, nous limitons les informations identifiantes lorsque cela est possible : les signes du zodiaque, les types sanguins, les genres et les archétypes de personnalité peuvent être transmis, tandis que des espaces réservés neutres (« Personne A » / « Personne B ») sont généralement utilisés et les noms sont substitués côté client après réception de la réponse. Si vous choisissez de discuter d'une lecture dans le <strong>chat avec l'Oracle</strong>, le contexte de la lecture source et vos messages de chat peuvent être envoyés à OpenAI, et ce contexte peut inclure des noms ou d'autres détails déjà affichés dans la lecture afin que la conversation reste contextualisée. OpenAI traite ces requêtes en temps réel et ne les utilise pas pour entraîner ses modèles ; OpenAI peut conserver les données d'API pendant une période limitée (actuellement jusqu'à 30 jours) à des fins de surveillance des abus, conformément à ses politiques d'utilisation des données d'API. Notez qu'à la différence des lectures ponctuelles, <strong>l'historique de vos conversations de chat avec l'Oracle est stocké par nos soins</strong> dans Cloud Firestore afin que vous puissiez poursuivre la conversation (voir la Section 5). OpenAI peut traiter ces données conformément à sa propre <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité</a> et ses <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener">Conditions d'utilisation</a>.</p>
 
             <!-- ============================================================ -->
             <h2>4. Publicité et suivi</h2>
@@ -232,30 +258,54 @@
                         <td>Oui</td>
                         <td>Publicité tierce, Analyse, Personnalisation du produit</td>
                     </tr>
+                    <tr>
+                        <td>Coordonnées (e-mail, nom — Connexion Google)</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Fonctionnalité de l'application</td>
+                    </tr>
+                    <tr>
+                        <td>Contenu de l'utilisateur (rêves, messages de chat avec l'Oracle, etc.)</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Fonctionnalité de l'application</td>
+                    </tr>
+                    <tr>
+                        <td>Identifiants (ID de compte/utilisateur)</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Fonctionnalité de l'application</td>
+                    </tr>
                 </tbody>
             </table>
-            <p>La localisation précise n'est <strong>pas</strong> collectée.</p>
+            <p>La localisation précise n'est <strong>pas</strong> collectée. Les données de compte et de contenu utilisateur ci-dessus (Coordonnées, Contenu de l'utilisateur, Identifiants) sont utilisées uniquement pour faire fonctionner les fonctionnalités de compte, de synchronisation et d'Oracle de l'Application et ne sont <strong>pas</strong> utilisées à des fins de suivi.</p>
 
             <!-- ============================================================ -->
             <h2>5. Stockage et sécurité des données</h2>
 
             <h3>5.1 Stockage local</h3>
-            <p>La plupart des données personnelles — y compris votre profil (nom, date de naissance, lieu de naissance), l'historique des rêves, l'historique de l'oracle (p. ex. Eight Ball), le cache des horoscopes et les préférences de notification — sont stockées uniquement sur votre appareil dans le stockage local (fichiers et préférences sur l'appareil). Une petite quantité de configuration de l'application (p. ex. fournisseur sélectionné) peut également être stockée sur l'appareil via Flutter Secure Storage (Keychain sur iOS, EncryptedSharedPreferences sur Android). <strong>Le groupe sanguin et les lectures de compatibilité (zodiacales comme par groupe sanguin) ne sont conservés nulle part — ils n'existent qu'en mémoire pendant la durée de votre session (voir la Section 1.1 et la Section 5.2).</strong></p>
+            <p>Votre profil (nom, date de naissance, lieu de naissance), votre historique de rêves, votre historique d'oracle (p. ex. Eight Ball), votre cache d'horoscopes, vos lectures de groupe sanguin, vos préférences de notification, vos marqueurs de signalement et vos réglages d'application sont stockés sur votre appareil dans le stockage local (fichiers et préférences sur l'appareil). Une petite quantité de configuration de l'application peut également être stockée sur l'appareil via Flutter Secure Storage (Keychain sur iOS, EncryptedSharedPreferences sur Android). Lorsque vous êtes connecté, le contenu lié au compte et les réglages synchronisés sont également stockés dans le cloud et synchronisés entre vos appareils (voir la Section 5.2). Les lectures de compatibilité zodiacale sont limitées à la session : elles s'affichent pendant votre session et ne sont enregistrées ni sur votre appareil ni dans votre compte ; les lectures de groupe sanguin sont stockées comme décrit à la Section 1.1.</p>
 
-            <h3>5.2 Traitement en nuage</h3>
-            <p>Lorsque vous utilisez les fonctionnalités alimentées par l'IA, vos saisies sont transmises aux serveurs d'OpenAI pour traitement et génération d'images. Ces transmissions sont éphémères : nous ne maintenons pas de base de données permanente côté serveur de vos rêves, questions, demandes d'horoscope ou lectures de compatibilité.</p>
+            <h3>5.2 Stockage et traitement en nuage</h3>
+            <p>Lorsque vous utilisez les fonctionnalités liées au compte, votre contenu — votre profil, votre historique de rêves, votre historique d'horoscopes et d'Eight Ball, vos lectures de groupe sanguin, vos réglages synchronisés et vos <strong>conversations de chat avec l'Oracle</strong> — est stocké dans <strong>Google Cloud Firestore, hébergé dans l'Union européenne</strong>. L'accès est restreint par des règles de sécurité de sorte que chaque compte ne peut lire et écrire que ses propres données. Nous conservons ces données afin qu'elles soient disponibles sur vos appareils et pour faire fonctionner les fonctions de compte, de signalement et de sécurité ; vous pouvez les supprimer à tout moment (voir les Sections 6 et 10).</p>
+            <p>Lorsque vous utilisez les fonctionnalités alimentées par l'IA, vos saisies sont envoyées via nos Cloud Functions (hébergées dans l'Union européenne) à OpenAI pour traitement et génération d'images. Les lectures ponctuelles (rêves, horoscopes, compatibilité, Eight Ball) sont traitées en temps réel et ne servent pas à entraîner les modèles d'OpenAI ; voir la Section 3.3 concernant la conservation limitée à des fins de surveillance des abus. Les images de partage générées par l'IA peuvent être stockées dans Cloud Storage sous votre compte.</p>
 
+            <p><strong>Registres de génération :</strong> pour protéger l'intégrité des signalements de contenu, nos serveurs conservent un registre infalsifiable (« receipt ») de chaque lecture et demande d'image générée par IA — une copie du contenu généré (pour les images : la requête de génération et une empreinte du fichier livré) et une empreinte cryptographique (SHA-256), écrite côté serveur dans votre compte et non modifiable depuis l'App. Nous utilisons ces registres uniquement pour vérifier si un contenu signalé a réellement été produit par l'App. Ils ne contiennent pas plus de données personnelles que le contenu généré lui-même et sont supprimés avec votre compte.</p>
             <h3>5.3 Mesures de sécurité</h3>
             <p>Nous utilisons des mesures de sécurité conformes aux normes de l'industrie pour protéger vos données, notamment :</p>
             <ul>
-                <li>HTTPS (chiffrement TLS) pour toutes les données transmises entre l'Application et les services tiers.</li>
+                <li>HTTPS (chiffrement TLS) pour toutes les données transmises entre l'Application, nos serveurs et les services tiers.</li>
+                <li>Des contrôles d'accès par compte (règles de sécurité Firestore) afin que vos données dans le cloud ne soient accessibles qu'à votre compte authentifié.</li>
+                <li>Une gestion côté serveur de la clé d'accès OpenAI, de sorte qu'elle ne soit jamais exposée dans l'Application.</li>
                 <li>Stockage sécurisé au niveau du système d'exploitation (Keychain sur iOS, EncryptedSharedPreferences sur Android) pour les données sensibles stockées sur votre appareil.</li>
             </ul>
             <p>Bien que nous prenions des mesures raisonnables pour protéger vos informations, aucune méthode de transmission électronique ou de stockage n'est sécurisée à 100 %.</p>
 
             <!-- ============================================================ -->
             <h2>6. Conservation des données</h2>
-            <p>Les données stockées localement sur votre appareil persistent jusqu'à ce que vous supprimiez l'Application ou effaciez les données de l'Application. <strong>Les saisies de groupe sanguin et les lectures de compatibilité font exception — elles sont limitées à la session et sont automatiquement supprimées lorsque vous quittez l'écran de compatibilité ou relancez l'Application.</strong> Nous ne conservons pas vos données personnelles sur nos serveurs.</p>
+            <p>Les données stockées localement sur votre appareil persistent jusqu'à ce que vous supprimiez l'Application ou effaciez les données de l'Application. Les lectures de compatibilité zodiacale sont limitées à la session et sont écartées lorsque vous quittez l'écran de compatibilité ; elles ne sont pas conservées sur nos serveurs, les registres de génération décrits à la Section 5.2 restant toutefois disponibles pour vérifier les signalements. Les lectures de groupe sanguin sont enregistrées localement et dans le cloud comme décrit ci-dessus.</p>
+            <p>Le contenu stocké dans le cloud (Section 5.2) est conservé tant que votre compte existe afin de rester disponible sur vos appareils. Vous pouvez mettre fin à cette conservation à tout moment : la déconnexion arrête la synchronisation sur un appareil, et la suppression de votre compte dans l'Application (Paramètres → Compte → Supprimer le compte) supprime définitivement votre compte et ses données côté serveur — y compris vos données de profil, de rêves, d'horoscopes, d'Eight Ball, de groupe sanguin, de chat avec l'Oracle, vos réglages/dossiers juridiques synchronisés, ainsi que toute image de partage stockée (voir la Section 10). Les signalements déjà envoyés par e-mail peuvent rester dans notre boîte juridique/support si nécessaire pour examiner le signalement et y répondre.</p>
+            <p>Si nous interrompons une fonctionnalité ou fermons l'Application ou le service, nous pouvons supprimer, exporter, anonymiser ou conserver le contenu de compte pendant une période limitée dans la mesure raisonnablement nécessaire pour arrêter le service, respecter nos obligations légales, résoudre les litiges, prévenir les abus et maintenir la sécurité. Nous ne conserverons pas le contenu de compte plus longtemps que raisonnablement nécessaire à ces fins, sauf si la loi applicable exige ou autorise une période plus longue.</p>
             <p>Les services tiers (Google AdMob, Firebase, OpenAI) peuvent conserver les données qu'ils collectent conformément à leurs propres politiques de conservation. Veuillez consulter leurs politiques de confidentialité respectives référencées dans la Section 3 ci-dessus.</p>
 
             <!-- ============================================================ -->
@@ -264,12 +314,12 @@
 
             <!-- ============================================================ -->
             <h2>8. Transferts internationaux de données</h2>
-            <p>Vos données peuvent être transférées et traitées dans des pays situés en dehors de votre pays de résidence, y compris les États-Unis, où nos prestataires de services tiers (Google et OpenAI) maintiennent des serveurs. Ces transferts sont nécessaires pour fournir les services de l'Application. Lorsque la loi l'exige, nous nous appuyons sur des garanties appropriées telles que les Clauses contractuelles types (CCT) adoptées par la Commission européenne, ou la certification du prestataire de services dans le cadre des mécanismes de transfert de données applicables.</p>
+            <p>Le contenu de votre compte (Section 5.2) est stocké dans l'<strong>Union européenne</strong> (Google Cloud Firestore et Cloud Functions). Une partie du traitement a néanmoins lieu dans d'autres pays, y compris les États-Unis — par exemple le traitement par l'IA d'OpenAI ainsi que la publicité et l'analyse par Google/AdMob. Par conséquent, vos données peuvent être transférées et traitées dans des pays situés en dehors de votre pays de résidence. Ces transferts sont nécessaires pour fournir les services de l'Application. Lorsque la loi l'exige, nous nous appuyons sur des garanties appropriées telles que les Clauses contractuelles types (CCT) adoptées par la Commission européenne, ou la certification du prestataire de services dans le cadre des mécanismes de transfert de données applicables.</p>
 
             <!-- ============================================================ -->
             <h2>9. Confidentialité des enfants</h2>
-            <p>Gertruda est classée 13+ et n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et que vous pensez que votre enfant de moins de 13 ans nous a fourni des informations personnelles, veuillez nous contacter à <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, et nous prendrons des mesures pour supprimer ces informations.</p>
-            <p>Si vous avez entre 13 ans et l'âge de la majorité dans votre juridiction, vous devriez examiner cette Politique de confidentialité avec un parent ou un tuteur pour vous assurer de la comprendre.</p>
+            <p>Gertruda est classée 16+ et n'est pas destinée aux enfants de moins de 16 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 16 ans. Si vous êtes un parent ou un tuteur et que vous pensez que votre enfant de moins de 16 ans nous a fourni des informations personnelles, veuillez nous contacter à <a href="mailto:privacy@gertruda.fun">privacy@gertruda.fun</a>, et nous prendrons des mesures pour supprimer ces informations.</p>
+            <p>Si vous avez entre 16 ans et l'âge de la majorité dans votre juridiction, vous devriez examiner cette Politique de confidentialité avec un parent ou un tuteur pour vous assurer de la comprendre.</p>
 
             <!-- ============================================================ -->
             <h2>10. Vos droits et choix</h2>
@@ -279,7 +329,7 @@
             <ul>
                 <li><strong>Accès :</strong> Demander une copie des données personnelles que nous détenons à votre sujet.</li>
                 <li><strong>Rectification :</strong> Demander la correction de données personnelles inexactes.</li>
-                <li><strong>Suppression :</strong> Demander la suppression de vos données personnelles. Étant donné que la plupart des données sont stockées localement sur votre appareil, vous pouvez les supprimer en désinstallant l'Application ou en effaçant les données de l'Application.</li>
+                <li><strong>Suppression :</strong> Demander la suppression de vos données personnelles. Vous pouvez supprimer votre compte et toutes ses données côté serveur directement dans l'Application via <strong>Paramètres → Compte → Supprimer le compte</strong>. Les données stockées localement sur votre appareil peuvent également être supprimées en désinstallant l'Application ou en effaçant les données de l'Application.</li>
                 <li><strong>Portabilité :</strong> Demander vos données dans un format portable, le cas échéant.</li>
                 <li><strong>Refus du suivi :</strong> Sur iOS, refuser le suivi via l'invite ATT. Sur Android, désactiver la personnalisation des publicités dans les paramètres de votre appareil.</li>
                 <li><strong>Désactivation de l'analyse :</strong> Vous pouvez désactiver l'analyse au niveau du système lorsque votre système d'exploitation le permet.</li>
@@ -293,7 +343,7 @@
                     <ul>
                         <li><strong>Consentement :</strong> Pour la publicité personnalisée et le suivi (via App Tracking Transparency sur iOS ou les paramètres publicitaires sur Android). Vous pouvez retirer votre consentement à tout moment via les paramètres de confidentialité ou les paramètres publicitaires de votre appareil.</li>
                         <li><strong>Intérêt légitime :</strong> Pour l'analyse et l'amélioration de l'application. Vous pouvez vous opposer au traitement fondé sur l'intérêt légitime.</li>
-                        <li><strong>Exécution du contrat :</strong> Pour fournir les fonctionnalités de divertissement principales de l'application sur la base de vos données.</li>
+                        <li><strong>Exécution du contrat :</strong> Pour fournir les fonctionnalités de divertissement principales de l'application sur la base de vos données, et pour faire fonctionner votre compte, la synchronisation dans le cloud et la fonctionnalité de chat avec l'Oracle.</li>
                     </ul>
                     <p>L'analyse peut être désactivée dans l'Application (Paramètres → Analyse).</p>
                 </li>
@@ -318,7 +368,7 @@
 
             <!-- ============================================================ -->
             <h2>11. Paiements</h2>
-            <p>Gertruda ne propose actuellement aucun achat intégré ni abonnement, et nous ne collectons ni ne traitons aucune information de paiement. Si cela change à l'avenir, nous mettrons à jour cette Politique de confidentialité avant l'introduction de toute fonctionnalité payante.</p>
+            <p>Gertruda est actuellement proposée gratuitement avec des publicités et des limites quotidiennes d'utilisation pour les fonctions alimentées par l'IA. L'Application peut inclure des fonctionnalités d'achat intégré ou d'abonnement dormantes ou limitées. Si des fonctions payantes vous sont proposées, le prix, les conditions d'essai, les conditions de renouvellement et les instructions d'annulation seront affichés dans le flux d'achat de l'App Store ou de Google Play avant l'achat. Les abonnements actifs sont gérés par l'App Store ou Google Play et ne sont pas automatiquement annulés lorsque vous supprimez votre compte Gertruda.</p>
 
             <!-- ============================================================ -->
             <h2>12. Avertissement relatif au divertissement</h2>
