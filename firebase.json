@@ -70,6 +70,38 @@
       {
         "source": "/terms/uk",
         "destination": "/legal/terms/TERMS_OF_USE_UK.html"
+      },
+      {
+        "source": "/account-deletion",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_EN.html"
+      },
+      {
+        "source": "/account-deletion/de",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_DE.html"
+      },
+      {
+        "source": "/account-deletion/es",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_ES.html"
+      },
+      {
+        "source": "/account-deletion/fr",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_FR.html"
+      },
+      {
+        "source": "/account-deletion/kk",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_KK.html"
+      },
+      {
+        "source": "/account-deletion/pt",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_PT.html"
+      },
+      {
+        "source": "/account-deletion/ru",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_RU.html"
+      },
+      {
+        "source": "/account-deletion/uk",
+        "destination": "/legal/deletion/ACCOUNT_DELETION_UK.html"
       }
     ]
   }
